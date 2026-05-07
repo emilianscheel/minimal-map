@@ -136,8 +136,6 @@ class Iframe_Endpoint {
 	 * @return string
 	 */
 	private function render_document( $context ) {
-		$this->enqueue_document_styles();
-
 		if ( '' !== $context['map_surface_markup'] ) {
 			wp_enqueue_style( 'minimal-map-style' );
 			wp_enqueue_script( 'minimal-map-frontend' );
@@ -145,6 +143,7 @@ class Iframe_Endpoint {
 
 		$document_title    = $context['document_title'];
 		$document_font_family = $context['document_font_family'];
+		$document_styles   = $this->get_document_styles();
 		$error_message     = $context['error_message'];
 		$map_surface_markup = $context['map_surface_markup'];
 		$language_attributes = get_language_attributes();
@@ -156,16 +155,21 @@ class Iframe_Endpoint {
 	}
 
 	/**
-	 * Enqueue iframe document reset styles.
+	 * Get iframe document reset styles.
 	 *
-	 * @return void
+	 * @return string
 	 */
-	private function enqueue_document_styles() {
-		wp_register_style( 'minimal-map-iframe', false, array(), MINIMAL_MAP_VERSION );
-		wp_add_inline_style(
-			'minimal-map-iframe',
-			'html,body{margin:0;padding:0;background:transparent;}html{margin-top:0!important;}body.minimal-map-iframe-page{font-family:var(--minimal-map-font-family,var(--wp--style--global--font-family,inherit));}.minimal-map-iframe-page .minimal-map-surface{width:100%;}.minimal-map-iframe-page__error{padding:16px;color:#1e1e1e;font-size:14px;line-height:1.5;}'
+	private function get_document_styles() {
+		return implode(
+			' ',
+			array(
+				'html, body { margin: 0; padding: 0; background: transparent; }',
+				'html { margin-top: 0 !important; }',
+				'body.minimal-map-iframe-page { font-family: var(--minimal-map-font-family, var(--wp--style--global--font-family, inherit)); }',
+				'.minimal-map-iframe-page .minimal-map-surface { width: 100%; }',
+				'.minimal-map-iframe-page .cmplz-cookiebanner-container { display: none; }',
+				'.minimal-map-iframe-page__error { padding: 16px; color: #1e1e1e; font-size: 14px; line-height: 1.5; }',
+			)
 		);
-		wp_enqueue_style( 'minimal-map-iframe' );
 	}
 }

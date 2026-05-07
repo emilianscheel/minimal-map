@@ -1033,6 +1033,9 @@ class Minimal_Map_Plugin_Test extends WP_UnitTestCase {
 		$this->assertStringContainsString( '--minimal-map-font-family', $response['html'] );
 		$this->assertStringContainsString( 'border-radius: 24px;', $response['html'] );
 		$this->assertStringContainsString( 'margin-top: 0 !important;', $response['html'] );
+		$this->assertStringContainsString( 'minimal-map-iframe-document-css', $response['html'] );
+		$this->assertStringContainsString( '.minimal-map-iframe-page .cmplz-cookiebanner-container', $response['html'] );
+		$this->assertStringContainsString( 'display: none;', $response['html'] );
 	}
 
 	/**

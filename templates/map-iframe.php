@@ -14,6 +14,7 @@ defined( 'ABSPATH' ) || exit;
 	<meta charset="<?php echo esc_attr( $charset ); ?>">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title><?php echo esc_html( $document_title ); ?></title>
+	<style id="minimal-map-iframe-document-css"><?php echo esc_html( $document_styles ); ?></style>
 	<?php wp_head(); ?>
 </head>
 <body
