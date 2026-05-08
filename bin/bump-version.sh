@@ -16,7 +16,7 @@ case "$1" in
 	*) usage ;;
 esac
 
-for file in package.json block.json minimal-map-net-locator-block-emiliansch.php readme.txt; do
+for file in package.json block.json emilian-scheel-minimal-map.php readme.txt; do
 	[ -f "$file" ] || {
 		echo "Missing file: $file" >&2
 		exit 1
@@ -50,14 +50,14 @@ next_version="$major.$minor.$patch"
 
 NEXT_VERSION="$next_version" perl -0pi -e 's{^  "version": ".*",$}{  "version": "$ENV{NEXT_VERSION}",}m or die "Could not update package.json\n"' package.json
 NEXT_VERSION="$next_version" perl -0pi -e 's{^  "version": ".*",$}{  "version": "$ENV{NEXT_VERSION}",}m or die "Could not update block.json\n"' block.json
-NEXT_VERSION="$next_version" perl -0pi -e 's{^\s*\* Version:.*$}{ * Version:           $ENV{NEXT_VERSION}}m or die "Could not update plugin header\n"' minimal-map-net-locator-block-emiliansch.php
-NEXT_VERSION="$next_version" perl -0pi -e 's{^define\( '\''MINIMAL_MAP_VERSION'\'', '\''.*'\'' \);$}{define( '\''MINIMAL_MAP_VERSION'\'', '\''$ENV{NEXT_VERSION}'\'' );}m or die "Could not update MINIMAL_MAP_VERSION\n"' minimal-map-net-locator-block-emiliansch.php
+NEXT_VERSION="$next_version" perl -0pi -e 's{^\s*\* Version:.*$}{ * Version:           $ENV{NEXT_VERSION}}m or die "Could not update plugin header\n"' emilian-scheel-minimal-map.php
+NEXT_VERSION="$next_version" perl -0pi -e 's{^define\( '\''MINIMAL_MAP_VERSION'\'', '\''.*'\'' \);$}{define( '\''MINIMAL_MAP_VERSION'\'', '\''$ENV{NEXT_VERSION}'\'' );}m or die "Could not update MINIMAL_MAP_VERSION\n"' emilian-scheel-minimal-map.php
 NEXT_VERSION="$next_version" perl -0pi -e 's{^Stable tag: .*$}{Stable tag: $ENV{NEXT_VERSION}}m or die "Could not update readme.txt\n"' readme.txt
 
 shopt -s nullglob
 
 for file in languages/*.po languages/*.pot; do
-	NEXT_VERSION="$next_version" perl -0pi -e 's{^"Project-Id-Version: .*\\n"$}{"Project-Id-Version: Minimal Map: Store Locator & Map Block $ENV{NEXT_VERSION}\\n"}m or die "Could not update $ARGV\n"' "$file"
+	NEXT_VERSION="$next_version" perl -0pi -e 's{^"Project-Id-Version: .*\\n"$}{"Project-Id-Version: Emilian Scheel'\''s Minimal Map & Store Locator $ENV{NEXT_VERSION}\\n"}m or die "Could not update $ARGV\n"' "$file"
 done
 
 echo "$current_version -> $next_version"

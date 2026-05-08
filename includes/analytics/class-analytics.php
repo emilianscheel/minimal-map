@@ -467,8 +467,8 @@ class Analytics {
 				'sourceMix'    => $this->build_source_mix_breakdown(
 					$selection_rows,
 					array(
-						'search_panel' => __( 'Search panel', 'minimal-map' ),
-						'map_marker'   => __( 'Map marker', 'minimal-map' ),
+						'search_panel' => __( 'Search panel', 'emilian-scheel-minimal-map' ),
+						'map_marker'   => __( 'Map marker', 'emilian-scheel-minimal-map' ),
 					)
 				),
 				'topLocations' => $this->build_top_location_breakdown( $selection_rows ),
@@ -496,8 +496,8 @@ class Analytics {
 				'sourceMix'     => $this->build_source_mix_breakdown(
 					$rows,
 					array(
-						'search_panel' => __( 'Search panel', 'minimal-map' ),
-						'in_map_card'  => __( 'In-map card', 'minimal-map' ),
+						'search_panel' => __( 'Search panel', 'emilian-scheel-minimal-map' ),
+						'in_map_card'  => __( 'In-map card', 'emilian-scheel-minimal-map' ),
 					)
 				),
 				'topLocations'  => $this->build_top_location_breakdown( $rows ),
@@ -1083,22 +1083,22 @@ class Analytics {
 		return array(
 			array(
 				'key'   => 'text',
-				'label' => __( 'Text', 'minimal-map' ),
+				'label' => __( 'Text', 'emilian-scheel-minimal-map' ),
 				'value' => $counts['text'],
 			),
 			array(
 				'key'   => 'address',
-				'label' => __( 'Address', 'minimal-map' ),
+				'label' => __( 'Address', 'emilian-scheel-minimal-map' ),
 				'value' => $counts['address'],
 			),
 			array(
 				'key'   => 'coordinates',
-				'label' => __( 'Coordinates', 'minimal-map' ),
+				'label' => __( 'Coordinates', 'emilian-scheel-minimal-map' ),
 				'value' => $counts['coordinates'],
 			),
 			array(
 				'key'   => 'live_location',
-				'label' => __( 'Live location', 'minimal-map' ),
+				'label' => __( 'Live location', 'emilian-scheel-minimal-map' ),
 				'value' => $counts['live_location'],
 			),
 		);
@@ -1135,22 +1135,22 @@ class Analytics {
 		return array(
 			array(
 				'key'   => '0',
-				'label' => __( '0 results', 'minimal-map' ),
+				'label' => __( '0 results', 'emilian-scheel-minimal-map' ),
 				'value' => $counts['0'],
 			),
 			array(
 				'key'   => '1',
-				'label' => __( '1 result', 'minimal-map' ),
+				'label' => __( '1 result', 'emilian-scheel-minimal-map' ),
 				'value' => $counts['1'],
 			),
 			array(
 				'key'   => '2-5',
-				'label' => __( '2-5 results', 'minimal-map' ),
+				'label' => __( '2-5 results', 'emilian-scheel-minimal-map' ),
 				'value' => $counts['2-5'],
 			),
 			array(
 				'key'   => '6+',
-				'label' => __( '6+ results', 'minimal-map' ),
+				'label' => __( '6+ results', 'emilian-scheel-minimal-map' ),
 				'value' => $counts['6+'],
 			),
 		);
@@ -1228,12 +1228,12 @@ class Analytics {
 	 */
 	private function build_action_type_mix_breakdown( $rows ) {
 		$labels = array(
-			'opening_hours' => __( 'Opening hours', 'minimal-map' ),
-			'telephone'     => __( 'Phone', 'minimal-map' ),
-			'email'         => __( 'Email', 'minimal-map' ),
-			'website'       => __( 'Website', 'minimal-map' ),
-			'social_media'  => __( 'Social media', 'minimal-map' ),
-			'google_maps'   => __( 'Google Maps', 'minimal-map' ),
+			'opening_hours' => __( 'Opening hours', 'emilian-scheel-minimal-map' ),
+			'telephone'     => __( 'Phone', 'emilian-scheel-minimal-map' ),
+			'email'         => __( 'Email', 'emilian-scheel-minimal-map' ),
+			'website'       => __( 'Website', 'emilian-scheel-minimal-map' ),
+			'social_media'  => __( 'Social media', 'emilian-scheel-minimal-map' ),
+			'google_maps'   => __( 'Google Maps', 'emilian-scheel-minimal-map' ),
 		);
 		$counts = array_fill_keys( array_keys( $labels ), 0 );
 

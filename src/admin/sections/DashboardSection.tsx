@@ -10,23 +10,23 @@ import type { DashboardCardView, MinimalMapInstance, RawMapConfig } from '../../
 import type { AdminSectionComponentProps } from './types';
 
 const CARD_COPY: Record<DashboardCardView, string> = {
-	analytics: __('Inspect search demand, result quality, and nearest-distance patterns without leaving the admin panel.', 'minimal-map'),
-	locations: __('Manage every place you want to render on your maps and prepare it for future block integrations.', 'minimal-map'),
-	collections: __('Build reusable groups of locations and curate map-ready sets without changing the location editor flow.', 'minimal-map'),
-	logos: __('Upload reusable SVG logos and assign them across multiple locations without duplicating assets.', 'minimal-map'),
-	markers: __('Create marker variants and keep your map pin system consistent across locations and styles.', 'minimal-map'),
-	tags: __('Add lightweight labels that make large map datasets easier to sort, search, and evolve.', 'minimal-map'),
-	styles: __('Shape the visual language of your maps with reusable themes and live preview adjustments.', 'minimal-map'),
+	analytics: __('Inspect search demand, result quality, and nearest-distance patterns without leaving the admin panel.', 'emilian-scheel-minimal-map'),
+	locations: __('Manage every place you want to render on your maps and prepare it for future block integrations.', 'emilian-scheel-minimal-map'),
+	collections: __('Build reusable groups of locations and curate map-ready sets without changing the location editor flow.', 'emilian-scheel-minimal-map'),
+	logos: __('Upload reusable SVG logos and assign them across multiple locations without duplicating assets.', 'emilian-scheel-minimal-map'),
+	markers: __('Create marker variants and keep your map pin system consistent across locations and styles.', 'emilian-scheel-minimal-map'),
+	tags: __('Add lightweight labels that make large map datasets easier to sort, search, and evolve.', 'emilian-scheel-minimal-map'),
+	styles: __('Shape the visual language of your maps with reusable themes and live preview adjustments.', 'emilian-scheel-minimal-map'),
 };
 
 const CTA_COPY: Record<DashboardCardView, string> = {
-	analytics: __('Open analytics', 'minimal-map'),
-	locations: __('Open locations', 'minimal-map'),
-	collections: __('Open collections', 'minimal-map'),
-	logos: __('Open logos', 'minimal-map'),
-	markers: __('Open markers', 'minimal-map'),
-	tags: __('Open tags', 'minimal-map'),
-	styles: __('Open styles', 'minimal-map'),
+	analytics: __('Open analytics', 'emilian-scheel-minimal-map'),
+	locations: __('Open locations', 'emilian-scheel-minimal-map'),
+	collections: __('Open collections', 'emilian-scheel-minimal-map'),
+	logos: __('Open logos', 'emilian-scheel-minimal-map'),
+	markers: __('Open markers', 'emilian-scheel-minimal-map'),
+	tags: __('Open tags', 'emilian-scheel-minimal-map'),
+	styles: __('Open styles', 'emilian-scheel-minimal-map'),
 };
 
 type DashboardCardCountDisplay =
@@ -38,8 +38,8 @@ const COUNT_DISPLAYS: Record<DashboardCardView, (
 ) => DashboardCardCountDisplay> = {
 	analytics: (appConfig) => ({
 		label: appConfig.analyticsConfig.enabled
-			? __('On', 'minimal-map')
-			: __('Off', 'minimal-map'),
+			? __('On', 'emilian-scheel-minimal-map')
+			: __('Off', 'emilian-scheel-minimal-map'),
 		type: 'static',
 	}),
 	locations: (appConfig) => ({

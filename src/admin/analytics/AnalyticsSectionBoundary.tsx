@@ -43,7 +43,7 @@ export default class AnalyticsSectionBoundary extends Component<
 					{sprintf(
 						__(
 							'%s analytics could not be rendered because one or more records contain unexpected data.',
-							'minimal-map'
+							'emilian-scheel-minimal-map'
 						),
 						this.props.title
 					)}

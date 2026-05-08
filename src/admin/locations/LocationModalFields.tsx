@@ -15,7 +15,7 @@ function OptionalLabel({ label }: { label: string }) {
 		<span className="minimal-map-admin__field-label-with-hint">
 			<span>{label}</span>
 			<span className="minimal-map-admin__field-optional-hint">
-				{__('Optional', 'minimal-map')}
+				{__('Optional', 'emilian-scheel-minimal-map')}
 			</span>
 		</span>
 	);
@@ -33,33 +33,33 @@ export default function LocationModalFields({
 			<div className="minimal-map-admin__location-dialog-fields">
 				<TextControl
 					autoFocus
-					label={__('Title', 'minimal-map')}
+					label={__('Title', 'emilian-scheel-minimal-map')}
 					value={form.title}
 					onChange={(value) => onChange('title', value)}
 					help={fieldErrors.title}
 				/>
 				<TextControl
-					label={<OptionalLabel label={__('Telephone', 'minimal-map')} />}
+					label={<OptionalLabel label={__('Telephone', 'emilian-scheel-minimal-map')} />}
 					type="tel"
 					value={form.telephone}
 					onChange={(value) => onChange('telephone', value)}
 				/>
 				<TextControl
-					label={<OptionalLabel label={__('Email address', 'minimal-map')} />}
+					label={<OptionalLabel label={__('Email address', 'emilian-scheel-minimal-map')} />}
 					type="email"
 					value={form.email}
 					onChange={(value) => onChange('email', value)}
 					help={fieldErrors.email}
 				/>
 				<TextControl
-					label={<OptionalLabel label={__('Website', 'minimal-map')} />}
+					label={<OptionalLabel label={__('Website', 'emilian-scheel-minimal-map')} />}
 					type="url"
 					value={form.website}
 					onChange={(value) => onChange('website', value)}
 					help={fieldErrors.website}
 				/>
 				<FormTokenField
-					label={__('Tags (optional)', 'minimal-map')}
+					label={__('Tags (optional)', 'emilian-scheel-minimal-map')}
 					value={form.tag_ids
 						.map((id) => tags.find((t) => t.id === id)?.name)
 						.filter((name): name is string => !!name)}
@@ -82,13 +82,13 @@ export default function LocationModalFields({
 			<div className="minimal-map-admin__location-dialog-grid minimal-map-admin__location-dialog-grid--row-one">
 				<TextControl
 					autoFocus
-					label={__('Street', 'minimal-map')}
+					label={__('Street', 'emilian-scheel-minimal-map')}
 					value={form.street}
 					onChange={(value) => onChange('street', value)}
 					help={fieldErrors.street}
 				/>
 				<TextControl
-					label={__('House number', 'minimal-map')}
+					label={__('House number', 'emilian-scheel-minimal-map')}
 					value={form.house_number}
 					onChange={(value) => onChange('house_number', value)}
 					help={fieldErrors.house_number}
@@ -96,13 +96,13 @@ export default function LocationModalFields({
 			</div>
 			<div className="minimal-map-admin__location-dialog-grid minimal-map-admin__location-dialog-grid--row-two">
 				<TextControl
-					label={__('Postal code', 'minimal-map')}
+					label={__('Postal code', 'emilian-scheel-minimal-map')}
 					value={form.postal_code}
 					onChange={(value) => onChange('postal_code', value)}
 					help={fieldErrors.postal_code}
 				/>
 				<TextControl
-					label={__('City', 'minimal-map')}
+					label={__('City', 'emilian-scheel-minimal-map')}
 					value={form.city}
 					onChange={(value) => onChange('city', value)}
 					help={fieldErrors.city}
@@ -110,12 +110,12 @@ export default function LocationModalFields({
 			</div>
 			<div className="minimal-map-admin__location-dialog-grid minimal-map-admin__location-dialog-grid--row-three">
 				<TextControl
-					label={__('State', 'minimal-map')}
+					label={__('State', 'emilian-scheel-minimal-map')}
 					value={form.state}
 					onChange={(value) => onChange('state', value)}
 				/>
 				<TextControl
-					label={__('Country', 'minimal-map')}
+					label={__('Country', 'emilian-scheel-minimal-map')}
 					value={form.country}
 					onChange={(value) => onChange('country', value)}
 					help={fieldErrors.country}

@@ -11,7 +11,7 @@ export function UploadLogoButton({ onUpload, isUploading }: UploadLogoButtonProp
 	return (
 		<Button
 			icon={<Upload size={18} />}
-			label={__('Upload Logos', 'minimal-map')}
+			label={__('Upload Logos', 'emilian-scheel-minimal-map')}
 			onClick={() => {
 				const input = document.createElement('input');
 				input.type = 'file';

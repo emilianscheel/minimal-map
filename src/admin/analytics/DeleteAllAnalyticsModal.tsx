@@ -44,7 +44,7 @@ export default function DeleteAllAnalyticsModal({
 
 	return (
 		<Modal
-			title={__('Delete all tracking data', 'minimal-map')}
+			title={__('Delete all tracking data', 'emilian-scheel-minimal-map')}
 			onRequestClose={controller.onCloseDeleteAllAnalyticsModal}
 			shouldCloseOnClickOutside={!controller.isDeletingAllAnalytics}
 			shouldCloseOnEsc={!controller.isDeletingAllAnalytics}
@@ -57,7 +57,7 @@ export default function DeleteAllAnalyticsModal({
 				onKeyDown={handleKeyDown}
 			>
 				<p className="minimal-map-admin__collection-delete-dialog-copy">
-					{__('Are you sure you want to delete all tracking data? This action cannot be undone.', 'minimal-map')}
+					{__('Are you sure you want to delete all tracking data? This action cannot be undone.', 'emilian-scheel-minimal-map')}
 				</p>
 				<div className="minimal-map-admin__collection-delete-dialog-actions">
 					<Button
@@ -66,7 +66,7 @@ export default function DeleteAllAnalyticsModal({
 						disabled={controller.isDeletingAllAnalytics}
 						data-minimal-map-dialog-ignore-enter="true"
 					>
-						{__('Cancel', 'minimal-map')}
+						{__('Cancel', 'emilian-scheel-minimal-map')}
 					</Button>
 					<Button
 						variant="primary"
@@ -78,7 +78,7 @@ export default function DeleteAllAnalyticsModal({
 						disabled={controller.isDeletingAllAnalytics}
 					>
 						<span className="minimal-map-admin__location-dialog-button-content">
-							<span>{__('Delete all tracking data', 'minimal-map')}</span>
+							<span>{__('Delete all tracking data', 'emilian-scheel-minimal-map')}</span>
 							<Kbd variant="red">Enter</Kbd>
 						</span>
 					</Button>

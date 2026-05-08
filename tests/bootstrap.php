@@ -29,7 +29,7 @@ require_once "{$_tests_dir}/includes/functions.php";
  * Manually load the plugin being tested.
  */
 function _manually_load_plugin() {
-	require dirname( dirname( __FILE__ ) ) . '/minimal-map-net-locator-block-emiliansch.php';
+	require dirname( dirname( __FILE__ ) ) . '/emilian-scheel-minimal-map.php';
 }
 
 tests_add_filter( 'muplugins_loaded', '_manually_load_plugin' );

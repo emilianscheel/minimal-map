@@ -38,13 +38,13 @@ export default function RemoveCollectionAssignmentModal({
   return (
     <Modal
       className="minimal-map-admin__remove-collection-assignment-modal"
-      contentLabel={__("Remove collection", "minimal-map")}
+      contentLabel={__("Remove collection", "emilian-scheel-minimal-map")}
       focusOnMount={true}
       onKeyDown={handleKeyDown}
       onRequestClose={controller.onCloseRemoveCollectionAssignmentModal}
       shouldCloseOnClickOutside={!controller.isRemovingCollectionAssignment}
       shouldCloseOnEsc={!controller.isRemovingCollectionAssignment}
-      title={__("Remove collection", "minimal-map")}
+      title={__("Remove collection", "emilian-scheel-minimal-map")}
     >
       <div className="minimal-map-admin__remove-collection-assignment-dialog">
         <p className="minimal-map-admin__remove-collection-assignment-copy">
@@ -58,7 +58,7 @@ export default function RemoveCollectionAssignmentModal({
             disabled={controller.isRemovingCollectionAssignment}
             data-minimal-map-dialog-ignore-enter="true"
           >
-            {__("Cancel", "minimal-map")}
+            {__("Cancel", "emilian-scheel-minimal-map")}
           </Button>
           <Button
             __next40pxDefaultSize
@@ -69,7 +69,7 @@ export default function RemoveCollectionAssignmentModal({
             isBusy={controller.isRemovingCollectionAssignment}
           >
             <span className="minimal-map-admin__location-dialog-button-content">
-              <span>{__("Confirm", "minimal-map")}</span>
+              <span>{__("Confirm", "emilian-scheel-minimal-map")}</span>
               <Kbd variant="red">Enter</Kbd>
             </span>
           </Button>

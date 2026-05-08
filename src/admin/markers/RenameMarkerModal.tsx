@@ -13,7 +13,7 @@ export default function RenameMarkerModal({ controller }: { controller: MarkersC
 	return (
 		<Modal
 			className="minimal-map-admin__collection-modal"
-			title={__('Rename marker', 'minimal-map')}
+			title={__('Rename marker', 'emilian-scheel-minimal-map')}
 			onRequestClose={controller.onCancelEditMarker}
 			shouldCloseOnClickOutside={!controller.isSubmitting}
 			shouldCloseOnEsc={!controller.isSubmitting}
@@ -39,14 +39,14 @@ export default function RenameMarkerModal({ controller }: { controller: MarkersC
 					<TextControl
 						__next40pxDefaultSize
 						__nextHasNoMarginBottom
-						label={__('Filename', 'minimal-map')}
+						label={__('Filename', 'emilian-scheel-minimal-map')}
 						value={controller.editFilenameBasename}
 						onChange={controller.onChangeEditFilename}
 						autoFocus
 						help={
 							controller.editFilenameExtension
 								? sprintf(
-										__('The %s extension will be preserved.', 'minimal-map'),
+										__('The %s extension will be preserved.', 'emilian-scheel-minimal-map'),
 										controller.editFilenameExtension
 									)
 								: undefined
@@ -61,7 +61,7 @@ export default function RenameMarkerModal({ controller }: { controller: MarkersC
 						onClick={controller.onCancelEditMarker}
 						disabled={controller.isSubmitting}
 					>
-						{__('Cancel', 'minimal-map')}
+						{__('Cancel', 'emilian-scheel-minimal-map')}
 					</Button>
 					<Button
 						__next40pxDefaultSize
@@ -71,7 +71,7 @@ export default function RenameMarkerModal({ controller }: { controller: MarkersC
 						disabled={controller.isSubmitting}
 					>
 						<span className="minimal-map-admin__location-dialog-button-content">
-							<span>{__('Save changes', 'minimal-map')}</span>
+							<span>{__('Save changes', 'emilian-scheel-minimal-map')}</span>
 							<Kbd variant="blue">Enter</Kbd>
 						</span>
 					</Button>

@@ -4,7 +4,7 @@ import fs from "node:fs";
 import path from "node:path";
 
 const languagesDir = path.resolve("languages");
-const textDomain = "minimal-map";
+const textDomain = "emilian-scheel-minimal-map";
 const handles = [
   "minimal-map-block-editor",
   "minimal-map-admin",

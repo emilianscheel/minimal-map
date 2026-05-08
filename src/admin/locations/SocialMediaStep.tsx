@@ -13,12 +13,12 @@ interface SocialMediaStepProps {
 }
 
 const PLATFORMS: { label: string; value: SocialMediaPlatform }[] = [
-  { label: __("Instagram", "minimal-map"), value: "instagram" },
-  { label: __("X", "minimal-map"), value: "x" },
-  { label: __("Facebook", "minimal-map"), value: "facebook" },
-  { label: __("Threads", "minimal-map"), value: "threads" },
-  { label: __("YouTube", "minimal-map"), value: "youtube" },
-  { label: __("Telegram", "minimal-map"), value: "telegram" },
+  { label: __("Instagram", "emilian-scheel-minimal-map"), value: "instagram" },
+  { label: __("X", "emilian-scheel-minimal-map"), value: "x" },
+  { label: __("Facebook", "emilian-scheel-minimal-map"), value: "facebook" },
+  { label: __("Threads", "emilian-scheel-minimal-map"), value: "threads" },
+  { label: __("YouTube", "emilian-scheel-minimal-map"), value: "youtube" },
+  { label: __("Telegram", "emilian-scheel-minimal-map"), value: "telegram" },
 ];
 
 export default function SocialMediaStep({
@@ -61,7 +61,7 @@ export default function SocialMediaStep({
               <SelectControl
                 __next40pxDefaultSize
                 __nextHasNoMarginBottom
-                label={index === 0 ? __("Platform", "minimal-map") : undefined}
+                label={index === 0 ? __("Platform", "emilian-scheel-minimal-map") : undefined}
                 hideLabelFromVision={index !== 0}
                 options={PLATFORMS}
                 value={link.platform}
@@ -74,9 +74,9 @@ export default function SocialMediaStep({
               <TextControl
                 __next40pxDefaultSize
                 __nextHasNoMarginBottom
-                label={index === 0 ? __("URL", "minimal-map") : undefined}
+                label={index === 0 ? __("URL", "emilian-scheel-minimal-map") : undefined}
                 hideLabelFromVision={index !== 0}
-                placeholder={__("https://...", "minimal-map")}
+                placeholder={__("https://...", "emilian-scheel-minimal-map")}
                 value={link.url}
                 onChange={(value) => onChangeUrl(index, value)}
               />
@@ -88,7 +88,7 @@ export default function SocialMediaStep({
                 isDestructive
                 icon={<Trash2 size={18} />}
                 onClick={() => onRemovePlatform(index)}
-                label={__("Remove platform", "minimal-map")}
+                label={__("Remove platform", "emilian-scheel-minimal-map")}
               />
             </div>
           </div>
@@ -102,7 +102,7 @@ export default function SocialMediaStep({
         icon={<Plus size={18} />}
         onClick={onAddPlatform}
       >
-        {__("Add platform", "minimal-map")}
+        {__("Add platform", "emilian-scheel-minimal-map")}
       </Button>
     </div>
   );

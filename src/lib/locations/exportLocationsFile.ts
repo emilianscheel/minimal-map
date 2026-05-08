@@ -55,5 +55,5 @@ export async function exportLocationsFile(
 export function getLocationsExportErrorMessage(error: unknown): string {
 	return error instanceof Error
 		? error.message
-		: __('Locations could not be exported.', 'minimal-map');
+		: __('Locations could not be exported.', 'emilian-scheel-minimal-map');
 }

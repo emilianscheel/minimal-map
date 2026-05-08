@@ -57,7 +57,7 @@ export function useCollectionsController(
       sharedLocationCount: number,
     ): string => {
       if (!options.deleteLocations) {
-        return __("Collection deleted.", "minimal-map");
+        return __("Collection deleted.", "emilian-scheel-minimal-map");
       }
 
       const deletedLocationsMessage = sprintf(
@@ -65,20 +65,20 @@ export function useCollectionsController(
           "%d assigned location deleted",
           "%d assigned locations deleted",
           deletedLocationCount,
-          "minimal-map",
+          "emilian-scheel-minimal-map",
         ),
         deletedLocationCount,
       );
 
       if (!options.skipSharedLocations) {
         return sprintf(
-          __("Collection deleted. %s.", "minimal-map"),
+          __("Collection deleted. %s.", "emilian-scheel-minimal-map"),
           deletedLocationsMessage,
         );
       }
 
       return sprintf(
-        __("Collection deleted. %1$s. Shared locations kept: %2$d.", "minimal-map"),
+        __("Collection deleted. %1$s. Shared locations kept: %2$d.", "emilian-scheel-minimal-map"),
         deletedLocationsMessage,
         sharedLocationCount,
       );
@@ -99,7 +99,7 @@ export function useCollectionsController(
             "%d collection deleted.",
             "%d collections deleted.",
             collectionCount,
-            "minimal-map",
+            "emilian-scheel-minimal-map",
           ),
           collectionCount,
         );
@@ -110,7 +110,7 @@ export function useCollectionsController(
           "%d assigned location deleted",
           "%d assigned locations deleted",
           deletedLocationCount,
-          "minimal-map",
+          "emilian-scheel-minimal-map",
         ),
         deletedLocationCount,
       );
@@ -121,13 +121,13 @@ export function useCollectionsController(
               "%1$d collection deleted. %2$s. Shared locations kept: %3$d.",
               "%1$d collections deleted. %2$s. Shared locations kept: %3$d.",
               collectionCount,
-              "minimal-map",
+              "emilian-scheel-minimal-map",
             )
           : _n(
               "%1$d collection deleted. %2$s.",
               "%1$d collections deleted. %2$s.",
               collectionCount,
-              "minimal-map",
+              "emilian-scheel-minimal-map",
             ),
         collectionCount,
         deletedLocationsMessage,
@@ -241,7 +241,7 @@ export function useCollectionsController(
       setLoadError(
         error instanceof Error
           ? error.message
-          : __("Collections could not be loaded.", "minimal-map"),
+          : __("Collections could not be loaded.", "emilian-scheel-minimal-map"),
       );
     } finally {
       setLoading(false);
@@ -348,7 +348,7 @@ export function useCollectionsController(
 
   const onConfirm = useCallback(async (): Promise<void> => {
     if (!form.title.trim()) {
-      setSubmitError(__("Collection title is required.", "minimal-map"));
+      setSubmitError(__("Collection title is required.", "emilian-scheel-minimal-map"));
       return;
     }
 
@@ -375,16 +375,16 @@ export function useCollectionsController(
         status: "success",
         message:
           formMode === "edit"
-            ? __("Collection updated.", "minimal-map")
-            : __("Collection created.", "minimal-map"),
+            ? __("Collection updated.", "emilian-scheel-minimal-map")
+            : __("Collection created.", "emilian-scheel-minimal-map"),
       });
     } catch (error) {
       setSubmitError(
         error instanceof Error
           ? error.message
           : formMode === "edit"
-          ? __("Collection could not be updated.", "minimal-map")
-          : __("Collection could not be created.", "minimal-map"),
+          ? __("Collection could not be updated.", "emilian-scheel-minimal-map")
+          : __("Collection could not be created.", "emilian-scheel-minimal-map"),
       );
     } finally {
       setSubmitting(false);
@@ -457,7 +457,7 @@ export function useCollectionsController(
           message:
             error instanceof Error
               ? error.message
-              : __("Collection could not be deleted.", "minimal-map"),
+              : __("Collection could not be deleted.", "emilian-scheel-minimal-map"),
         });
         throw error;
       } finally {
@@ -535,7 +535,7 @@ export function useCollectionsController(
           message:
             error instanceof Error
               ? error.message
-              : __("Collections could not be deleted.", "minimal-map"),
+              : __("Collections could not be deleted.", "emilian-scheel-minimal-map"),
         });
         throw error;
       } finally {
@@ -620,7 +620,7 @@ export function useCollectionsController(
       setSelectedLocationIds([]);
       setActionNotice({
         status: "success",
-        message: __("Collection locations saved.", "minimal-map"),
+        message: __("Collection locations saved.", "emilian-scheel-minimal-map"),
       });
     } catch (error) {
       setActionNotice({
@@ -628,7 +628,7 @@ export function useCollectionsController(
         message:
           error instanceof Error
             ? error.message
-            : __("Collection locations could not be saved.", "minimal-map"),
+            : __("Collection locations could not be saved.", "emilian-scheel-minimal-map"),
       });
     } finally {
       setAssignmentSaving(false);
@@ -659,7 +659,7 @@ export function useCollectionsController(
         setSubmitError(
           error instanceof Error
             ? error.message
-            : __("Collections could not be loaded.", "minimal-map"),
+            : __("Collections could not be loaded.", "emilian-scheel-minimal-map"),
         );
       });
   }, [collectionsConfig]);
@@ -693,7 +693,7 @@ export function useCollectionsController(
     if (mergeStep === "selection") {
       if (selectedMergeCollectionIds.length < 2) {
         setSubmitError(
-          __("Select at least two collections to merge.", "minimal-map"),
+          __("Select at least two collections to merge.", "emilian-scheel-minimal-map"),
         );
         return;
       }
@@ -705,7 +705,7 @@ export function useCollectionsController(
     }
 
     if (!mergeTitle.trim()) {
-      setSubmitError(__("Collection title is required.", "minimal-map"));
+      setSubmitError(__("Collection title is required.", "emilian-scheel-minimal-map"));
       return;
     }
 
@@ -739,13 +739,13 @@ export function useCollectionsController(
       setMergeModalOpen(false);
       setActionNotice({
         status: "success",
-        message: __("Collections merged successfully.", "minimal-map"),
+        message: __("Collections merged successfully.", "emilian-scheel-minimal-map"),
       });
     } catch (error) {
       setSubmitError(
         error instanceof Error
           ? error.message
-          : __("Collections could not be merged.", "minimal-map"),
+          : __("Collections could not be merged.", "emilian-scheel-minimal-map"),
       );
     } finally {
       setMerging(false);
@@ -812,7 +812,7 @@ export function useCollectionsController(
               "%d location imported and assigned to a new collection.",
               "%d locations imported and assigned to a new collection.",
               count,
-              "minimal-map",
+              "emilian-scheel-minimal-map",
             ),
             count,
           ),
@@ -823,7 +823,7 @@ export function useCollectionsController(
           message:
             error instanceof Error
               ? error.message
-              : __("Failed to import locations.", "minimal-map"),
+              : __("Failed to import locations.", "emilian-scheel-minimal-map"),
         });
       } finally {
         setIsImporting(false);
@@ -849,7 +849,7 @@ export function useCollectionsController(
             __next40pxDefaultSize
             variant="tertiary"
             icon={<BrushCleaning size={18} strokeWidth={2} />}
-            label={__("Delete all collections", "minimal-map")}
+            label={__("Delete all collections", "emilian-scheel-minimal-map")}
             onClick={onOpenDeleteAllCollectionsModal}
             disabled={
               totalItems === 0 ||
@@ -873,7 +873,7 @@ export function useCollectionsController(
           aria-keyshortcuts={getShortcutAriaKeys(["m"])}
         >
           <span className="minimal-map-admin__button-shortcut-content">
-            <span>{__("Merge collections", "minimal-map")}</span>
+            <span>{__("Merge collections", "emilian-scheel-minimal-map")}</span>
             <KeyboardShortcut keys={["m"]} variant="neutral" />
           </span>
         </Button>
@@ -886,7 +886,7 @@ export function useCollectionsController(
           aria-keyshortcuts={getShortcutAriaKeys(["n"])}
         >
           <span className="minimal-map-admin__button-shortcut-content">
-            <span>{__("Add collection", "minimal-map")}</span>
+            <span>{__("Add collection", "emilian-scheel-minimal-map")}</span>
             <KeyboardShortcut keys={["n"]} variant="blue" />
           </span>
         </Button>
@@ -915,15 +915,15 @@ export function useCollectionsController(
     loadError,
     modalTitle:
       formMode === "edit"
-        ? __("Edit collection", "minimal-map")
-        : __("Add collection", "minimal-map"),
+        ? __("Edit collection", "emilian-scheel-minimal-map")
+        : __("Add collection", "emilian-scheel-minimal-map"),
     selectedAssignmentCollection,
     selectedLocationIds,
     submitError,
     submitLabel:
       formMode === "edit"
-        ? __("Save changes", "minimal-map")
-        : __("Add collection", "minimal-map"),
+        ? __("Save changes", "emilian-scheel-minimal-map")
+        : __("Add collection", "emilian-scheel-minimal-map"),
     view,
     dismissActionNotice,
     onCancel,

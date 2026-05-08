@@ -60,7 +60,7 @@ export default function MarkerLibraryModal({ controller }: { controller: Markers
 			setInstallError(
 				error instanceof Error
 					? error.message
-					: __('Markers could not be installed.', 'minimal-map')
+					: __('Markers could not be installed.', 'emilian-scheel-minimal-map')
 			);
 		}
 	};
@@ -78,15 +78,15 @@ export default function MarkerLibraryModal({ controller }: { controller: Markers
 	const installLabel =
 		selectedIds.size > 0
 			? sprintf(
-					_n('Install %d marker', 'Install %d markers', selectedIds.size, 'minimal-map'),
+					_n('Install %d marker', 'Install %d markers', selectedIds.size, 'emilian-scheel-minimal-map'),
 					selectedIds.size
 				)
-			: __('Install', 'minimal-map');
+			: __('Install', 'emilian-scheel-minimal-map');
 
 	return (
 		<Modal
 			className="minimal-map-admin__collection-modal minimal-map-admin__library-modal"
-			title={__('Marker library', 'minimal-map')}
+			title={__('Marker library', 'emilian-scheel-minimal-map')}
 			onRequestClose={handleClose}
 			shouldCloseOnClickOutside={!controller.isUploading}
 			shouldCloseOnEsc={!controller.isUploading}
@@ -114,14 +114,14 @@ export default function MarkerLibraryModal({ controller }: { controller: Markers
 				<SearchControl
 					__nextHasNoMarginBottom
 					className="minimal-map-admin__library-search"
-					label={__('Search markers', 'minimal-map')}
+					label={__('Search markers', 'emilian-scheel-minimal-map')}
 					value={query}
 					onChange={setQuery}
 				/>
 
 				{filtered.length === 0 ? (
 					<p className="minimal-map-admin__library-empty">
-						{__('No markers found.', 'minimal-map')}
+						{__('No markers found.', 'emilian-scheel-minimal-map')}
 					</p>
 				) : (
 					<div className="minimal-map-admin__library-grid">
@@ -160,7 +160,7 @@ export default function MarkerLibraryModal({ controller }: { controller: Markers
 						disabled={controller.isUploading}
 						data-minimal-map-dialog-ignore-enter="true"
 					>
-						{__('Cancel', 'minimal-map')}
+						{__('Cancel', 'emilian-scheel-minimal-map')}
 					</Button>
 					<Button
 						__next40pxDefaultSize

@@ -50,7 +50,7 @@ export default function AssignTagsModal({ controller }: { controller: LocationsC
 	return (
 		<Modal
 			className="minimal-map-admin__collection-modal"
-			title={__('Assign Tags', 'minimal-map')}
+			title={__('Assign Tags', 'emilian-scheel-minimal-map')}
 			onRequestClose={controller.onCloseAssignTagsModal}
 			shouldCloseOnClickOutside={!controller.isAssignmentSaving}
 			shouldCloseOnEsc={!controller.isAssignmentSaving}
@@ -66,13 +66,13 @@ export default function AssignTagsModal({ controller }: { controller: LocationsC
 						</div>
 					) : (
 						<p className="minimal-map-admin__assign-to-collection-empty">
-							{__('No tags assigned yet.', 'minimal-map')}
+							{__('No tags assigned yet.', 'emilian-scheel-minimal-map')}
 						</p>
 					)}
 				</div>
 
 				<FormTokenField
-					label={__('Tags', 'minimal-map')}
+					label={__('Tags', 'emilian-scheel-minimal-map')}
 					value={currentTagNames}
 					suggestions={tagSuggestions}
 					onChange={(tokenNames) => {
@@ -90,8 +90,8 @@ export default function AssignTagsModal({ controller }: { controller: LocationsC
 				/>
 				<p className="components-base-control__help">
 					{tagSuggestions.length === 0
-						? __('All available tags are already assigned for this selection.', 'minimal-map')
-						: __('Select only new tags to add. Existing tags stay assigned.', 'minimal-map')}
+						? __('All available tags are already assigned for this selection.', 'emilian-scheel-minimal-map')
+						: __('Select only new tags to add. Existing tags stay assigned.', 'emilian-scheel-minimal-map')}
 				</p>
 
 				<div className="minimal-map-admin__assign-to-collection-actions">
@@ -102,7 +102,7 @@ export default function AssignTagsModal({ controller }: { controller: LocationsC
 						disabled={controller.isAssignmentSaving}
 						data-minimal-map-dialog-ignore-enter="true"
 					>
-						{__('Cancel', 'minimal-map')}
+						{__('Cancel', 'emilian-scheel-minimal-map')}
 					</Button>
 					<Button
 						__next40pxDefaultSize
@@ -112,7 +112,7 @@ export default function AssignTagsModal({ controller }: { controller: LocationsC
 						disabled={controller.isAssignmentSaving || controller.assignmentTagIds.length === 0}
 					>
 						<span className="minimal-map-admin__location-dialog-button-content">
-							<span>{__('Save Tags', 'minimal-map')}</span>
+							<span>{__('Save Tags', 'emilian-scheel-minimal-map')}</span>
 							<Kbd variant="blue">Enter</Kbd>
 						</span>
 					</Button>

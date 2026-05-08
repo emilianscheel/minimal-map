@@ -7,13 +7,13 @@ export default function LogosEmptyState({ controller }: { controller: LogosContr
 	return (
 		<EmptyState
 			icon={<Image />}
-			title={__('No logos found', 'minimal-map')}
+			title={__('No logos found', 'emilian-scheel-minimal-map')}
 			description={__(
 				'Upload SVG or PNG logos to reuse the same brand asset across multiple locations. Drag and drop files here or use the upload button.',
-				'minimal-map'
+				'emilian-scheel-minimal-map'
 			)}
 			action={{
-				label: __('Upload', 'minimal-map'),
+				label: __('Upload', 'emilian-scheel-minimal-map'),
 				onClick: () => {
 					const input = document.createElement('input');
 					input.type = 'file';

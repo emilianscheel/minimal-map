@@ -7,10 +7,10 @@ export default function TagsEmptyState({ controller }: { controller: TagsControl
 	return (
 		<EmptyState
 			icon={<Tags />}
-			title={__('No tags found', 'minimal-map')}
-			description={__('Create tags to apply lightweight labels to your locations. This helps you keep your map content organized and easy to search.', 'minimal-map')}
+			title={__('No tags found', 'emilian-scheel-minimal-map')}
+			description={__('Create tags to apply lightweight labels to your locations. This helps you keep your map content organized and easy to search.', 'emilian-scheel-minimal-map')}
 			action={{
-				label: __('Add tag', 'minimal-map'),
+				label: __('Add tag', 'emilian-scheel-minimal-map'),
 				onClick: controller.onAddTag,
 				icon: <Plus />,
 			}}

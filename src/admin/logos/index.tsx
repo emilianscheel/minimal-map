@@ -33,7 +33,7 @@ export default function LogosView({ controller }: { controller: LogosController 
 					onFilesDrop={(files) => {
 						void controller.onUploadLogos(files as unknown as FileList);
 					}}
-					label={__('Drop SVG or PNG files here to upload', 'minimal-map')}
+					label={__('Drop SVG or PNG files here to upload', 'emilian-scheel-minimal-map')}
 				/>
 				{controller.isLoading ? (
 					<div className="minimal-map-admin__locations-state minimal-map-admin__locations-state--loading">

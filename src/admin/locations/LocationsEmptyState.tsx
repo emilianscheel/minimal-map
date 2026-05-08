@@ -7,10 +7,10 @@ export default function LocationsEmptyState({ controller }: { controller: Locati
 	return (
 		<EmptyState
 			icon={<MapPin />}
-			title={__('No locations found', 'minimal-map')}
-			description={__('Start adding locations to your maps. You can add them manually or import them from a file.', 'minimal-map')}
+			title={__('No locations found', 'emilian-scheel-minimal-map')}
+			description={__('Start adding locations to your maps. You can add them manually or import them from a file.', 'emilian-scheel-minimal-map')}
 			action={{
-				label: __('Add location', 'minimal-map'),
+				label: __('Add location', 'emilian-scheel-minimal-map'),
 				onClick: controller.onAddLocation,
 				icon: <Plus />,
 			}}

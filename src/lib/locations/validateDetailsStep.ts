@@ -8,15 +8,15 @@ export function validateDetailsStep(form: LocationFormState): FieldErrors {
 	const errors = createEmptyFieldErrors();
 
 	if (!form.title.trim()) {
-		errors.title = __('A title is required.', 'minimal-map');
+		errors.title = __('A title is required.', 'emilian-scheel-minimal-map');
 	}
 
 	if (form.email.trim() && !isValidEmail(form.email.trim())) {
-		errors.email = __('Enter a valid email address.', 'minimal-map');
+		errors.email = __('Enter a valid email address.', 'emilian-scheel-minimal-map');
 	}
 
 	if (form.website.trim() && !isValidWebsite(form.website.trim())) {
-		errors.website = __('Enter a valid website URL.', 'minimal-map');
+		errors.website = __('Enter a valid website URL.', 'emilian-scheel-minimal-map');
 	}
 
 	return errors;

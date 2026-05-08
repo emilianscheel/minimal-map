@@ -2,9 +2,9 @@
 # This file is distributed under the MIT.
 msgid ""
 msgstr ""
-"Project-Id-Version: Minimal Map: Store Locator & Map Block by Emilian Scheel "
+"Project-Id-Version: Emilian Scheel's Minimal Map & Store Locator "
 "0.8.3\n"
-"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/minimal-map.net\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/emilian-scheel-minimal-map\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
@@ -13,20 +13,20 @@ msgstr ""
 "POT-Creation-Date: 2026-05-05T09:31:18+00:00\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "X-Generator: WP-CLI 2.12.0\n"
-"X-Domain: minimal-map\n"
+"X-Domain: emilian-scheel-minimal-map\n"
 
 #. Plugin Name of the plugin
-#: minimal-map-net-locator-block-emiliansch.php
-msgid "Minimal Map: Store Locator & Map Block by Emilian Scheel"
+#: emilian-scheel-minimal-map.php
+msgid "Emilian Scheel's Minimal Map & Store Locator"
 msgstr ""
 
 #. Description of the plugin
-#: minimal-map-net-locator-block-emiliansch.php
+#: emilian-scheel-minimal-map.php
 msgid "Gutenberg-first native map block and admin shell for WordPress."
 msgstr ""
 
 #. Author of the plugin
-#: minimal-map-net-locator-block-emiliansch.php
+#: emilian-scheel-minimal-map.php
 msgid "Emilian Scheel"
 msgstr ""
 

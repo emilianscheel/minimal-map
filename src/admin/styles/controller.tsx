@@ -211,7 +211,7 @@ export function useStylesController(
 			setActionNotice({
 				status: 'success',
 				message: sprintf(
-					__('Created a new theme from %s.', 'minimal-map'),
+					__('Created a new theme from %s.', 'emilian-scheel-minimal-map'),
 					template.label
 				),
 			});
@@ -220,7 +220,7 @@ export function useStylesController(
 			setActionNotice({
 				status: 'error',
 				message: sprintf(
-					__('Failed to create a theme from %s.', 'minimal-map'),
+					__('Failed to create a theme from %s.', 'emilian-scheel-minimal-map'),
 					template.label
 				),
 			});
@@ -265,7 +265,7 @@ export function useStylesController(
 				setActionNotice({
 					status: 'warning',
 					message: sprintf(
-						__('Imported theme with fallback default colors for: %s', 'minimal-map'),
+						__('Imported theme with fallback default colors for: %s', 'emilian-scheel-minimal-map'),
 						warningLabels
 					),
 				});
@@ -274,7 +274,7 @@ export function useStylesController(
 			console.error('Failed to import theme', error);
 			setActionNotice({
 				status: 'error',
-				message: __('Failed to import theme.', 'minimal-map'),
+				message: __('Failed to import theme.', 'emilian-scheel-minimal-map'),
 			});
 		} finally {
 			setIsLoading(false);
@@ -298,14 +298,14 @@ export function useStylesController(
 			} catch (err) {
 				setActionNotice({
 					status: 'error',
-					message: err instanceof Error ? err.message : __('Invalid JSON file.', 'minimal-map'),
+					message: err instanceof Error ? err.message : __('Invalid JSON file.', 'emilian-scheel-minimal-map'),
 				});
 			}
 		};
 		reader.onerror = () => {
 			setActionNotice({
 				status: 'error',
-				message: __('Failed to read the selected file.', 'minimal-map'),
+				message: __('Failed to read the selected file.', 'emilian-scheel-minimal-map'),
 			});
 		};
 		reader.readAsText(file);
@@ -358,7 +358,7 @@ export function useStylesController(
 					__next40pxDefaultSize
 				>
 					<span className="minimal-map-admin__button-shortcut-content">
-						<span>{__('Save Theme', 'minimal-map')}</span>
+						<span>{__('Save Theme', 'emilian-scheel-minimal-map')}</span>
 						<KeyboardShortcut keys={['s']} variant="blue" />
 					</span>
 				</Button>

@@ -23,7 +23,7 @@ const DEFAULT_CONFIG: AdminCommandsConfig = {
 function registerSectionCommand( section: AdminCommandSection ): void {
 	dispatch( commandsStore ).registerCommand( {
 		name: `minimal-map/go-to-${ section.view }`,
-		label: sprintf( __( 'Minimal Map: Store Locator & Map Block: %s', 'minimal-map' ), section.title ),
+		label: sprintf( __( 'Minimal Map: Store Locator & Map Block: %s', 'emilian-scheel-minimal-map' ), section.title ),
 		icon: page,
 		category: 'view',
 		keywords: section.keywords,
@@ -85,7 +85,7 @@ const ACTION_HANDLERS: Record<
 function getLocationsExportErrorMessage(error: unknown): string {
 	return error instanceof Error
 		? error.message
-		: __('Locations could not be exported.', 'minimal-map');
+		: __('Locations could not be exported.', 'emilian-scheel-minimal-map');
 }
 
 function getCommandActionErrorMessage(action: AdminCommandAction, error: unknown): string {

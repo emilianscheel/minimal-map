@@ -40,20 +40,20 @@ export default function TagModal({ controller }: { controller: TagsController })
 					<TextControl
 						__next40pxDefaultSize
 						__nextHasNoMarginBottom
-						label={__('Name', 'minimal-map')}
+						label={__('Name', 'emilian-scheel-minimal-map')}
 						value={controller.form.name}
 						onChange={(value) => controller.onChangeFormValue('name', value)}
 						autoFocus
 					/>
 
 					<ColorControl
-						label={__('Background Color', 'minimal-map')}
+						label={__('Background Color', 'emilian-scheel-minimal-map')}
 						color={controller.form.background_color}
 						onChange={(value) => controller.onChangeFormValue('background_color', value)}
 					/>
 
 					<ColorControl
-						label={__('Foreground Color', 'minimal-map')}
+						label={__('Foreground Color', 'emilian-scheel-minimal-map')}
 						color={controller.form.foreground_color}
 						onChange={(value) => controller.onChangeFormValue('foreground_color', value)}
 					/>
@@ -66,7 +66,7 @@ export default function TagModal({ controller }: { controller: TagsController })
 						onClick={controller.onCancel}
 						disabled={controller.isSubmitting}
 					>
-						{__('Cancel', 'minimal-map')}
+						{__('Cancel', 'emilian-scheel-minimal-map')}
 					</Button>
 					<Button
 						__next40pxDefaultSize

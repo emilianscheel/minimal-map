@@ -44,7 +44,7 @@ export default function CollectionModal({ controller }: { controller: Collection
 				) : null}
 				<TextControl
 					__next40pxDefaultSize
-					label={__('Title', 'minimal-map')}
+					label={__('Title', 'emilian-scheel-minimal-map')}
 					value={controller.form.title}
 					onChange={(value) => controller.onChangeFormValue('title', value)}
 				/>
@@ -56,7 +56,7 @@ export default function CollectionModal({ controller }: { controller: Collection
 						disabled={controller.isSubmitting}
 						data-minimal-map-dialog-ignore-enter="true"
 					>
-						{__('Cancel', 'minimal-map')}
+						{__('Cancel', 'emilian-scheel-minimal-map')}
 					</Button>
 					<Button
 						__next40pxDefaultSize

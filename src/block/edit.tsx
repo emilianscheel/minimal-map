@@ -333,19 +333,19 @@ function ZoomControlColorSettings({
   return (
     <div style={{ display: "grid", gap: "8px", marginBottom: "16px" }}>
       <CompactColorDropdown
-        label={__("Background", "minimal-map")}
+        label={__("Background", "emilian-scheel-minimal-map")}
         value={backgroundColor}
         defaultValue={defaultBackgroundColor}
         onChange={(value) => onChange("zoomControlsBackgroundColor", value)}
       />
       <CompactColorDropdown
-        label={__("Foreground", "minimal-map")}
+        label={__("Foreground", "emilian-scheel-minimal-map")}
         value={iconColor}
         defaultValue={defaultIconColor}
         onChange={(value) => onChange("zoomControlsIconColor", value)}
       />
       <CompactColorDropdown
-        label={__("Border", "minimal-map")}
+        label={__("Border", "emilian-scheel-minimal-map")}
         value={borderColor}
         defaultValue={defaultBorderColor}
         onChange={(value) => onChange("zoomControlsBorderColor", value)}
@@ -373,13 +373,13 @@ function CreditsColorSettings({
   return (
     <div style={{ display: "grid", gap: "8px", marginBottom: "16px" }}>
       <CompactColorDropdown
-        label={__("Background", "minimal-map")}
+        label={__("Background", "emilian-scheel-minimal-map")}
         value={backgroundColor}
         defaultValue={defaultBackgroundColor}
         onChange={(value) => onChange("creditsBackgroundColor", value)}
       />
       <CompactColorDropdown
-        label={__("Foreground", "minimal-map")}
+        label={__("Foreground", "emilian-scheel-minimal-map")}
         value={foregroundColor}
         defaultValue={defaultForegroundColor}
         onChange={(value) => onChange("creditsForegroundColor", value)}
@@ -422,31 +422,31 @@ function SearchPanelColorSettings({
   return (
     <div style={{ display: "grid", gap: "8px", marginBottom: "16px" }}>
       <CompactColorDropdown
-        label={__("Background Primary", "minimal-map")}
+        label={__("Background Primary", "emilian-scheel-minimal-map")}
         value={backgroundPrimary}
         defaultValue={defaults.backgroundPrimary}
         onChange={(value) => onChange("searchPanelBackgroundPrimary", value)}
       />
       <CompactColorDropdown
-        label={__("Background Secondary", "minimal-map")}
+        label={__("Background Secondary", "emilian-scheel-minimal-map")}
         value={backgroundSecondary}
         defaultValue={defaults.backgroundSecondary}
         onChange={(value) => onChange("searchPanelBackgroundSecondary", value)}
       />
       <CompactColorDropdown
-        label={__("Background Hover", "minimal-map")}
+        label={__("Background Hover", "emilian-scheel-minimal-map")}
         value={backgroundHover}
         defaultValue={defaults.backgroundHover}
         onChange={(value) => onChange("searchPanelBackgroundHover", value)}
       />
       <CompactColorDropdown
-        label={__("Foreground Primary", "minimal-map")}
+        label={__("Foreground Primary", "emilian-scheel-minimal-map")}
         value={foregroundPrimary}
         defaultValue={defaults.foregroundPrimary}
         onChange={(value) => onChange("searchPanelForegroundPrimary", value)}
       />
       <CompactColorDropdown
-        label={__("Foreground Secondary", "minimal-map")}
+        label={__("Foreground Secondary", "emilian-scheel-minimal-map")}
         value={foregroundSecondary}
         defaultValue={defaults.foregroundSecondary}
         onChange={(value) => onChange("searchPanelForegroundSecondary", value)}
@@ -474,13 +474,13 @@ function GoogleMapsButtonColorSettings({
   return (
     <div style={{ display: "grid", gap: "8px", marginBottom: "16px" }}>
       <CompactColorDropdown
-        label={__("Background", "minimal-map")}
+        label={__("Background", "emilian-scheel-minimal-map")}
         value={backgroundColor}
         defaultValue={defaultBackgroundColor}
         onChange={(value) => onChange("googleMapsButtonBackgroundColor", value)}
       />
       <CompactColorDropdown
-        label={__("Foreground", "minimal-map")}
+        label={__("Foreground", "emilian-scheel-minimal-map")}
         value={foregroundColor}
         defaultValue={defaultForegroundColor}
         onChange={(value) => onChange("googleMapsButtonForegroundColor", value)}
@@ -515,19 +515,19 @@ function OpeningHoursColorSettings({
   return (
     <div style={{ display: "grid", gap: "8px", marginBottom: "16px" }}>
       <CompactColorDropdown
-        label={__("Open", "minimal-map")}
+        label={__("Open", "emilian-scheel-minimal-map")}
         value={openColor}
         defaultValue={defaultOpenColor}
         onChange={(value) => onChange("openingHoursOpenColor", value)}
       />
       <CompactColorDropdown
-        label={__("Closed", "minimal-map")}
+        label={__("Closed", "emilian-scheel-minimal-map")}
         value={closedColor}
         defaultValue={defaultClosedColor}
         onChange={(value) => onChange("openingHoursClosedColor", value)}
       />
       <CompactColorDropdown
-        label={__("Soon", "minimal-map")}
+        label={__("Soon", "emilian-scheel-minimal-map")}
         value={soonColor}
         defaultValue={defaultSoonColor}
         onChange={(value) => onChange("openingHoursSoonColor", value)}
@@ -555,13 +555,13 @@ function ClusterColorSettings({
   return (
     <div style={{ display: "grid", gap: "8px", marginBottom: "16px" }}>
       <CompactColorDropdown
-        label={__("Background", "minimal-map")}
+        label={__("Background", "emilian-scheel-minimal-map")}
         value={backgroundColor}
         defaultValue={defaultBackgroundColor}
         onChange={(value) => onChange("clusterBackgroundColor", value)}
       />
       <CompactColorDropdown
-        label={__("Foreground", "minimal-map")}
+        label={__("Foreground", "emilian-scheel-minimal-map")}
         value={foregroundColor}
         defaultValue={defaultForegroundColor}
         onChange={(value) => onChange("clusterForegroundColor", value)}
@@ -644,9 +644,9 @@ function ThemeDropdown({
   return (
     <OptionDropdown
       className="minimal-map-editor__theme-dropdown"
-      emptyLabel={__("Default", "minimal-map")}
-      groupLabel={__("Switch Theme", "minimal-map")}
-      label={__("Style Theme", "minimal-map")}
+      emptyLabel={__("Default", "emilian-scheel-minimal-map")}
+      groupLabel={__("Switch Theme", "emilian-scheel-minimal-map")}
+      label={__("Style Theme", "emilian-scheel-minimal-map")}
       onChange={onChange}
       options={themes.map((theme) => ({
         label: theme.label,
@@ -669,9 +669,9 @@ function StylePresetDropdown({
   return (
     <OptionDropdown
       className="minimal-map-editor__style-preset-dropdown"
-      emptyLabel={__("Select style preset", "minimal-map")}
-      groupLabel={__("Switch Style Preset", "minimal-map")}
-      label={__("Style Preset", "minimal-map")}
+      emptyLabel={__("Select style preset", "emilian-scheel-minimal-map")}
+      groupLabel={__("Switch Style Preset", "emilian-scheel-minimal-map")}
+      label={__("Style Preset", "emilian-scheel-minimal-map")}
       onChange={onChange}
       options={options}
       selectedValue={selectedValue}
@@ -691,12 +691,12 @@ function CollectionDropdown({
   const selectedCollection = options.find((option) => option.id === selectedId);
   const selectedLabel =
     selectedId > 0
-      ? selectedCollection?.title || __("Collection unavailable", "minimal-map")
-      : __("All locations", "minimal-map");
+      ? selectedCollection?.title || __("Collection unavailable", "emilian-scheel-minimal-map")
+      : __("All locations", "emilian-scheel-minimal-map");
 
   return (
     <div style={{ display: "grid", gap: "8px", marginBottom: "16px" }}>
-      <span>{__("Collection", "minimal-map")}</span>
+      <span>{__("Collection", "emilian-scheel-minimal-map")}</span>
       <Dropdown
         className="minimal-map-editor__collection-dropdown"
         popoverProps={{
@@ -722,7 +722,7 @@ function CollectionDropdown({
           </Button>
         )}
         renderContent={({ onClose }) => (
-          <MenuGroup label={__("Switch Collection", "minimal-map")}>
+          <MenuGroup label={__("Switch Collection", "emilian-scheel-minimal-map")}>
             <MenuItem
               onClick={() => {
                 onChange(0);
@@ -730,7 +730,7 @@ function CollectionDropdown({
               }}
             >
               <HStack justify="space-between" style={{ width: "100%" }}>
-                <span>{__("All locations", "minimal-map")}</span>
+                <span>{__("All locations", "emilian-scheel-minimal-map")}</span>
                 {selectedId === 0 && (
                   <CheckIcon
                     size={16}
@@ -775,7 +775,7 @@ function CollectionDropdown({
                   fontSize: "12px",
                 }}
               >
-                {__("No collections available.", "minimal-map")}
+                {__("No collections available.", "emilian-scheel-minimal-map")}
               </div>
             ) : null}
           </MenuGroup>
@@ -805,7 +805,7 @@ function SelectedTagsControl({
   return (
     <div style={{ display: "grid", gap: "8px", marginBottom: "16px" }}>
       <FormTokenField
-        label={__("Tags", "minimal-map")}
+        label={__("Tags", "emilian-scheel-minimal-map")}
         value={currentTagNames}
         suggestions={suggestionTags.map((tag) => tag.name)}
         onChange={(tokenNames) =>
@@ -1138,7 +1138,7 @@ export default function Edit({ attributes, setAttributes }: EditProps) {
               style={{ marginBottom: "12px", opacity: 0.5 }}
             />
             <p style={{ margin: 0 }}>
-              {__("Minimal Map Preview", "minimal-map")}
+              {__("Minimal Map Preview", "emilian-scheel-minimal-map")}
             </p>
           </div>
         )}
@@ -1149,7 +1149,7 @@ export default function Edit({ attributes, setAttributes }: EditProps) {
   return (
     <>
       <InspectorControls group="settings">
-        <PanelBody title={__("Data", "minimal-map")} initialOpen={false}>
+        <PanelBody title={__("Data", "emilian-scheel-minimal-map")} initialOpen={false}>
           <CollectionDropdown
             options={runtimeConfig.collections ?? []}
             selectedId={attributes.collectionId}
@@ -1162,23 +1162,23 @@ export default function Edit({ attributes, setAttributes }: EditProps) {
             onChange={(value) => setAttributes({ selectedTagIds: value })}
           />
         </PanelBody>
-        <PanelBody title={__("Frame", "minimal-map")} initialOpen={false}>
+        <PanelBody title={__("Frame", "emilian-scheel-minimal-map")} initialOpen={false}>
           <TextControl
-            label={__("Center Latitude", "minimal-map")}
+            label={__("Center Latitude", "emilian-scheel-minimal-map")}
             type="number"
             step="0.000001"
             value={attributes.centerLat}
             onChange={updateNumberAttribute("centerLat")}
           />
           <TextControl
-            label={__("Center Longitude", "minimal-map")}
+            label={__("Center Longitude", "emilian-scheel-minimal-map")}
             type="number"
             step="0.000001"
             value={attributes.centerLng}
             onChange={updateNumberAttribute("centerLng")}
           />
           <RangeControl
-            label={__("Zoom Level", "minimal-map")}
+            label={__("Zoom Level", "emilian-scheel-minimal-map")}
             value={attributes.zoom}
             onChange={updateZoom}
             min={0}
@@ -1186,35 +1186,35 @@ export default function Edit({ attributes, setAttributes }: EditProps) {
             step={0.5}
           />
         </PanelBody>
-        <PanelBody title={__("Features", "minimal-map")} initialOpen={false}>
+        <PanelBody title={__("Features", "emilian-scheel-minimal-map")} initialOpen={false}>
           <ToggleControl
-            label={__("Show Zoom Controls", "minimal-map")}
+            label={__("Show Zoom Controls", "emilian-scheel-minimal-map")}
             checked={attributes.showZoomControls}
             onChange={(value: boolean) =>
               setAttributes({ showZoomControls: value })
             }
           />
           <ToggleControl
-            label={__("Allow Zoom via Scroll", "minimal-map")}
+            label={__("Allow Zoom via Scroll", "emilian-scheel-minimal-map")}
             checked={attributes.scrollZoom}
             onChange={(value: boolean) => setAttributes({ scrollZoom: value })}
           />
           <ToggleControl
-            label={__("Allow Two-Finger Zoom", "minimal-map")}
+            label={__("Allow Two-Finger Zoom", "emilian-scheel-minimal-map")}
             checked={attributes.mobileTwoFingerZoom}
             help={__(
               "When enabled, one can zoom the map using two fingers on mobile devices.",
-              "minimal-map",
+              "emilian-scheel-minimal-map",
             )}
             onChange={(value: boolean) =>
               setAttributes({ mobileTwoFingerZoom: value })
             }
           />
           <ToggleControl
-            label={__("Require Two Fingers to Move", "minimal-map")}
+            label={__("Require Two Fingers to Move", "emilian-scheel-minimal-map")}
             help={__(
               "When enabled, one finger scrolls the page, while two fingers are required to move the map.",
-              "minimal-map",
+              "emilian-scheel-minimal-map",
             )}
             checked={attributes.cooperativeGestures}
             onChange={(value: boolean) =>
@@ -1222,12 +1222,12 @@ export default function Edit({ attributes, setAttributes }: EditProps) {
             }
           />
           <ToggleControl
-            label={__("Allow Search", "minimal-map")}
+            label={__("Allow Search", "emilian-scheel-minimal-map")}
             checked={attributes.allowSearch}
             onChange={(value: boolean) => setAttributes({ allowSearch: value })}
           />
           <ToggleControl
-            label={__("Enable Live Location Search", "minimal-map")}
+            label={__("Enable Live Location Search", "emilian-scheel-minimal-map")}
             checked={attributes.enableLiveLocationSearch}
             disabled={!canEnableLiveLocationSearch}
             help={
@@ -1235,7 +1235,7 @@ export default function Edit({ attributes, setAttributes }: EditProps) {
                 ? undefined
                 : __(
                     "Enable search first to use the live location result card.",
-                    "minimal-map",
+                    "emilian-scheel-minimal-map",
                   )
             }
             onChange={(value: boolean) =>
@@ -1243,7 +1243,7 @@ export default function Edit({ attributes, setAttributes }: EditProps) {
             }
           />
           <ToggleControl
-            label={__("Enable Live Location Map", "minimal-map")}
+            label={__("Enable Live Location Map", "emilian-scheel-minimal-map")}
             checked={attributes.enableLiveLocationMap}
             disabled={!canEnableLiveLocationMap}
             help={
@@ -1251,7 +1251,7 @@ export default function Edit({ attributes, setAttributes }: EditProps) {
                 ? undefined
                 : __(
                     "Enable search and zoom controls first to use the live location map button.",
-                    "minimal-map",
+                    "emilian-scheel-minimal-map",
                   )
             }
             onChange={(value: boolean) =>
@@ -1259,59 +1259,59 @@ export default function Edit({ attributes, setAttributes }: EditProps) {
             }
           />
           <ToggleControl
-            label={__("Enable Tags Filter", "minimal-map")}
+            label={__("Enable Tags Filter", "emilian-scheel-minimal-map")}
             checked={attributes.enableCategoryFilter}
             onChange={(value: boolean) =>
               setAttributes({ enableCategoryFilter: value })
             }
           />
           <ToggleControl
-            label={__("Enable Opened Quick Filter", "minimal-map")}
+            label={__("Enable Opened Quick Filter", "emilian-scheel-minimal-map")}
             checked={attributes.enableOpenedFilter}
             onChange={(value: boolean) =>
               setAttributes({ enableOpenedFilter: value })
             }
           />
           <ToggleControl
-            label={__("Enable Marker Clustering", "minimal-map")}
+            label={__("Enable Marker Clustering", "emilian-scheel-minimal-map")}
             checked={attributes.enableMarkerClustering}
             onChange={(value: boolean) =>
               setAttributes({ enableMarkerClustering: value })
             }
           />
           <ToggleControl
-            label={__("Google Maps Navigation", "minimal-map")}
+            label={__("Google Maps Navigation", "emilian-scheel-minimal-map")}
             checked={attributes.googleMapsNavigation}
             onChange={(value: boolean) =>
               setAttributes({ googleMapsNavigation: value })
             }
           />
           <ToggleControl
-            label={__("In-map Location Card", "minimal-map")}
+            label={__("In-map Location Card", "emilian-scheel-minimal-map")}
             checked={attributes.inMapLocationCard}
             onChange={(value: boolean) =>
               setAttributes({ inMapLocationCard: value })
             }
           />
         </PanelBody>
-        <PanelBody title={__("Embed", "minimal-map")} initialOpen={false}>
+        <PanelBody title={__("Embed", "emilian-scheel-minimal-map")} initialOpen={false}>
           <TextControl
-            label={__("Iframe Font Family", "minimal-map")}
+            label={__("Iframe Font Family", "emilian-scheel-minimal-map")}
             value={effectiveFontFamily}
             help={__(
               "Iframes cannot inherit the font family from the parent page automatically. Paste a CSS font-family stack here to match it, or clear the field to use the WordPress theme default.",
-              "minimal-map",
+              "emilian-scheel-minimal-map",
             )}
             onChange={(value: string) => setAttributes({ fontFamily: value })}
           />
           <TextareaControl
-            label={__("Iframe Snippet", "minimal-map")}
+            label={__("Iframe Snippet", "emilian-scheel-minimal-map")}
             value={iframeSnippet}
             readOnly
             rows={6}
             help={__(
               "The snippet updates automatically when this block configuration changes.",
-              "minimal-map",
+              "emilian-scheel-minimal-map",
             )}
             onChange={() => {}}
           />
@@ -1329,19 +1329,19 @@ export default function Edit({ attributes, setAttributes }: EditProps) {
               onClick={copyIframeSnippet}
               disabled={!iframeSnippet}
             >
-              {__("Copy Snippet", "minimal-map")}
+              {__("Copy Snippet", "emilian-scheel-minimal-map")}
             </Button>
             {copyState === "copied" ? (
-              <span>{__("Copied", "minimal-map")}</span>
+              <span>{__("Copied", "emilian-scheel-minimal-map")}</span>
             ) : null}
             {copyState === "error" ? (
-              <span>{__("Copy failed", "minimal-map")}</span>
+              <span>{__("Copy failed", "emilian-scheel-minimal-map")}</span>
             ) : null}
           </div>
         </PanelBody>
       </InspectorControls>
       <InspectorControls group="styles">
-        <PanelBody title={__("Appearance", "minimal-map")} initialOpen={false}>
+        <PanelBody title={__("Appearance", "emilian-scheel-minimal-map")} initialOpen={false}>
           <ThemeDropdown
             themes={runtimeConfig.styleThemes ?? []}
             selectedSlug={attributes.styleThemeSlug}
@@ -1354,7 +1354,7 @@ export default function Edit({ attributes, setAttributes }: EditProps) {
           />
           <UnitControl
             className="minimal-map-editor__height-control components-border-radius-control__unit-control"
-            label={__("Height", "minimal-map")}
+            label={__("Height", "emilian-scheel-minimal-map")}
             value={getHeightControlValue(
               attributes.height ?? 420,
               attributes.heightUnit || "px",
@@ -1365,7 +1365,7 @@ export default function Edit({ attributes, setAttributes }: EditProps) {
           />
           <UnitControl
             className="minimal-map-editor__height-control components-border-radius-control__unit-control"
-            label={__("Height Mobile", "minimal-map")}
+            label={__("Height Mobile", "emilian-scheel-minimal-map")}
             value={getHeightControlValue(
               attributes.heightMobile,
               attributes.heightMobileUnit || attributes.heightUnit || "px",
@@ -1376,7 +1376,7 @@ export default function Edit({ attributes, setAttributes }: EditProps) {
           />
         </PanelBody>
         <PanelBody
-          title={__("Zoom Controls", "minimal-map")}
+          title={__("Zoom Controls", "emilian-scheel-minimal-map")}
           initialOpen={false}
         >
           <ZoomControlColorSettings
@@ -1396,7 +1396,7 @@ export default function Edit({ attributes, setAttributes }: EditProps) {
           />
           <ToggleGroupControl
             __next40pxDefaultSize
-            label={__("Position", "minimal-map")}
+            label={__("Position", "emilian-scheel-minimal-map")}
             value={attributes.zoomControlsPosition}
             isBlock
             onChange={(nextValue?: string | number) => {
@@ -1419,7 +1419,7 @@ export default function Edit({ attributes, setAttributes }: EditProps) {
           <div className="minimal-map-editor__box-control">
             <BoxControl
               __next40pxDefaultSize
-              label={__("Padding", "minimal-map")}
+              label={__("Padding", "emilian-scheel-minimal-map")}
               values={attributes.zoomControlsPadding}
               units={HEIGHT_UNITS}
               inputProps={BOX_CONTROL_INPUT_PROPS}
@@ -1433,7 +1433,7 @@ export default function Edit({ attributes, setAttributes }: EditProps) {
           <div className="minimal-map-editor__box-control">
             <BoxControl
               __next40pxDefaultSize
-              label={__("Outer Margin", "minimal-map")}
+              label={__("Outer Margin", "emilian-scheel-minimal-map")}
               values={attributes.zoomControlsOuterMargin}
               units={HEIGHT_UNITS}
               inputProps={BOX_CONTROL_INPUT_PROPS}
@@ -1458,7 +1458,7 @@ export default function Edit({ attributes, setAttributes }: EditProps) {
             />
           </div>
           <UnitControl
-            label={__("Border Width", "minimal-map")}
+            label={__("Border Width", "emilian-scheel-minimal-map")}
             value={attributes.zoomControlsBorderWidth}
             onChange={updateBorderWidth}
             units={BORDER_UNITS}
@@ -1466,7 +1466,7 @@ export default function Edit({ attributes, setAttributes }: EditProps) {
           />
         </PanelBody>
         <PanelBody
-          title={__("Search Panel", "minimal-map")}
+          title={__("Search Panel", "emilian-scheel-minimal-map")}
           initialOpen={false}
         >
           <SearchPanelColorSettings
@@ -1496,7 +1496,7 @@ export default function Edit({ attributes, setAttributes }: EditProps) {
           <div className="minimal-map-editor__box-control">
             <BoxControl
               __next40pxDefaultSize
-              label={__("Outer Margin", "minimal-map")}
+              label={__("Outer Margin", "emilian-scheel-minimal-map")}
               values={attributes.searchPanelOuterMargin}
               units={HEIGHT_UNITS}
               inputProps={BOX_CONTROL_INPUT_PROPS}
@@ -1510,7 +1510,7 @@ export default function Edit({ attributes, setAttributes }: EditProps) {
           </div>
           <div ref={searchPanelInputRadiusRef} style={{ marginBottom: "8px" }}>
             <BorderRadiusControl
-              label={__("Border Radius Input", "minimal-map")}
+              label={__("Border Radius Input", "emilian-scheel-minimal-map")}
               onChange={(value: string | BorderRadiusValues) => {
                 setAttributes({
                   searchPanelBorderRadiusInput:
@@ -1524,7 +1524,7 @@ export default function Edit({ attributes, setAttributes }: EditProps) {
           </div>
           <div ref={searchPanelCardRadiusRef} style={{ marginBottom: "8px" }}>
             <BorderRadiusControl
-              label={__("Border Radius Card", "minimal-map")}
+              label={__("Border Radius Card", "emilian-scheel-minimal-map")}
               onChange={(value: string | BorderRadiusValues) => {
                 setAttributes({
                   searchPanelBorderRadiusCard:
@@ -1537,21 +1537,21 @@ export default function Edit({ attributes, setAttributes }: EditProps) {
             />
           </div>
           <UnitControl
-            label={__("Card Gap", "minimal-map")}
+            label={__("Card Gap", "emilian-scheel-minimal-map")}
             value={attributes.searchPanelCardGap}
             onChange={updateSearchPanelCardGap}
             units={HEIGHT_UNITS}
             size="__unstable-large"
           />
           <UnitControl
-            label={__("Panel Width", "minimal-map")}
+            label={__("Panel Width", "emilian-scheel-minimal-map")}
             value={attributes.searchPanelWidth}
             onChange={updateSearchPanelWidth}
             units={HEIGHT_UNITS}
             size="__unstable-large"
           />
         </PanelBody>
-        <PanelBody title={__("Credits", "minimal-map")} initialOpen={false}>
+        <PanelBody title={__("Credits", "emilian-scheel-minimal-map")} initialOpen={false}>
           <CreditsColorSettings
             backgroundColor={attributes.creditsBackgroundColor}
             foregroundColor={attributes.creditsForegroundColor}
@@ -1565,7 +1565,7 @@ export default function Edit({ attributes, setAttributes }: EditProps) {
           />
           <div ref={creditsRadiusRef} style={{ marginBottom: "8px" }}>
             <BorderRadiusControl
-              label={__("Border Radius", "minimal-map")}
+              label={__("Border Radius", "emilian-scheel-minimal-map")}
               onChange={(value: string | BorderRadiusValues) => {
                 setAttributes({
                   creditsBorderRadius: stringifyBorderRadiusValue(value),
@@ -1577,7 +1577,7 @@ export default function Edit({ attributes, setAttributes }: EditProps) {
           <div className="minimal-map-editor__box-control">
             <BoxControl
               __next40pxDefaultSize
-              label={__("Padding", "minimal-map")}
+              label={__("Padding", "emilian-scheel-minimal-map")}
               values={attributes.creditsPadding}
               units={HEIGHT_UNITS}
               inputProps={BOX_CONTROL_INPUT_PROPS}
@@ -1591,7 +1591,7 @@ export default function Edit({ attributes, setAttributes }: EditProps) {
           <div className="minimal-map-editor__box-control">
             <BoxControl
               __next40pxDefaultSize
-              label={__("Outer Margin", "minimal-map")}
+              label={__("Outer Margin", "emilian-scheel-minimal-map")}
               values={attributes.creditsOuterMargin}
               units={HEIGHT_UNITS}
               inputProps={BOX_CONTROL_INPUT_PROPS}
@@ -1604,7 +1604,7 @@ export default function Edit({ attributes, setAttributes }: EditProps) {
           </div>
         </PanelBody>
         <PanelBody
-          title={__("Google Maps Button", "minimal-map")}
+          title={__("Google Maps Button", "emilian-scheel-minimal-map")}
           initialOpen={false}
         >
           <GoogleMapsButtonColorSettings
@@ -1624,7 +1624,7 @@ export default function Edit({ attributes, setAttributes }: EditProps) {
           />
           <div ref={googleMapsButtonRadiusRef} style={{ marginBottom: "8px" }}>
             <BorderRadiusControl
-              label={__("Border Radius", "minimal-map")}
+              label={__("Border Radius", "emilian-scheel-minimal-map")}
               onChange={(value: string | BorderRadiusValues) => {
                 setAttributes({
                   googleMapsButtonBorderRadius:
@@ -1639,7 +1639,7 @@ export default function Edit({ attributes, setAttributes }: EditProps) {
           <div className="minimal-map-editor__box-control">
             <BoxControl
               __next40pxDefaultSize
-              label={__("Padding", "minimal-map")}
+              label={__("Padding", "emilian-scheel-minimal-map")}
               values={attributes.googleMapsButtonPadding}
               units={HEIGHT_UNITS}
               inputProps={BOX_CONTROL_INPUT_PROPS}
@@ -1652,7 +1652,7 @@ export default function Edit({ attributes, setAttributes }: EditProps) {
             />
           </div>
           <ToggleControl
-            label={__("Show icon", "minimal-map")}
+            label={__("Show icon", "emilian-scheel-minimal-map")}
             checked={attributes.googleMapsButtonShowIcon}
             onChange={(value: boolean) =>
               setAttributes({ googleMapsButtonShowIcon: value })
@@ -1660,7 +1660,7 @@ export default function Edit({ attributes, setAttributes }: EditProps) {
           />
         </PanelBody>
         <PanelBody
-          title={__("Opening Hours", "minimal-map")}
+          title={__("Opening Hours", "emilian-scheel-minimal-map")}
           initialOpen={false}
         >
           <OpeningHoursColorSettings
@@ -1679,7 +1679,7 @@ export default function Edit({ attributes, setAttributes }: EditProps) {
             onChange={(key, value) => setAttributes({ [key]: value })}
           />
         </PanelBody>
-        <PanelBody title={__("Cluster", "minimal-map")} initialOpen={false}>
+        <PanelBody title={__("Cluster", "emilian-scheel-minimal-map")} initialOpen={false}>
           <ClusterColorSettings
             backgroundColor={attributes.clusterBackgroundColor}
             foregroundColor={attributes.clusterForegroundColor}

@@ -50,22 +50,22 @@ function renderQueryType(value: AnalyticsQueryType | ''): JSX.Element | string {
 	switch (value) {
 		case 'address':
 			return renderLabelWithIcon(
-				__('Address', 'minimal-map'),
+				__('Address', 'emilian-scheel-minimal-map'),
 				<MapPinned className="minimal-map-admin__analytics-label-icon" size={14} strokeWidth={1.8} aria-hidden="true" />
 			);
 		case 'coordinates':
 			return renderLabelWithIcon(
-				__('Coordinates', 'minimal-map'),
+				__('Coordinates', 'emilian-scheel-minimal-map'),
 				<LocateFixed className="minimal-map-admin__analytics-label-icon" size={14} strokeWidth={1.8} aria-hidden="true" />
 			);
 		case 'live_location':
 			return renderLabelWithIcon(
-				__('Live location', 'minimal-map'),
+				__('Live location', 'emilian-scheel-minimal-map'),
 				<Navigation className="minimal-map-admin__analytics-label-icon" size={14} strokeWidth={1.8} aria-hidden="true" />
 			);
 		case 'text':
 			return renderLabelWithIcon(
-				__('Text', 'minimal-map'),
+				__('Text', 'emilian-scheel-minimal-map'),
 				<Type className="minimal-map-admin__analytics-label-icon" size={14} strokeWidth={1.8} aria-hidden="true" />
 			);
 		default:
@@ -77,17 +77,17 @@ function renderInteractionSource(value: AnalyticsInteractionSource | ''): JSX.El
 	switch (value) {
 		case 'map_marker':
 			return renderLabelWithIcon(
-				__('Map marker', 'minimal-map'),
+				__('Map marker', 'emilian-scheel-minimal-map'),
 				<MapPin className="minimal-map-admin__analytics-label-icon" size={14} strokeWidth={1.8} aria-hidden="true" />
 			);
 		case 'in_map_card':
 			return renderLabelWithIcon(
-				__('In-map card', 'minimal-map'),
+				__('In-map card', 'emilian-scheel-minimal-map'),
 				<MousePointerClick className="minimal-map-admin__analytics-label-icon" size={14} strokeWidth={1.8} aria-hidden="true" />
 			);
 		case 'search_panel':
 			return renderLabelWithIcon(
-				__('Search panel', 'minimal-map'),
+				__('Search panel', 'emilian-scheel-minimal-map'),
 				<PanelLeft className="minimal-map-admin__analytics-label-icon" size={14} strokeWidth={1.8} aria-hidden="true" />
 			);
 		default:
@@ -99,32 +99,32 @@ function renderActionType(value: AnalyticsActionType | ''): JSX.Element | string
 	switch (value) {
 		case 'opening_hours':
 			return renderLabelWithIcon(
-				__('Opening hours', 'minimal-map'),
+				__('Opening hours', 'emilian-scheel-minimal-map'),
 				<Clock3 className="minimal-map-admin__analytics-label-icon" size={14} strokeWidth={1.8} aria-hidden="true" />
 			);
 		case 'telephone':
 			return renderLabelWithIcon(
-				__('Phone', 'minimal-map'),
+				__('Phone', 'emilian-scheel-minimal-map'),
 				<Phone className="minimal-map-admin__analytics-label-icon" size={14} strokeWidth={1.8} aria-hidden="true" />
 			);
 		case 'email':
 			return renderLabelWithIcon(
-				__('Email', 'minimal-map'),
+				__('Email', 'emilian-scheel-minimal-map'),
 				<Mail className="minimal-map-admin__analytics-label-icon" size={14} strokeWidth={1.8} aria-hidden="true" />
 			);
 		case 'website':
 			return renderLabelWithIcon(
-				__('Website', 'minimal-map'),
+				__('Website', 'emilian-scheel-minimal-map'),
 				<Globe className="minimal-map-admin__analytics-label-icon" size={14} strokeWidth={1.8} aria-hidden="true" />
 			);
 		case 'social_media':
 			return renderLabelWithIcon(
-				__('Social media', 'minimal-map'),
+				__('Social media', 'emilian-scheel-minimal-map'),
 				<Share2 className="minimal-map-admin__analytics-label-icon" size={14} strokeWidth={1.8} aria-hidden="true" />
 			);
 		case 'google_maps':
 			return renderLabelWithIcon(
-				__('Google Maps', 'minimal-map'),
+				__('Google Maps', 'emilian-scheel-minimal-map'),
 				<Navigation className="minimal-map-admin__analytics-label-icon" size={14} strokeWidth={1.8} aria-hidden="true" />
 			);
 		default:
@@ -180,7 +180,7 @@ function useAnalyticsFields(
 			return [
 				{
 					id: 'location_title',
-					label: __('Location', 'minimal-map'),
+					label: __('Location', 'emilian-scheel-minimal-map'),
 					enableGlobalSearch: true,
 					enableHiding: false,
 					enableSorting: false,
@@ -189,7 +189,7 @@ function useAnalyticsFields(
 				},
 				{
 					id: 'interaction_source',
-					label: __('Source', 'minimal-map'),
+					label: __('Source', 'emilian-scheel-minimal-map'),
 					enableHiding: false,
 					enableSorting: false,
 					filterBy: false,
@@ -197,7 +197,7 @@ function useAnalyticsFields(
 				},
 				{
 					id: 'query_text',
-					label: __('Query', 'minimal-map'),
+					label: __('Query', 'emilian-scheel-minimal-map'),
 					enableHiding: false,
 					enableSorting: false,
 					filterBy: false,
@@ -205,7 +205,7 @@ function useAnalyticsFields(
 				},
 				{
 					id: 'occurred_at_gmt',
-					label: __('Time', 'minimal-map'),
+					label: __('Time', 'emilian-scheel-minimal-map'),
 					enableHiding: false,
 					enableSorting: false,
 					filterBy: false,
@@ -218,7 +218,7 @@ function useAnalyticsFields(
 			return [
 				{
 					id: 'location_title',
-					label: __('Location', 'minimal-map'),
+					label: __('Location', 'emilian-scheel-minimal-map'),
 					enableGlobalSearch: true,
 					enableHiding: false,
 					enableSorting: false,
@@ -227,7 +227,7 @@ function useAnalyticsFields(
 				},
 				{
 					id: 'action_type',
-					label: __('Action', 'minimal-map'),
+					label: __('Action', 'emilian-scheel-minimal-map'),
 					enableHiding: false,
 					enableSorting: false,
 					filterBy: false,
@@ -235,7 +235,7 @@ function useAnalyticsFields(
 				},
 				{
 					id: 'interaction_source',
-					label: __('Source', 'minimal-map'),
+					label: __('Source', 'emilian-scheel-minimal-map'),
 					enableHiding: false,
 					enableSorting: false,
 					filterBy: false,
@@ -243,7 +243,7 @@ function useAnalyticsFields(
 				},
 				{
 					id: 'action_target',
-					label: __('Target', 'minimal-map'),
+					label: __('Target', 'emilian-scheel-minimal-map'),
 					enableHiding: false,
 					enableSorting: false,
 					filterBy: false,
@@ -251,7 +251,7 @@ function useAnalyticsFields(
 				},
 				{
 					id: 'occurred_at_gmt',
-					label: __('Time', 'minimal-map'),
+					label: __('Time', 'emilian-scheel-minimal-map'),
 					enableHiding: false,
 					enableSorting: false,
 					filterBy: false,
@@ -263,7 +263,7 @@ function useAnalyticsFields(
 		return [
 			{
 				id: 'query_text',
-				label: __('Query', 'minimal-map'),
+				label: __('Query', 'emilian-scheel-minimal-map'),
 				enableGlobalSearch: true,
 				enableHiding: false,
 				enableSorting: false,
@@ -272,7 +272,7 @@ function useAnalyticsFields(
 			},
 			{
 				id: 'query_type',
-				label: __('Query type', 'minimal-map'),
+				label: __('Query type', 'emilian-scheel-minimal-map'),
 				enableHiding: false,
 				enableSorting: false,
 				filterBy: false,
@@ -280,7 +280,7 @@ function useAnalyticsFields(
 			},
 			{
 				id: 'result_count',
-				label: __('Results', 'minimal-map'),
+				label: __('Results', 'emilian-scheel-minimal-map'),
 				enableHiding: false,
 				enableSorting: false,
 				filterBy: false,
@@ -288,7 +288,7 @@ function useAnalyticsFields(
 			},
 			{
 				id: 'nearest_distance_meters',
-				label: __('Nearest store', 'minimal-map'),
+				label: __('Nearest store', 'emilian-scheel-minimal-map'),
 				enableHiding: false,
 				enableSorting: false,
 				filterBy: false,
@@ -296,7 +296,7 @@ function useAnalyticsFields(
 			},
 			{
 				id: 'occurred_at_gmt',
-				label: __('Time', 'minimal-map'),
+				label: __('Time', 'emilian-scheel-minimal-map'),
 				enableHiding: false,
 				enableSorting: false,
 				filterBy: false,

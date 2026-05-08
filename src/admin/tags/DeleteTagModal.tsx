@@ -25,7 +25,7 @@ export default function DeleteTagModal({ controller }: { controller: TagsControl
 
 	return (
 		<Modal
-			title={__('Delete Tag', 'minimal-map')}
+			title={__('Delete Tag', 'emilian-scheel-minimal-map')}
 			onRequestClose={controller.onCloseDeleteModal}
 			shouldCloseOnClickOutside={!controller.isRowActionPending}
 			shouldCloseOnEsc={!controller.isRowActionPending}
@@ -33,7 +33,7 @@ export default function DeleteTagModal({ controller }: { controller: TagsControl
 		>
 			<div className="minimal-map-admin__collection-delete-dialog">
 				<p className="minimal-map-admin__collection-delete-dialog-copy">
-					{__('Delete this tag? This action cannot be undone.', 'minimal-map')}
+					{__('Delete this tag? This action cannot be undone.', 'emilian-scheel-minimal-map')}
 				</p>
 				<p className="minimal-map-admin__collection-delete-dialog-title">
 					{controller.selectedTag.name}
@@ -45,7 +45,7 @@ export default function DeleteTagModal({ controller }: { controller: TagsControl
 						disabled={controller.isRowActionPending}
 						data-minimal-map-dialog-ignore-enter="true"
 					>
-						{__('Cancel', 'minimal-map')}
+						{__('Cancel', 'emilian-scheel-minimal-map')}
 					</Button>
 					<Button
 						variant="primary"
@@ -55,7 +55,7 @@ export default function DeleteTagModal({ controller }: { controller: TagsControl
 						disabled={controller.isRowActionPending}
 					>
 						<span className="minimal-map-admin__location-dialog-button-content">
-							<span>{__('Delete Tag', 'minimal-map')}</span>
+							<span>{__('Delete Tag', 'emilian-scheel-minimal-map')}</span>
 							<Kbd variant="red">Enter</Kbd>
 						</span>
 					</Button>

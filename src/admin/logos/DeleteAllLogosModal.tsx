@@ -44,7 +44,7 @@ export default function DeleteAllLogosModal({
 
 	return (
 		<Modal
-			title={__('Delete all logos', 'minimal-map')}
+			title={__('Delete all logos', 'emilian-scheel-minimal-map')}
 			onRequestClose={controller.onCloseDeleteAllLogosModal}
 			shouldCloseOnClickOutside={!controller.isDeletingAllLogos}
 			shouldCloseOnEsc={!controller.isDeletingAllLogos}
@@ -62,7 +62,7 @@ export default function DeleteAllLogosModal({
 							'Are you sure you want to delete %d logo? This action cannot be undone.',
 							'Are you sure you want to delete %d logos? This action cannot be undone.',
 							controller.totalItems,
-							'minimal-map'
+							'emilian-scheel-minimal-map'
 						),
 						controller.totalItems
 					)}
@@ -74,7 +74,7 @@ export default function DeleteAllLogosModal({
 						disabled={controller.isDeletingAllLogos}
 						data-minimal-map-dialog-ignore-enter="true"
 					>
-						{__('Cancel', 'minimal-map')}
+						{__('Cancel', 'emilian-scheel-minimal-map')}
 					</Button>
 					<Button
 						variant="primary"
@@ -86,7 +86,7 @@ export default function DeleteAllLogosModal({
 						disabled={controller.isDeletingAllLogos}
 					>
 						<span className="minimal-map-admin__location-dialog-button-content">
-							<span>{__('Delete all logos', 'minimal-map')}</span>
+							<span>{__('Delete all logos', 'emilian-scheel-minimal-map')}</span>
 							<Kbd variant="red">Enter</Kbd>
 						</span>
 					</Button>

@@ -36,18 +36,18 @@ export function DeleteThemeModal({ isOpen, onRequestClose, onDelete, theme }: De
 
 	return (
 		<Modal
-			title={__('Delete Theme', 'minimal-map')}
+			title={__('Delete Theme', 'emilian-scheel-minimal-map')}
 			onRequestClose={onRequestClose}
 			overlayClassName="minimal-map-admin__modal-overlay"
 			onKeyDown={handleKeyDown}
 		>
 			<div className="minimal-map-admin__location-dialog">
 				<p>
-					{__('Are you sure you want to delete the theme:', 'minimal-map')} <strong>{theme.label}</strong>?
+					{__('Are you sure you want to delete the theme:', 'emilian-scheel-minimal-map')} <strong>{theme.label}</strong>?
 				</p>
 				<div className="minimal-map-admin__location-dialog-actions">
 					<Button variant="tertiary" onClick={onRequestClose} disabled={isDeleting}>
-						{__('Cancel', 'minimal-map')}
+						{__('Cancel', 'emilian-scheel-minimal-map')}
 					</Button>
 					<Button
 						variant="primary"
@@ -57,7 +57,7 @@ export function DeleteThemeModal({ isOpen, onRequestClose, onDelete, theme }: De
 						disabled={isDeleting}
 					>
 						<span className="minimal-map-admin__location-dialog-button-content">
-							<span>{__('Delete Theme', 'minimal-map')}</span>
+							<span>{__('Delete Theme', 'emilian-scheel-minimal-map')}</span>
 							<Kbd variant="red">Enter</Kbd>
 						</span>
 					</Button>

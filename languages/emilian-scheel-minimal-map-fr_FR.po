@@ -3,7 +3,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Minimal Map 0.8.3\n"
-"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/minimal-map-net-locator-block-emiliansch\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/emilian-scheel-minimal-map\n"
 "POT-Creation-Date: 2026-04-17T05:43:01+00:00\n"
 "PO-Revision-Date: 2026-03-29 21:00+0100\n"
 "Last-Translator: Emilian Scheel\n"
@@ -13,11 +13,11 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: Emilian Scheel\n"
-"X-Domain: minimal-map\n"
+"X-Domain: emilian-scheel-minimal-map\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 
 #. Plugin Name of the plugin
-#: minimal-map-net-locator-block-emiliansch.php includes/admin/class-admin-menu.php:112
+#: emilian-scheel-minimal-map.php includes/admin/class-admin-menu.php:112
 #: includes/admin/class-admin-menu.php:113
 #: includes/blocks/class-map-block.php:57
 #: includes/class-iframe-endpoint.php:111
@@ -25,14 +25,14 @@ msgid "Minimal Map"
 msgstr "Minimal Map"
 
 #. Description of the plugin
-#: minimal-map-net-locator-block-emiliansch.php
+#: emilian-scheel-minimal-map.php
 msgid "Gutenberg-first native map block and admin shell for WordPress."
 msgstr ""
 "Bloc de carte natif orienté Gutenberg et interface d'administration pour "
 "WordPress."
 
 #. Author of the plugin
-#: minimal-map-net-locator-block-emiliansch.php
+#: emilian-scheel-minimal-map.php
 msgid "Emilian Scheel"
 msgstr "Emilian Scheel"
 

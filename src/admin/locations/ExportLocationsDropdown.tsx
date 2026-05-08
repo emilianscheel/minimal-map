@@ -28,14 +28,14 @@ export function ExportLocationsDropdown({
 					aria-expanded={isOpen}
 					variant="tertiary"
 					icon={<Download size={18} />}
-					label={__('Export locations', 'minimal-map')}
+					label={__('Export locations', 'emilian-scheel-minimal-map')}
 					__next40pxDefaultSize
 				>
 					<ChevronDown size={16} />
 				</Button>
 			)}
 			renderContent={({ onClose }) => (
-				<MenuGroup label={__('Export Options', 'minimal-map')}>
+				<MenuGroup label={__('Export Options', 'emilian-scheel-minimal-map')}>
 					<MenuItem
 						onClick={() => {
 							onExport();
@@ -43,7 +43,7 @@ export function ExportLocationsDropdown({
 						}}
 						icon={<FileSpreadsheet size={16} />}
 					>
-						{__('Download as CSV', 'minimal-map')}
+						{__('Download as CSV', 'emilian-scheel-minimal-map')}
 					</MenuItem>
 					<MenuItem
 						onClick={() => {
@@ -52,7 +52,7 @@ export function ExportLocationsDropdown({
 						}}
 						icon={<FileSpreadsheet size={16} />}
 					>
-						{__('Download as Excel', 'minimal-map')}
+						{__('Download as Excel', 'emilian-scheel-minimal-map')}
 					</MenuItem>
 					<MenuItem
 						onClick={() => {
@@ -61,7 +61,7 @@ export function ExportLocationsDropdown({
 						}}
 						icon={<FileSpreadsheet size={16} />}
 					>
-						{__('Download as JSON', 'minimal-map')}
+						{__('Download as JSON', 'emilian-scheel-minimal-map')}
 					</MenuItem>
 					<MenuItem
 						onClick={() => {
@@ -70,7 +70,7 @@ export function ExportLocationsDropdown({
 						}}
 						icon={<FileSpreadsheet size={16} />}
 					>
-						{__('Download Example CSV', 'minimal-map')}
+						{__('Download Example CSV', 'emilian-scheel-minimal-map')}
 					</MenuItem>
 					<MenuItem
 						onClick={() => {
@@ -79,7 +79,7 @@ export function ExportLocationsDropdown({
 						}}
 						icon={<FileSpreadsheet size={16} />}
 					>
-						{__('Download Example Excel', 'minimal-map')}
+						{__('Download Example Excel', 'emilian-scheel-minimal-map')}
 					</MenuItem>
 					<MenuItem
 						onClick={() => {
@@ -88,7 +88,7 @@ export function ExportLocationsDropdown({
 						}}
 						icon={<FileSpreadsheet size={16} />}
 					>
-						{__('Download Example JSON', 'minimal-map')}
+						{__('Download Example JSON', 'emilian-scheel-minimal-map')}
 					</MenuItem>
 				</MenuGroup>
 			)}

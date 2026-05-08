@@ -15,13 +15,13 @@ export interface CsvImportMappingRow {
 }
 
 const OPENING_HOURS_DAY_LABELS: Record<OpeningHoursDayKey, string> = {
-	monday: __('Mon', 'minimal-map'),
-	tuesday: __('Tue', 'minimal-map'),
-	wednesday: __('Wed', 'minimal-map'),
-	thursday: __('Thu', 'minimal-map'),
-	friday: __('Fri', 'minimal-map'),
-	saturday: __('Sat', 'minimal-map'),
-	sunday: __('Sun', 'minimal-map'),
+	monday: __('Mon', 'emilian-scheel-minimal-map'),
+	tuesday: __('Tue', 'emilian-scheel-minimal-map'),
+	wednesday: __('Wed', 'emilian-scheel-minimal-map'),
+	thursday: __('Thu', 'emilian-scheel-minimal-map'),
+	friday: __('Fri', 'emilian-scheel-minimal-map'),
+	saturday: __('Sat', 'emilian-scheel-minimal-map'),
+	sunday: __('Sun', 'emilian-scheel-minimal-map'),
 };
 
 export const CSV_OPENING_HOURS_MAPPING_FIELDS = OPENING_HOURS_DAY_ORDER.map((dayKey) => ({
@@ -31,14 +31,14 @@ export const CSV_OPENING_HOURS_MAPPING_FIELDS = OPENING_HOURS_DAY_ORDER.map((day
 
 export const CSV_OPENING_HOURS_NOTES_FIELD = {
 	key: 'opening_hours_notes',
-	label: __('Opening hours notes', 'minimal-map'),
+	label: __('Opening hours notes', 'emilian-scheel-minimal-map'),
 } as const;
 
 export function buildCsvImportColumnOptions(
 	parsedCsv: ParsedLocationImportData | null,
 	columnIndexes?: number[]
 ): CsvImportColumnOption[] {
-	const options: CsvImportColumnOption[] = [{ label: __('None', 'minimal-map'), value: '' }];
+	const options: CsvImportColumnOption[] = [{ label: __('None', 'emilian-scheel-minimal-map'), value: '' }];
 
 	if (!parsedCsv) {
 		return options;
@@ -49,7 +49,7 @@ export function buildCsvImportColumnOptions(
 
 	indexes.forEach((index) => {
 		const header = parsedCsv.headers[index] ?? '';
-		const baseLabel = header || `${__('Column', 'minimal-map')} ${index + 1}`;
+		const baseLabel = header || `${__('Column', 'emilian-scheel-minimal-map')} ${index + 1}`;
 		const exampleValue = parsedCsv.rows
 			.map((row) => row[index]?.trim() ?? '')
 			.find((value) => value.length > 0);

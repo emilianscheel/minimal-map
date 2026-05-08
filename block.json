@@ -7,7 +7,7 @@
   "category": "widgets",
   "icon": "location-alt",
   "description": "Render a minimalist MapLibre-powered map.",
-  "textdomain": "minimal-map",
+  "textdomain": "emilian-scheel-minimal-map",
   "attributes": {
     "centerLat": {
       "type": "number",

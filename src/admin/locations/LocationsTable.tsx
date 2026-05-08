@@ -46,12 +46,12 @@ function useLocationFields(controller: LocationsController): Field<LocationRecor
 		{ label: string; icon: any; color: string }
 	> = useMemo(
 		() => ({
-			instagram: { label: __('Instagram', 'minimal-map'), icon: Instagram, color: '#E4405F' },
-			x: { label: __('X', 'minimal-map'), icon: Twitter, color: '#000000' },
-			facebook: { label: __('Facebook', 'minimal-map'), icon: Facebook, color: '#1877F2' },
-			threads: { label: __('Threads', 'minimal-map'), icon: AtSign, color: '#000000' },
-			youtube: { label: __('YouTube', 'minimal-map'), icon: Youtube, color: '#FF0000' },
-			telegram: { label: __('Telegram', 'minimal-map'), icon: Send, color: '#26A5E4' },
+			instagram: { label: __('Instagram', 'emilian-scheel-minimal-map'), icon: Instagram, color: '#E4405F' },
+			x: { label: __('X', 'emilian-scheel-minimal-map'), icon: Twitter, color: '#000000' },
+			facebook: { label: __('Facebook', 'emilian-scheel-minimal-map'), icon: Facebook, color: '#1877F2' },
+			threads: { label: __('Threads', 'emilian-scheel-minimal-map'), icon: AtSign, color: '#000000' },
+			youtube: { label: __('YouTube', 'emilian-scheel-minimal-map'), icon: Youtube, color: '#FF0000' },
+			telegram: { label: __('Telegram', 'emilian-scheel-minimal-map'), icon: Send, color: '#26A5E4' },
 		}),
 		[]
 	);
@@ -60,7 +60,7 @@ function useLocationFields(controller: LocationsController): Field<LocationRecor
 		() => [
 			{
 				id: 'map_preview',
-				label: __('Map preview', 'minimal-map'),
+				label: __('Map preview', 'emilian-scheel-minimal-map'),
 				header: (
 					<span
 						className="minimal-map-admin__location-mini-map-header"
@@ -88,7 +88,7 @@ function useLocationFields(controller: LocationsController): Field<LocationRecor
 			},
 			{
 				id: 'logo',
-				label: __('Logo', 'minimal-map'),
+				label: __('Logo', 'emilian-scheel-minimal-map'),
 				enableHiding: false,
 				enableSorting: false,
 				filterBy: false,
@@ -114,7 +114,7 @@ function useLocationFields(controller: LocationsController): Field<LocationRecor
 			},
 			{
 				id: 'title',
-				label: __('Title', 'minimal-map'),
+				label: __('Title', 'emilian-scheel-minimal-map'),
 				enableHiding: false,
 				enableSorting: true,
 				filterBy: false,
@@ -128,7 +128,7 @@ function useLocationFields(controller: LocationsController): Field<LocationRecor
 			},
 			{
 				id: 'contact',
-				label: __('Contact', 'minimal-map'),
+				label: __('Contact', 'emilian-scheel-minimal-map'),
 				enableHiding: true,
 				enableSorting: false,
 				filterBy: false,
@@ -158,7 +158,7 @@ function useLocationFields(controller: LocationsController): Field<LocationRecor
 			},
 			{
 				id: 'social_media',
-				label: __('Social Media', 'minimal-map'),
+				label: __('Social Media', 'emilian-scheel-minimal-map'),
 				enableHiding: true,
 				enableSorting: false,
 				filterBy: false,
@@ -198,7 +198,7 @@ function useLocationFields(controller: LocationsController): Field<LocationRecor
 			},
 			{
 				id: 'opening_hours',
-				label: __('Opening hours', 'minimal-map'),
+				label: __('Opening hours', 'emilian-scheel-minimal-map'),
 				enableHiding: false,
 				enableSorting: false,
 				filterBy: false,
@@ -222,7 +222,7 @@ function useLocationFields(controller: LocationsController): Field<LocationRecor
 							)}
 							{summary.hiddenLineCount > 0 ? (
 								<span className="minimal-map-admin__location-opening-hours-more">
-									{sprintf(__('+%d more', 'minimal-map'), summary.hiddenLineCount)}
+									{sprintf(__('+%d more', 'emilian-scheel-minimal-map'), summary.hiddenLineCount)}
 								</span>
 							) : null}
 							{item.opening_hours_notes.trim() ? (
@@ -230,7 +230,7 @@ function useLocationFields(controller: LocationsController): Field<LocationRecor
 									className="minimal-map-admin__location-opening-hours-note"
 									title={item.opening_hours_notes}
 								>
-									{__('Note', 'minimal-map')}
+									{__('Note', 'emilian-scheel-minimal-map')}
 								</span>
 							) : null}
 						</div>
@@ -239,7 +239,7 @@ function useLocationFields(controller: LocationsController): Field<LocationRecor
 			},
 			{
 				id: 'address',
-				label: __('Address', 'minimal-map'),
+				label: __('Address', 'emilian-scheel-minimal-map'),
 				enableHiding: false,
 				enableSorting: false,
 				filterBy: false,
@@ -263,7 +263,7 @@ function useLocationFields(controller: LocationsController): Field<LocationRecor
 			},
 			{
 				id: 'collections',
-				label: __('Collections', 'minimal-map'),
+				label: __('Collections', 'emilian-scheel-minimal-map'),
 				enableHiding: false,
 				enableSorting: false,
 				filterBy: false,
@@ -294,7 +294,7 @@ function useLocationFields(controller: LocationsController): Field<LocationRecor
 			},
 			{
 				id: 'tags',
-				label: __('Tags', 'minimal-map'),
+				label: __('Tags', 'emilian-scheel-minimal-map'),
 				enableHiding: false,
 				enableSorting: false,
 				filterBy: false,
@@ -337,7 +337,7 @@ export function createLocationActions(controller: LocationsController): Action<L
 	return [
 		{
 			id: 'duplicate-location',
-			label: __('Duplicate', 'minimal-map'),
+			label: __('Duplicate', 'emilian-scheel-minimal-map'),
 			icon: <Copy size={16} strokeWidth={2} />,
 			context: 'single',
 			disabled: controller.isRowActionPending,
@@ -352,7 +352,7 @@ export function createLocationActions(controller: LocationsController): Action<L
 		},
 		{
 			id: 'edit-location',
-			label: __('Edit', 'minimal-map'),
+			label: __('Edit', 'emilian-scheel-minimal-map'),
 			icon: <Pencil size={16} strokeWidth={2} />,
 			context: 'single',
 			disabled: controller.isRowActionPending,
@@ -368,7 +368,7 @@ export function createLocationActions(controller: LocationsController): Action<L
 		{
 			id: 'toggle-location-visibility',
 			label: (items) =>
-				items[0]?.is_hidden ? __('Show', 'minimal-map') : __('Hide', 'minimal-map'),
+				items[0]?.is_hidden ? __('Show', 'emilian-scheel-minimal-map') : __('Hide', 'emilian-scheel-minimal-map'),
 			icon: <Eye size={16} strokeWidth={2} />,
 			context: 'single',
 			disabled: controller.isRowActionPending || controller.isAssignmentSaving,
@@ -387,7 +387,7 @@ export function createLocationActions(controller: LocationsController): Action<L
 		},
 		{
 			id: 'retrieve-location',
-			label: __('Retrieve location', 'minimal-map'),
+			label: __('Retrieve location', 'emilian-scheel-minimal-map'),
 			icon: <LocateFixed size={16} strokeWidth={2} />,
 			context: 'single',
 			disabled: controller.isRowActionPending,
@@ -402,7 +402,7 @@ export function createLocationActions(controller: LocationsController): Action<L
 		},
 		{
 			id: 'assign-location-to-collection',
-			label: __('Assign to Collection', 'minimal-map'),
+			label: __('Assign to Collection', 'emilian-scheel-minimal-map'),
 			icon: <Layers3 size={16} strokeWidth={2} />,
 			context: 'single',
 			disabled: controller.isRowActionPending || controller.isAssignmentSaving,
@@ -419,9 +419,9 @@ export function createLocationActions(controller: LocationsController): Action<L
 			id: 'quick-assign-logo',
 			label: (items) => {
 				const quickLogo = items[0] ? getQuickLogo(items[0]) : null;
-				const logoLabel = quickLogo?.title || __('Untitled logo', 'minimal-map');
+				const logoLabel = quickLogo?.title || __('Untitled logo', 'emilian-scheel-minimal-map');
 
-				return sprintf(__('Assign %s as logo', 'minimal-map'), logoLabel);
+				return sprintf(__('Assign %s as logo', 'emilian-scheel-minimal-map'), logoLabel);
 			},
 			icon: <Image size={16} strokeWidth={2} />,
 			context: 'single',
@@ -443,8 +443,8 @@ export function createLocationActions(controller: LocationsController): Action<L
 			id: 'assign-logo',
 			label: (items) =>
 				items.length === 1
-					? __('Assign Logo', 'minimal-map')
-					: __('Assign Logos', 'minimal-map'),
+					? __('Assign Logo', 'emilian-scheel-minimal-map')
+					: __('Assign Logos', 'emilian-scheel-minimal-map'),
 			icon: <Image size={16} strokeWidth={2} />,
 			context: 'single',
 			disabled: controller.isRowActionPending || controller.isAssignmentSaving,
@@ -461,9 +461,9 @@ export function createLocationActions(controller: LocationsController): Action<L
 			id: 'quick-assign-marker',
 			label: (items) => {
 				const quickMarker = items[0] ? getQuickMarker(items[0]) : null;
-				const markerLabel = quickMarker?.title || __('Untitled marker', 'minimal-map');
+				const markerLabel = quickMarker?.title || __('Untitled marker', 'emilian-scheel-minimal-map');
 
-				return sprintf(__('Assign %s as marker', 'minimal-map'), markerLabel);
+				return sprintf(__('Assign %s as marker', 'emilian-scheel-minimal-map'), markerLabel);
 			},
 			icon: <MapPin size={16} strokeWidth={2} />,
 			context: 'single',
@@ -485,8 +485,8 @@ export function createLocationActions(controller: LocationsController): Action<L
 			id: 'assign-marker',
 			label: (items) =>
 				items.length === 1
-					? __('Assign Marker', 'minimal-map')
-					: __('Assign Markers', 'minimal-map'),
+					? __('Assign Marker', 'emilian-scheel-minimal-map')
+					: __('Assign Markers', 'emilian-scheel-minimal-map'),
 			icon: <MapPin size={16} strokeWidth={2} />,
 			context: 'single',
 			disabled: controller.isRowActionPending || controller.isAssignmentSaving,
@@ -501,7 +501,7 @@ export function createLocationActions(controller: LocationsController): Action<L
 		},
 		{
 			id: 'assign-opening-hours',
-			label: () => __('Assign Opening Hours', 'minimal-map'),
+			label: () => __('Assign Opening Hours', 'emilian-scheel-minimal-map'),
 			icon: <Clock size={16} strokeWidth={2} />,
 			context: 'single',
 			disabled: controller.isRowActionPending || controller.isAssignmentSaving,
@@ -518,9 +518,9 @@ export function createLocationActions(controller: LocationsController): Action<L
 			id: 'quick-assign-tags',
 			label: (items) => {
 				const quickTag = items[0] ? getQuickTag(items[0]) : null;
-				const tagLabel = quickTag?.name || __('Untitled tag', 'minimal-map');
+				const tagLabel = quickTag?.name || __('Untitled tag', 'emilian-scheel-minimal-map');
 
-				return sprintf(__('Assign %s as tag', 'minimal-map'), tagLabel);
+				return sprintf(__('Assign %s as tag', 'emilian-scheel-minimal-map'), tagLabel);
 			},
 			icon: <Tags size={16} strokeWidth={2} />,
 			context: 'single',
@@ -542,8 +542,8 @@ export function createLocationActions(controller: LocationsController): Action<L
 			id: 'assign-tags',
 			label: (items) =>
 				items.length === 1
-					? __('Assign Tag', 'minimal-map')
-					: __('Assign Tags', 'minimal-map'),
+					? __('Assign Tag', 'emilian-scheel-minimal-map')
+					: __('Assign Tags', 'emilian-scheel-minimal-map'),
 			icon: <Tags size={16} strokeWidth={2} />,
 			context: 'single',
 			disabled: controller.isRowActionPending || controller.isAssignmentSaving,
@@ -558,7 +558,7 @@ export function createLocationActions(controller: LocationsController): Action<L
 		},
 		{
 			id: 'hide-all-locations',
-			label: __('Hide all', 'minimal-map'),
+			label: __('Hide all', 'emilian-scheel-minimal-map'),
 			icon: <EyeOff size={16} strokeWidth={2} />,
 			context: 'list',
 			disabled: controller.isRowActionPending || controller.isAssignmentSaving,
@@ -574,7 +574,7 @@ export function createLocationActions(controller: LocationsController): Action<L
 		},
 		{
 			id: 'show-all-locations',
-			label: __('Show all', 'minimal-map'),
+			label: __('Show all', 'emilian-scheel-minimal-map'),
 			icon: <Eye size={16} strokeWidth={2} />,
 			context: 'list',
 			disabled: controller.isRowActionPending || controller.isAssignmentSaving,
@@ -590,7 +590,7 @@ export function createLocationActions(controller: LocationsController): Action<L
 		},
 		{
 			id: 'bulk-remove-logo',
-			label: __('Remove Logos', 'minimal-map'),
+			label: __('Remove Logos', 'emilian-scheel-minimal-map'),
 			icon: <Image size={16} strokeWidth={2} />,
 			context: 'list',
 			disabled: controller.isRowActionPending || controller.isAssignmentSaving,
@@ -606,7 +606,7 @@ export function createLocationActions(controller: LocationsController): Action<L
 		},
 		{
 			id: 'bulk-remove-marker',
-			label: __('Remove Markers', 'minimal-map'),
+			label: __('Remove Markers', 'emilian-scheel-minimal-map'),
 			icon: <MapPin size={16} strokeWidth={2} />,
 			context: 'list',
 			disabled: controller.isRowActionPending || controller.isAssignmentSaving,
@@ -624,8 +624,8 @@ export function createLocationActions(controller: LocationsController): Action<L
 			id: 'set-marker-color',
 			label: (items) =>
 				items.length === 1
-					? __('Set Marker Color', 'minimal-map')
-					: __('Set Marker Colors', 'minimal-map'),
+					? __('Set Marker Color', 'emilian-scheel-minimal-map')
+					: __('Set Marker Colors', 'emilian-scheel-minimal-map'),
 			icon: <Palette size={16} strokeWidth={2} />,
 			context: 'list',
 			disabled: controller.isRowActionPending || controller.isAssignmentSaving,
@@ -641,7 +641,7 @@ export function createLocationActions(controller: LocationsController): Action<L
 		},
 		{
 			id: 'bulk-remove-tags',
-			label: __('Remove Tags', 'minimal-map'),
+			label: __('Remove Tags', 'emilian-scheel-minimal-map'),
 			icon: <Tags size={16} strokeWidth={2} />,
 			context: 'list',
 			disabled: controller.isRowActionPending || controller.isAssignmentSaving,
@@ -657,16 +657,16 @@ export function createLocationActions(controller: LocationsController): Action<L
 		},
 		({
 			id: 'delete-location',
-			label: __('Delete', 'minimal-map'),
+			label: __('Delete', 'emilian-scheel-minimal-map'),
 			icon: <Trash2 size={16} strokeWidth={2} />,
 			isDestructive: true,
 			disabled: controller.isRowActionPending,
 			supportsBulk: true,
 			modalHeader: (items: LocationRecord[]) =>
 				items.length === 1
-					? __('Delete location', 'minimal-map')
+					? __('Delete location', 'emilian-scheel-minimal-map')
 					: sprintf(
-						_n( 'Delete %d location', 'Delete %d locations', items.length, 'minimal-map' ),
+						_n( 'Delete %d location', 'Delete %d locations', items.length, 'emilian-scheel-minimal-map' ),
 						items.length
 					),
 			RenderModal: ({

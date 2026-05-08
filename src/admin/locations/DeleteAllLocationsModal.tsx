@@ -44,7 +44,7 @@ export default function DeleteAllLocationsModal({
 
 	return (
 		<Modal
-			title={__('Delete all locations', 'minimal-map')}
+			title={__('Delete all locations', 'emilian-scheel-minimal-map')}
 			onRequestClose={controller.onCloseDeleteAllLocationsModal}
 			shouldCloseOnClickOutside={!controller.isDeletingAllLocations}
 			shouldCloseOnEsc={!controller.isDeletingAllLocations}
@@ -62,7 +62,7 @@ export default function DeleteAllLocationsModal({
 							'Are you sure you want to delete %d location? This action cannot be undone.',
 							'Are you sure you want to delete %d locations? This action cannot be undone.',
 							controller.totalItems,
-							'minimal-map'
+							'emilian-scheel-minimal-map'
 						),
 						controller.totalItems
 					)}
@@ -74,7 +74,7 @@ export default function DeleteAllLocationsModal({
 						disabled={controller.isDeletingAllLocations}
 						data-minimal-map-dialog-ignore-enter="true"
 					>
-						{__('Cancel', 'minimal-map')}
+						{__('Cancel', 'emilian-scheel-minimal-map')}
 					</Button>
 					<Button
 						variant="primary"
@@ -86,7 +86,7 @@ export default function DeleteAllLocationsModal({
 						disabled={controller.isDeletingAllLocations}
 					>
 						<span className="minimal-map-admin__location-dialog-button-content">
-							<span>{__('Delete all locations', 'minimal-map')}</span>
+							<span>{__('Delete all locations', 'emilian-scheel-minimal-map')}</span>
 							<Kbd variant="red">Enter</Kbd>
 						</span>
 					</Button>

@@ -9,7 +9,7 @@ export function ImportThemeButton({ onImport }: ImportThemeButtonProps) {
 	return (
 		<Button
 			icon={<Upload size={18} />}
-			label={__('Upload Theme File', 'minimal-map')}
+			label={__('Upload Theme File', 'emilian-scheel-minimal-map')}
 			onClick={() => {
 				const input = document.createElement('input');
 				input.type = 'file';

@@ -48,7 +48,7 @@ export default function DeleteCollectionActionModal({
       setErrorMessage(
         error instanceof Error
           ? error.message
-          : __("Collection could not be deleted.", "minimal-map"),
+          : __("Collection could not be deleted.", "emilian-scheel-minimal-map"),
       );
     } finally {
       setDeleting(false);
@@ -82,7 +82,7 @@ export default function DeleteCollectionActionModal({
       <p className="minimal-map-admin__collection-delete-dialog-copy">
         {__(
           "Delete this collection and remove its saved location assignments?",
-          "minimal-map",
+          "emilian-scheel-minimal-map",
         )}
       </p>
       <p className="minimal-map-admin__collection-delete-dialog-title">
@@ -91,7 +91,7 @@ export default function DeleteCollectionActionModal({
       <div className="minimal-map-admin__collection-delete-dialog-options">
         <CheckboxControl
           __nextHasNoMarginBottom
-          label={__("Delete locations", "minimal-map")}
+          label={__("Delete locations", "emilian-scheel-minimal-map")}
           checked={deleteLocations}
           onChange={(checked) => {
             setDeleteLocations(checked);
@@ -106,7 +106,7 @@ export default function DeleteCollectionActionModal({
         {deleteLocations ? (
           <CheckboxControl
             __nextHasNoMarginBottom
-            label={__("Skip shared locations", "minimal-map")}
+            label={__("Skip shared locations", "emilian-scheel-minimal-map")}
             checked={skipSharedLocations}
             onChange={setSkipSharedLocations}
             disabled={isDeleting}
@@ -126,7 +126,7 @@ export default function DeleteCollectionActionModal({
           disabled={isDeleting}
           data-minimal-map-dialog-ignore-enter="true"
         >
-          {__("Cancel", "minimal-map")}
+          {__("Cancel", "emilian-scheel-minimal-map")}
         </Button>
         <Button
           variant="primary"
@@ -136,7 +136,7 @@ export default function DeleteCollectionActionModal({
           disabled={isDeleting}
         >
           <span className="minimal-map-admin__location-dialog-button-content">
-            <span>{__("Delete collection", "minimal-map")}</span>
+            <span>{__("Delete collection", "emilian-scheel-minimal-map")}</span>
             <Kbd variant="red">Enter</Kbd>
           </span>
         </Button>

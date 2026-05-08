@@ -50,12 +50,12 @@ function getDominantBreakdownItem(items: AnalyticsBreakdownDatum[]): AnalyticsBr
 export function getAnalyticsSectionTitle(category: AnalyticsSummary['category']): string {
 	switch (category) {
 		case 'selection':
-			return __('Selection', 'minimal-map');
+			return __('Selection', 'emilian-scheel-minimal-map');
 		case 'action':
-			return __('Action', 'minimal-map');
+			return __('Action', 'emilian-scheel-minimal-map');
 		case 'search':
 		default:
-			return __('Search', 'minimal-map');
+			return __('Search', 'emilian-scheel-minimal-map');
 	}
 }
 
@@ -118,12 +118,12 @@ export default function AnalyticsCards({
 			{
 				id: 'selection-total',
 				icon: <ChartColumn aria-hidden="true" size={22} strokeWidth={1.8} />,
-				title: __('Total selections', 'minimal-map'),
+				title: __('Total selections', 'emilian-scheel-minimal-map'),
 				value: createCountValue(hasData ? safeSummary.totalSelections : null),
-				description: __('Explicit location picks from search or marker clicks.', 'minimal-map'),
+				description: __('Explicit location picks from search or marker clicks.', 'emilian-scheel-minimal-map'),
 				chart: (
 					<AnalyticsSparkline
-						ariaLabel={__('Total selections trend', 'minimal-map')}
+						ariaLabel={__('Total selections trend', 'emilian-scheel-minimal-map')}
 						formatTooltipValue={formatMetricValue}
 						isEmpty={!hasData}
 						series={safeSummary.series.totalSelections}
@@ -134,12 +134,12 @@ export default function AnalyticsCards({
 			{
 				id: 'selection-conversion',
 				icon: <Target aria-hidden="true" size={22} strokeWidth={1.8} />,
-				title: __('Search-to-selection conversion', 'minimal-map'),
+				title: __('Search-to-selection conversion', 'emilian-scheel-minimal-map'),
 				value: createPercentageValue(hasData ? safeSummary.conversionRate : null),
-				description: __('How often searches turn into a location choice.', 'minimal-map'),
+				description: __('How often searches turn into a location choice.', 'emilian-scheel-minimal-map'),
 				chart: (
 					<AnalyticsSparkline
-						ariaLabel={__('Selection conversion trend', 'minimal-map')}
+						ariaLabel={__('Selection conversion trend', 'emilian-scheel-minimal-map')}
 						formatTooltipValue={formatPercentage}
 						isEmpty={!hasData}
 						series={safeSummary.series.conversionRate}
@@ -150,18 +150,18 @@ export default function AnalyticsCards({
 			{
 				id: 'selection-source-mix',
 				icon: <PieChart aria-hidden="true" size={22} strokeWidth={1.8} />,
-				title: __('Selection source mix', 'minimal-map'),
+				title: __('Selection source mix', 'emilian-scheel-minimal-map'),
 				value: createPercentageValue(dominantSourceShare),
 				description: dominantSource && dominantSourceShare !== null
 					? sprintf(
-						__('%1$s leads with %2$s.', 'minimal-map'),
+						__('%1$s leads with %2$s.', 'emilian-scheel-minimal-map'),
 						dominantSource.label,
 						formatPercentage(dominantSourceShare),
 					)
-					: __('Where people choose locations from.', 'minimal-map'),
+					: __('Where people choose locations from.', 'emilian-scheel-minimal-map'),
 				chart: (
 					<AnalyticsSparkline
-						ariaLabel={__('Selection source mix', 'minimal-map')}
+						ariaLabel={__('Selection source mix', 'emilian-scheel-minimal-map')}
 						data={safeSummary.breakdowns.sourceMix}
 						isEmpty={!hasData}
 						variant="donut"
@@ -171,14 +171,14 @@ export default function AnalyticsCards({
 			{
 				id: 'selection-top-locations',
 				icon: <MapPin aria-hidden="true" size={22} strokeWidth={1.8} />,
-				title: __('Top selected locations', 'minimal-map'),
+				title: __('Top selected locations', 'emilian-scheel-minimal-map'),
 				value: createCountValue(topLocation?.value ?? null),
 				description: topLocation
-					? sprintf(__('Most selected: %s', 'minimal-map'), topLocation.label)
-					: __('No selected locations in this period yet.', 'minimal-map'),
+					? sprintf(__('Most selected: %s', 'emilian-scheel-minimal-map'), topLocation.label)
+					: __('No selected locations in this period yet.', 'emilian-scheel-minimal-map'),
 				chart: (
 					<AnalyticsSparkline
-						ariaLabel={__('Top selected locations', 'minimal-map')}
+						ariaLabel={__('Top selected locations', 'emilian-scheel-minimal-map')}
 						data={safeSummary.breakdowns.topLocations}
 						isEmpty={!hasData}
 						variant="bar"
@@ -232,12 +232,12 @@ export default function AnalyticsCards({
 			{
 				id: 'action-total',
 				icon: <ChartColumn aria-hidden="true" size={22} strokeWidth={1.8} />,
-				title: __('Total actions', 'minimal-map'),
+				title: __('Total actions', 'emilian-scheel-minimal-map'),
 				value: createCountValue(hasData ? safeSummary.totalActions : null),
-				description: __('Clicks and expansions after a location is viewed.', 'minimal-map'),
+				description: __('Clicks and expansions after a location is viewed.', 'emilian-scheel-minimal-map'),
 				chart: (
 					<AnalyticsSparkline
-						ariaLabel={__('Total actions trend', 'minimal-map')}
+						ariaLabel={__('Total actions trend', 'emilian-scheel-minimal-map')}
 						formatTooltipValue={formatMetricValue}
 						isEmpty={!hasData}
 						series={safeSummary.series.totalActions}
@@ -248,18 +248,18 @@ export default function AnalyticsCards({
 			{
 				id: 'action-type-mix',
 				icon: <PieChart aria-hidden="true" size={22} strokeWidth={1.8} />,
-				title: __('Action type mix', 'minimal-map'),
+				title: __('Action type mix', 'emilian-scheel-minimal-map'),
 				value: createPercentageValue(dominantActionTypeShare),
 				description: dominantActionType && dominantActionTypeShare !== null
 					? sprintf(
-						__('%1$s leads with %2$s.', 'minimal-map'),
+						__('%1$s leads with %2$s.', 'emilian-scheel-minimal-map'),
 						dominantActionType.label,
 						formatPercentage(dominantActionTypeShare),
 					)
-					: __('Which follow-up actions visitors use most.', 'minimal-map'),
+					: __('Which follow-up actions visitors use most.', 'emilian-scheel-minimal-map'),
 				chart: (
 					<AnalyticsSparkline
-						ariaLabel={__('Action type mix', 'minimal-map')}
+						ariaLabel={__('Action type mix', 'emilian-scheel-minimal-map')}
 						data={safeSummary.breakdowns.actionTypeMix}
 						isEmpty={!hasData}
 						variant="donut"
@@ -269,18 +269,18 @@ export default function AnalyticsCards({
 			{
 				id: 'action-source-mix',
 				icon: <BarChart3 aria-hidden="true" size={22} strokeWidth={1.8} />,
-				title: __('Action source mix', 'minimal-map'),
+				title: __('Action source mix', 'emilian-scheel-minimal-map'),
 				value: createPercentageValue(dominantSourceShare),
 				description: dominantSource && dominantSourceShare !== null
 					? sprintf(
-						__('%1$s drives %2$s of actions.', 'minimal-map'),
+						__('%1$s drives %2$s of actions.', 'emilian-scheel-minimal-map'),
 						dominantSource.label,
 						formatPercentage(dominantSourceShare),
 					)
-					: __('Where follow-up actions happen most often.', 'minimal-map'),
+					: __('Where follow-up actions happen most often.', 'emilian-scheel-minimal-map'),
 				chart: (
 					<AnalyticsSparkline
-						ariaLabel={__('Action source mix', 'minimal-map')}
+						ariaLabel={__('Action source mix', 'emilian-scheel-minimal-map')}
 						data={safeSummary.breakdowns.sourceMix}
 						isEmpty={!hasData}
 						variant="donut"
@@ -290,14 +290,14 @@ export default function AnalyticsCards({
 			{
 				id: 'action-top-locations',
 				icon: <MapPin aria-hidden="true" size={22} strokeWidth={1.8} />,
-				title: __('Top locations by actions', 'minimal-map'),
+				title: __('Top locations by actions', 'emilian-scheel-minimal-map'),
 				value: createCountValue(topLocation?.value ?? null),
 				description: topLocation
-					? sprintf(__('Most actioned: %s', 'minimal-map'), topLocation.label)
-					: __('No tracked actions in the selected period.', 'minimal-map'),
+					? sprintf(__('Most actioned: %s', 'emilian-scheel-minimal-map'), topLocation.label)
+					: __('No tracked actions in the selected period.', 'emilian-scheel-minimal-map'),
 				chart: (
 					<AnalyticsSparkline
-						ariaLabel={__('Top locations by actions', 'minimal-map')}
+						ariaLabel={__('Top locations by actions', 'emilian-scheel-minimal-map')}
 						data={safeSummary.breakdowns.topLocations}
 						isEmpty={!hasData}
 						variant="bar"
@@ -351,12 +351,12 @@ export default function AnalyticsCards({
 		{
 			id: 'total',
 			icon: <ChartColumn aria-hidden="true" size={22} strokeWidth={1.8} />,
-			title: __('Total searches', 'minimal-map'),
+			title: __('Total searches', 'emilian-scheel-minimal-map'),
 			value: createCountValue(hasData ? safeSummary.totalSearches : null),
-			description: __('Demand across the selected period.', 'minimal-map'),
+			description: __('Demand across the selected period.', 'emilian-scheel-minimal-map'),
 			chart: (
 				<AnalyticsSparkline
-					ariaLabel={__('Total searches trend', 'minimal-map')}
+					ariaLabel={__('Total searches trend', 'emilian-scheel-minimal-map')}
 					formatTooltipValue={formatMetricValue}
 					isEmpty={!hasData}
 					series={safeSummary.series.totalSearches}
@@ -367,12 +367,12 @@ export default function AnalyticsCards({
 		{
 			id: 'success-rate',
 			icon: <Target aria-hidden="true" size={22} strokeWidth={1.8} />,
-			title: __('Success rate', 'minimal-map'),
+			title: __('Success rate', 'emilian-scheel-minimal-map'),
 			value: createPercentageValue(hasData ? safeSummary.successRate : null),
-			description: __('Searches returning at least one result.', 'minimal-map'),
+			description: __('Searches returning at least one result.', 'emilian-scheel-minimal-map'),
 			chart: (
 				<AnalyticsSparkline
-					ariaLabel={__('Success rate trend', 'minimal-map')}
+					ariaLabel={__('Success rate trend', 'emilian-scheel-minimal-map')}
 					formatTooltipValue={formatPercentage}
 					isEmpty={!hasData}
 					series={safeSummary.series.successRate}
@@ -383,12 +383,12 @@ export default function AnalyticsCards({
 		{
 			id: 'zero',
 			icon: <SearchX aria-hidden="true" size={22} strokeWidth={1.8} />,
-			title: __('Zero-result searches', 'minimal-map'),
+			title: __('Zero-result searches', 'emilian-scheel-minimal-map'),
 			value: createCountValue(hasData ? safeSummary.zeroResultSearches : null),
-			description: __('Searches with no matching location.', 'minimal-map'),
+			description: __('Searches with no matching location.', 'emilian-scheel-minimal-map'),
 			chart: (
 				<AnalyticsSparkline
-					ariaLabel={__('Zero-result searches trend', 'minimal-map')}
+					ariaLabel={__('Zero-result searches trend', 'emilian-scheel-minimal-map')}
 					formatTooltipValue={formatMetricValue}
 					isEmpty={!hasData}
 					series={safeSummary.series.zeroResultSearches}
@@ -399,12 +399,12 @@ export default function AnalyticsCards({
 		{
 			id: 'distance',
 			icon: <Route aria-hidden="true" size={22} strokeWidth={1.8} />,
-			title: __('Average distance to nearest store', 'minimal-map'),
+			title: __('Average distance to nearest store', 'emilian-scheel-minimal-map'),
 			value: createDistanceValue(safeSummary.averageNearestDistanceMeters, hasData),
-			description: __('Average distance for searches with a nearby match.', 'minimal-map'),
+			description: __('Average distance for searches with a nearby match.', 'emilian-scheel-minimal-map'),
 			chart: (
 				<AnalyticsSparkline
-					ariaLabel={__('Average distance trend', 'minimal-map')}
+					ariaLabel={__('Average distance trend', 'emilian-scheel-minimal-map')}
 					formatTooltipValue={formatSparklineDistance}
 					isEmpty={!hasData && safeSummary.averageNearestDistanceMeters === null}
 					series={safeSummary.series.averageNearestDistanceMeters}
@@ -415,14 +415,14 @@ export default function AnalyticsCards({
 		{
 			id: 'top-queries',
 			icon: <Search aria-hidden="true" size={22} strokeWidth={1.8} />,
-			title: __('Top search terms', 'minimal-map'),
+			title: __('Top search terms', 'emilian-scheel-minimal-map'),
 			value: createCountValue(topQuery?.value ?? null),
 			description: topQuery
-				? sprintf(__('Most searched: %s', 'minimal-map'), topQuery.label)
-				: __('No repeated search terms yet.', 'minimal-map'),
+				? sprintf(__('Most searched: %s', 'emilian-scheel-minimal-map'), topQuery.label)
+				: __('No repeated search terms yet.', 'emilian-scheel-minimal-map'),
 			chart: (
 				<AnalyticsSparkline
-					ariaLabel={__('Top search terms', 'minimal-map')}
+					ariaLabel={__('Top search terms', 'emilian-scheel-minimal-map')}
 					data={safeSummary.breakdowns.topQueries}
 					isEmpty={!hasData}
 					variant="bar"
@@ -432,14 +432,14 @@ export default function AnalyticsCards({
 		{
 			id: 'top-zero-queries',
 			icon: <SearchX aria-hidden="true" size={22} strokeWidth={1.8} />,
-			title: __('Top zero-result searches', 'minimal-map'),
+			title: __('Top zero-result searches', 'emilian-scheel-minimal-map'),
 			value: createCountValue(topZeroResultQuery?.value ?? null),
 			description: topZeroResultQuery
-				? sprintf(__('Most requested without a result: %s', 'minimal-map'), topZeroResultQuery.label)
-				: __('No failed searches in the selected period.', 'minimal-map'),
+				? sprintf(__('Most requested without a result: %s', 'emilian-scheel-minimal-map'), topZeroResultQuery.label)
+				: __('No failed searches in the selected period.', 'emilian-scheel-minimal-map'),
 			chart: (
 				<AnalyticsSparkline
-					ariaLabel={__('Top zero-result searches', 'minimal-map')}
+					ariaLabel={__('Top zero-result searches', 'emilian-scheel-minimal-map')}
 					data={safeSummary.breakdowns.topZeroResultQueries}
 					isEmpty={!hasData}
 					variant="bar"
@@ -449,18 +449,18 @@ export default function AnalyticsCards({
 		{
 			id: 'query-type-mix',
 			icon: <PieChart aria-hidden="true" size={22} strokeWidth={1.8} />,
-			title: __('Query type mix', 'minimal-map'),
+			title: __('Query type mix', 'emilian-scheel-minimal-map'),
 			value: createPercentageValue(dominantQueryTypeShare),
 			description: dominantQueryType && dominantQueryTypeShare !== null
 				? sprintf(
-					__('%1$s leads with %2$s.', 'minimal-map'),
+					__('%1$s leads with %2$s.', 'emilian-scheel-minimal-map'),
 					dominantQueryType.label,
 					formatPercentage(dominantQueryTypeShare),
 				)
-				: __('How visitors are searching your map.', 'minimal-map'),
+				: __('How visitors are searching your map.', 'emilian-scheel-minimal-map'),
 			chart: (
 				<AnalyticsSparkline
-					ariaLabel={__('Query type mix', 'minimal-map')}
+					ariaLabel={__('Query type mix', 'emilian-scheel-minimal-map')}
 					data={safeSummary.breakdowns.queryTypeMix}
 					isEmpty={!hasData}
 					variant="donut"
@@ -470,18 +470,18 @@ export default function AnalyticsCards({
 		{
 			id: 'result-distribution',
 			icon: <BarChart3 aria-hidden="true" size={22} strokeWidth={1.8} />,
-			title: __('Result distribution', 'minimal-map'),
+			title: __('Result distribution', 'emilian-scheel-minimal-map'),
 			value: createPercentageValue(dominantResultBucketShare),
 			description: dominantResultBucket && dominantResultBucketShare !== null
 				? sprintf(
-					__('%1$s is the largest bucket at %2$s.', 'minimal-map'),
+					__('%1$s is the largest bucket at %2$s.', 'emilian-scheel-minimal-map'),
 					dominantResultBucket.label,
 					formatPercentage(dominantResultBucketShare),
 				)
-				: __('How many results each search returned.', 'minimal-map'),
+				: __('How many results each search returned.', 'emilian-scheel-minimal-map'),
 			chart: (
 				<AnalyticsSparkline
-					ariaLabel={__('Result distribution', 'minimal-map')}
+					ariaLabel={__('Result distribution', 'emilian-scheel-minimal-map')}
 					data={safeSummary.breakdowns.resultDistribution}
 					isEmpty={!hasData}
 					variant="donut"

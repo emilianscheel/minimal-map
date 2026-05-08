@@ -32,7 +32,7 @@ export async function fetchAllMarkers(
 		return markers;
 	} catch (error) {
 		throw new Error(
-			error instanceof Error ? error.message : __('Markers could not be loaded.', 'minimal-map')
+			error instanceof Error ? error.message : __('Markers could not be loaded.', 'emilian-scheel-minimal-map')
 		);
 	}
 }

@@ -7,13 +7,13 @@ import {
 } from './openingHours';
 
 const SHORT_DAY_LABELS: Record<OpeningHoursDayKey, string> = {
-	monday: __('Mon', 'minimal-map'),
-	tuesday: __('Tue', 'minimal-map'),
-	wednesday: __('Wed', 'minimal-map'),
-	thursday: __('Thu', 'minimal-map'),
-	friday: __('Fri', 'minimal-map'),
-	saturday: __('Sat', 'minimal-map'),
-	sunday: __('Sun', 'minimal-map'),
+	monday: __('Mon', 'emilian-scheel-minimal-map'),
+	tuesday: __('Tue', 'emilian-scheel-minimal-map'),
+	wednesday: __('Wed', 'emilian-scheel-minimal-map'),
+	thursday: __('Thu', 'emilian-scheel-minimal-map'),
+	friday: __('Fri', 'emilian-scheel-minimal-map'),
+	saturday: __('Sat', 'emilian-scheel-minimal-map'),
+	sunday: __('Sun', 'emilian-scheel-minimal-map'),
 };
 
 function formatDayRange(dayKeys: OpeningHoursDayKey[]): string {
@@ -31,12 +31,12 @@ function formatGroupLine(
 	const dayRange = formatDayRange(dayKeys);
 
 	if (!hasOpeningHoursForDay(day) && hasLunchBreakForDay(day)) {
-		return `${dayRange} ${__('Lunch', 'minimal-map')} ${day.lunch_start} / ${day.lunch_duration_minutes}m`;
+		return `${dayRange} ${__('Lunch', 'emilian-scheel-minimal-map')} ${day.lunch_start} / ${day.lunch_duration_minutes}m`;
 	}
 
-	const hoursLabel = hasOpeningHoursForDay(day) ? `${day.open}-${day.close}` : __('Closed', 'minimal-map');
+	const hoursLabel = hasOpeningHoursForDay(day) ? `${day.open}-${day.close}` : __('Closed', 'emilian-scheel-minimal-map');
 	const lunchLabel = hasLunchBreakForDay(day)
-		? ` ${__('Lunch', 'minimal-map')} ${day.lunch_start} / ${day.lunch_duration_minutes}m`
+		? ` ${__('Lunch', 'emilian-scheel-minimal-map')} ${day.lunch_start} / ${day.lunch_duration_minutes}m`
 		: '';
 
 	return `${dayRange} ${hoursLabel}${lunchLabel}`;

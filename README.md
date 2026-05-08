@@ -4,7 +4,7 @@ Render a minimalist MapLibre-powered store locator and map block in WordPress.
 
 ![Preview](screenshot.png)
 
-[Demo](https://minimal-map.net/#demo) | [Download](https://github.com/emilianscheel/minimal-map.net/releases/latest/download/minimal-map-net-locator-block-emiliansch.zip) | [See Screenshots](Screenshots.md)
+[Demo](https://minimal-map.net/#demo) | [Download](https://github.com/emilianscheel/minimal-map.net/releases/latest/download/emilian-scheel-minimal-map.zip) | [See Screenshots](Screenshots.md)
 
 ## Features
 

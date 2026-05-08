@@ -34,7 +34,7 @@ export default function ShowLocationConfirmationModal({
 
   return (
     <Modal
-      title={__("Show location", "minimal-map")}
+      title={__("Show location", "emilian-scheel-minimal-map")}
       onRequestClose={controller.onCloseShowLocationConfirmationModal}
       shouldCloseOnClickOutside={!controller.isRowActionPending}
       shouldCloseOnEsc={!controller.isRowActionPending}
@@ -42,7 +42,7 @@ export default function ShowLocationConfirmationModal({
     >
       <div className="minimal-map-admin__collection-delete-dialog">
         <p className="minimal-map-admin__collection-delete-dialog-copy">
-          {__("Show this location again?", "minimal-map")}
+          {__("Show this location again?", "emilian-scheel-minimal-map")}
         </p>
         <p className="minimal-map-admin__collection-delete-dialog-title">
           {location.title}
@@ -54,7 +54,7 @@ export default function ShowLocationConfirmationModal({
             disabled={controller.isRowActionPending}
             data-minimal-map-dialog-ignore-enter="true"
           >
-            {__("Cancel", "minimal-map")}
+            {__("Cancel", "emilian-scheel-minimal-map")}
           </Button>
           <Button
             variant="primary"
@@ -63,7 +63,7 @@ export default function ShowLocationConfirmationModal({
             disabled={controller.isRowActionPending}
           >
             <span className="minimal-map-admin__location-dialog-button-content">
-              <span>{__("Show location", "minimal-map")}</span>
+              <span>{__("Show location", "emilian-scheel-minimal-map")}</span>
               <Kbd variant="blue">Enter</Kbd>
             </span>
           </Button>

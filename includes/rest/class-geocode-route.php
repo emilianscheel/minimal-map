@@ -87,7 +87,7 @@ class Geocode_Route {
 
 		if ( is_wp_error( $remote ) ) {
 			$result = $this->build_failure_response(
-				__( 'The address could not be geocoded right now. Select the location manually on the map.', 'minimal-map' )
+				__( 'The address could not be geocoded right now. Select the location manually on the map.', 'emilian-scheel-minimal-map' )
 			);
 
 			set_transient( $cache_key, $result, HOUR_IN_SECONDS );
@@ -99,7 +99,7 @@ class Geocode_Route {
 
 		if ( 200 !== $status_code || ! is_array( $body ) || empty( $body[0]['lat'] ) || empty( $body[0]['lon'] ) ) {
 			$result = $this->build_failure_response(
-				__( 'No matching coordinates were found. Select the location manually on the map.', 'minimal-map' )
+				__( 'No matching coordinates were found. Select the location manually on the map.', 'emilian-scheel-minimal-map' )
 			);
 
 			set_transient( $cache_key, $result, HOUR_IN_SECONDS );

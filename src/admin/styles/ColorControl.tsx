@@ -68,7 +68,7 @@ export function ColorControl({
 						onClick={onToggle}
 						aria-expanded={isOpen}
 						aria-label={sprintf(
-							__('Select %s color', 'minimal-map'),
+							__('Select %s color', 'emilian-scheel-minimal-map'),
 							label
 						)}
 						disabled={disabled}
@@ -89,7 +89,7 @@ export function ColorControl({
 						<span
 							className={`minimal-map-styles__color-value${mixed ? ' is-mixed' : ''}`}
 						>
-							{mixed ? __('Mixed', 'minimal-map') : color}
+							{mixed ? __('Mixed', 'emilian-scheel-minimal-map') : color}
 						</span>
 					</button>
 				)}

@@ -11,7 +11,7 @@ export function ImportLocationsButton({ onImport, isImporting }: ImportLocations
 	return (
 		<Button
 			icon={<Upload size={18} />}
-			label={__('Import locations from CSV, Excel, or JSON', 'minimal-map')}
+			label={__('Import locations from CSV, Excel, or JSON', 'emilian-scheel-minimal-map')}
 			onClick={() => {
 				const input = document.createElement('input');
 				input.type = 'file';

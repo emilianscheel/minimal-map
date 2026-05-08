@@ -54,15 +54,15 @@ class Config {
 	public function get_style_presets() {
 		return array(
 			'liberty'  => array(
-				'label'     => __( 'Liberty', 'minimal-map' ),
+				'label'     => __( 'Liberty', 'emilian-scheel-minimal-map' ),
 				'style_url' => 'https://tiles.openfreemap.org/styles/liberty',
 			),
 			'bright'   => array(
-				'label'     => __( 'Bright', 'minimal-map' ),
+				'label'     => __( 'Bright', 'emilian-scheel-minimal-map' ),
 				'style_url' => 'https://tiles.openfreemap.org/styles/bright',
 			),
 			'positron' => array(
-				'label'     => __( 'Positron', 'minimal-map' ),
+				'label'     => __( 'Positron', 'emilian-scheel-minimal-map' ),
 				'style_url' => 'https://tiles.openfreemap.org/styles/positron',
 			),
 		);
@@ -293,7 +293,7 @@ class Config {
 			'creditsForegroundColor'     => $this->sanitize_color( $attributes['creditsForegroundColor'] ?? '', $defaults['creditsForegroundColor'] ),
 			'creditsBorderRadius'        => $this->sanitize_border_radius_value( $attributes['creditsBorderRadius'] ?? '', $defaults['creditsBorderRadius'] ),
 			'locations'       => $locations,
-			'fallbackMessage'  => __( 'Map preview unavailable because this browser does not support WebGL.', 'minimal-map' ),
+			'fallbackMessage'  => __( 'Map preview unavailable because this browser does not support WebGL.', 'emilian-scheel-minimal-map' ),
 		);
 	}
 
@@ -318,7 +318,7 @@ class Config {
 			'siteTimezone' => $this->get_site_timezone_string(),
 			'siteLocale' => str_replace( '_', '-', get_locale() ),
 			'messages'      => array(
-				'fallback' => __( 'Map preview unavailable because this browser does not support WebGL.', 'minimal-map' ),
+				'fallback' => __( 'Map preview unavailable because this browser does not support WebGL.', 'emilian-scheel-minimal-map' ),
 			),
 			'embedBaseUrl' => $this->get_embed_base_url(),
 			'previewImageUrl' => plugins_url( 'assets/preview.png', MINIMAL_MAP_FILE ),
@@ -417,7 +417,7 @@ class Config {
 		if ( ! is_string( $encoded_payload ) || '' === $encoded_payload ) {
 			return new \WP_Error(
 				'minimal_map_invalid_embed_payload',
-				__( 'The map embed configuration is missing or invalid.', 'minimal-map' )
+				__( 'The map embed configuration is missing or invalid.', 'emilian-scheel-minimal-map' )
 			);
 		}
 
@@ -426,7 +426,7 @@ class Config {
 		if ( ! is_array( $decoded_payload ) ) {
 			return new \WP_Error(
 				'minimal_map_invalid_embed_payload',
-				__( 'The map embed configuration is missing or invalid.', 'minimal-map' )
+				__( 'The map embed configuration is missing or invalid.', 'emilian-scheel-minimal-map' )
 			);
 		}
 
@@ -435,7 +435,7 @@ class Config {
 		if ( self::EMBED_PAYLOAD_VERSION !== $version || ! isset( $decoded_payload['attributes'] ) || ! is_array( $decoded_payload['attributes'] ) ) {
 			return new \WP_Error(
 				'minimal_map_invalid_embed_payload',
-				__( 'The map embed configuration is missing or invalid.', 'minimal-map' )
+				__( 'The map embed configuration is missing or invalid.', 'emilian-scheel-minimal-map' )
 			);
 		}
 
@@ -796,7 +796,7 @@ class Config {
 
 		$actions[] = array(
 			'key'      => 'export-locations-csv',
-			'label'    => __( 'Minimal Map: Store Locator & Map Block: Export Locations as CSV', 'minimal-map' ),
+			'label'    => __( 'Minimal Map: Store Locator & Map Block: Export Locations as CSV', 'emilian-scheel-minimal-map' ),
 			'keywords' => array(
 				'minimal map',
 				'locations',
@@ -806,7 +806,7 @@ class Config {
 		);
 		$actions[] = array(
 			'key'      => 'export-locations-excel',
-			'label'    => __( 'Minimal Map: Store Locator & Map Block: Export Locations as Excel', 'minimal-map' ),
+			'label'    => __( 'Minimal Map: Store Locator & Map Block: Export Locations as Excel', 'emilian-scheel-minimal-map' ),
 			'keywords' => array(
 				'minimal map',
 				'locations',
@@ -817,7 +817,7 @@ class Config {
 		);
 		$actions[] = array(
 			'key'      => 'export-locations-json',
-			'label'    => __( 'Minimal Map: Store Locator & Map Block: Export Locations as JSON', 'minimal-map' ),
+			'label'    => __( 'Minimal Map: Store Locator & Map Block: Export Locations as JSON', 'emilian-scheel-minimal-map' ),
 			'keywords' => array(
 				'minimal map',
 				'locations',
@@ -827,7 +827,7 @@ class Config {
 		);
 		$actions[] = array(
 			'key'      => 'export-analytics-search-csv',
-			'label'    => __( 'Minimal Map: Store Locator & Map Block: Export Analytics Search Data as CSV', 'minimal-map' ),
+			'label'    => __( 'Minimal Map: Store Locator & Map Block: Export Analytics Search Data as CSV', 'emilian-scheel-minimal-map' ),
 			'keywords' => array(
 				'minimal map',
 				'analytics',
@@ -838,7 +838,7 @@ class Config {
 		);
 		$actions[] = array(
 			'key'      => 'export-analytics-selection-csv',
-			'label'    => __( 'Minimal Map: Store Locator & Map Block: Export Analytics Selection Data as CSV', 'minimal-map' ),
+			'label'    => __( 'Minimal Map: Store Locator & Map Block: Export Analytics Selection Data as CSV', 'emilian-scheel-minimal-map' ),
 			'keywords' => array(
 				'minimal map',
 				'analytics',
@@ -849,7 +849,7 @@ class Config {
 		);
 		$actions[] = array(
 			'key'      => 'export-analytics-action-csv',
-			'label'    => __( 'Minimal Map: Store Locator & Map Block: Export Analytics Action Data as CSV', 'minimal-map' ),
+			'label'    => __( 'Minimal Map: Store Locator & Map Block: Export Analytics Action Data as CSV', 'emilian-scheel-minimal-map' ),
 			'keywords' => array(
 				'minimal map',
 				'analytics',
@@ -1265,30 +1265,30 @@ class Config {
 		return array(
 			array(
 				'id'     => 'builtin-palette-terracotta-coast',
-				'label'  => __( 'Terracotta Coast', 'minimal-map' ),
+				'label'  => __( 'Terracotta Coast', 'emilian-scheel-minimal-map' ),
 				'colors' => array(
 					array(
-						'name'  => __( 'Canvas', 'minimal-map' ),
+						'name'  => __( 'Canvas', 'emilian-scheel-minimal-map' ),
 						'slug'  => 'canvas',
 						'color' => '#f6efe6',
 					),
 					array(
-						'name'  => __( 'Ink', 'minimal-map' ),
+						'name'  => __( 'Ink', 'emilian-scheel-minimal-map' ),
 						'slug'  => 'ink',
 						'color' => '#5b4638',
 					),
 					array(
-						'name'  => __( 'Water', 'minimal-map' ),
+						'name'  => __( 'Water', 'emilian-scheel-minimal-map' ),
 						'slug'  => 'water',
 						'color' => '#6ea7a2',
 					),
 					array(
-						'name'  => __( 'Land', 'minimal-map' ),
+						'name'  => __( 'Land', 'emilian-scheel-minimal-map' ),
 						'slug'  => 'land',
 						'color' => '#a8b97f',
 					),
 					array(
-						'name'  => __( 'Transport', 'minimal-map' ),
+						'name'  => __( 'Transport', 'emilian-scheel-minimal-map' ),
 						'slug'  => 'transport',
 						'color' => '#caa98a',
 					),
@@ -1296,30 +1296,30 @@ class Config {
 			),
 			array(
 				'id'     => 'builtin-palette-night-transit',
-				'label'  => __( 'Night Transit', 'minimal-map' ),
+				'label'  => __( 'Night Transit', 'emilian-scheel-minimal-map' ),
 				'colors' => array(
 					array(
-						'name'  => __( 'Canvas', 'minimal-map' ),
+						'name'  => __( 'Canvas', 'emilian-scheel-minimal-map' ),
 						'slug'  => 'canvas',
 						'color' => '#1c2027',
 					),
 					array(
-						'name'  => __( 'Ink', 'minimal-map' ),
+						'name'  => __( 'Ink', 'emilian-scheel-minimal-map' ),
 						'slug'  => 'ink',
 						'color' => '#eef3f8',
 					),
 					array(
-						'name'  => __( 'Water', 'minimal-map' ),
+						'name'  => __( 'Water', 'emilian-scheel-minimal-map' ),
 						'slug'  => 'water',
 						'color' => '#2f6f8e',
 					),
 					array(
-						'name'  => __( 'Land', 'minimal-map' ),
+						'name'  => __( 'Land', 'emilian-scheel-minimal-map' ),
 						'slug'  => 'land',
 						'color' => '#3e5b47',
 					),
 					array(
-						'name'  => __( 'Transport', 'minimal-map' ),
+						'name'  => __( 'Transport', 'emilian-scheel-minimal-map' ),
 						'slug'  => 'transport',
 						'color' => '#8b7fd1',
 					),
@@ -1327,30 +1327,30 @@ class Config {
 			),
 			array(
 				'id'     => 'builtin-palette-alpine-print',
-				'label'  => __( 'Alpine Print', 'minimal-map' ),
+				'label'  => __( 'Alpine Print', 'emilian-scheel-minimal-map' ),
 				'colors' => array(
 					array(
-						'name'  => __( 'Canvas', 'minimal-map' ),
+						'name'  => __( 'Canvas', 'emilian-scheel-minimal-map' ),
 						'slug'  => 'canvas',
 						'color' => '#edf2f0',
 					),
 					array(
-						'name'  => __( 'Ink', 'minimal-map' ),
+						'name'  => __( 'Ink', 'emilian-scheel-minimal-map' ),
 						'slug'  => 'ink',
 						'color' => '#334047',
 					),
 					array(
-						'name'  => __( 'Water', 'minimal-map' ),
+						'name'  => __( 'Water', 'emilian-scheel-minimal-map' ),
 						'slug'  => 'water',
 						'color' => '#7ea9c7',
 					),
 					array(
-						'name'  => __( 'Land', 'minimal-map' ),
+						'name'  => __( 'Land', 'emilian-scheel-minimal-map' ),
 						'slug'  => 'land',
 						'color' => '#b7c7a0',
 					),
 					array(
-						'name'  => __( 'Transport', 'minimal-map' ),
+						'name'  => __( 'Transport', 'emilian-scheel-minimal-map' ),
 						'slug'  => 'transport',
 						'color' => '#b07c6d',
 					),
@@ -1401,7 +1401,7 @@ class Config {
 					'id'            => $variant['id'],
 					'label'         => sprintf(
 						/* translators: %d: WordPress palette template number. */
-						__( 'WordPress Theme Palette #%d', 'minimal-map' ),
+						__( 'WordPress Theme Palette #%d', 'emilian-scheel-minimal-map' ),
 						$variant['number']
 					),
 					'colors'        => $palette,
@@ -1449,7 +1449,7 @@ class Config {
 			if ( '' === $name ) {
 				$name = sprintf(
 					/* translators: %d: fallback palette color position. */
-					__( 'Color %d', 'minimal-map' ),
+					__( 'Color %d', 'emilian-scheel-minimal-map' ),
 					$fallback_counter
 				);
 			}

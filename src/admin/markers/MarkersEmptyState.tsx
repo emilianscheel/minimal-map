@@ -7,10 +7,10 @@ export default function MarkersEmptyState({ controller }: { controller: MarkersC
 	return (
 		<EmptyState
 			icon={<MapPin />}
-			title={__('No markers found', 'minimal-map')}
-			description={__('Upload your custom SVG markers to personalize your maps. Simply drag and drop your files here or use the button below.', 'minimal-map')}
+			title={__('No markers found', 'emilian-scheel-minimal-map')}
+			description={__('Upload your custom SVG markers to personalize your maps. Simply drag and drop your files here or use the button below.', 'emilian-scheel-minimal-map')}
 			action={{
-				label: __('Upload', 'minimal-map'),
+				label: __('Upload', 'emilian-scheel-minimal-map'),
 				onClick: () => {
 					const input = document.createElement('input');
 					input.type = 'file';

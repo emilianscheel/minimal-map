@@ -69,13 +69,13 @@ export function createWordPressZoomControls(
 	applyControlStyles(controls, config);
 
 	const zoomInButton = createControlButton(
-		__( 'Zoom in', 'minimal-map' ),
+		__( 'Zoom in', 'emilian-scheel-minimal-map' ),
 		getZoomControlRuntimeIconSvg(config.zoomControlsPlusIcon),
 		() => map.zoomIn(),
 		host
 	);
 	const zoomOutButton = createControlButton(
-		__( 'Zoom out', 'minimal-map' ),
+		__( 'Zoom out', 'emilian-scheel-minimal-map' ),
 		getZoomControlRuntimeIconSvg(config.zoomControlsMinusIcon),
 		() => map.zoomOut(),
 		host
@@ -83,7 +83,7 @@ export function createWordPressZoomControls(
 
 	if (config.allowSearch && config.enableLiveLocationMap) {
 		liveLocationButton = createControlButton(
-			__( 'My location', 'minimal-map' ),
+			__( 'My location', 'emilian-scheel-minimal-map' ),
 			LIVE_LOCATION_ICON,
 			() => {
 				onLiveLocationSelect?.();

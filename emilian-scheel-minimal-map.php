@@ -1,6 +1,6 @@
 <?php
 /**
- * Plugin Name:       Minimal Map: Store Locator & Map Block by Emilian Scheel
+ * Plugin Name:       Emilian Scheel's Minimal Map & Store Locator
  * Description:       Gutenberg-first native map block and admin shell for WordPress.
  * Version:           0.8.3
  * Requires at least: 6.9
@@ -8,7 +8,7 @@
  * Author:            Emilian Scheel
  * License:           MIT
  * License URI:       https://opensource.org/license/mit/
- * Text Domain:       minimal-map
+ * Text Domain:       emilian-scheel-minimal-map
  * Domain Path:       /languages
  *
  * @package Minimal_Map

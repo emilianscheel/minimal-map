@@ -16,6 +16,7 @@ defined( 'ABSPATH' ) || exit;
 	<title><?php echo esc_html( $document_title ); ?></title>
 	<style id="minimal-map-iframe-document-css"><?php echo esc_html( $document_styles ); ?></style>
 	<?php wp_head(); ?>
+	<?php wp_print_styles( array( 'minimal-map-style' ) ); ?>
 </head>
 <body
 	class="minimal-map-iframe-page"
@@ -28,6 +29,6 @@ defined( 'ABSPATH' ) || exit;
 	<?php else : ?>
 		<?php echo $map_surface_markup; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?>
 	<?php endif; ?>
-	<?php wp_footer(); ?>
+	<?php wp_print_scripts( array( 'minimal-map-frontend' ) ); ?>
 </body>
 </html>

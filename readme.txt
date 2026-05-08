@@ -1,4 +1,4 @@
-=== Minimal Map: Store Locator & Map Block by Emilian Scheel ===
+=== Emilian Scheel's Minimal Map & Store Locator ===
 Contributors: emilianscheel
 Tags: maps, gutenberg, blocks, geolocation
 Requires at least: 6.9

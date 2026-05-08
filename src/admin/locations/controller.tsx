@@ -232,7 +232,7 @@ export function useLocationsController(
 			setLoadError(
 				error instanceof Error
 					? error.message
-					: __('Locations and collections could not be loaded.', 'minimal-map')
+					: __('Locations and collections could not be loaded.', 'emilian-scheel-minimal-map')
 			);
 		} finally {
 			setLoading(false);
@@ -265,7 +265,7 @@ export function useLocationsController(
 					message:
 						error instanceof Error
 							? error.message
-							: __('The locations page size could not be saved.', 'minimal-map'),
+							: __('The locations page size could not be saved.', 'emilian-scheel-minimal-map'),
 				});
 			}
 		},
@@ -417,28 +417,28 @@ export function useLocationsController(
 						affectedLocations.length === 0
 							? isHidden
 								? selectedLocations.length === 1
-									? __('Location is already hidden.', 'minimal-map')
-									: __('All selected locations are already hidden.', 'minimal-map')
+									? __('Location is already hidden.', 'emilian-scheel-minimal-map')
+									: __('All selected locations are already hidden.', 'emilian-scheel-minimal-map')
 								: selectedLocations.length === 1
-									? __('Location is already shown.', 'minimal-map')
-									: __('All selected locations are already shown.', 'minimal-map')
+									? __('Location is already shown.', 'emilian-scheel-minimal-map')
+									: __('All selected locations are already shown.', 'emilian-scheel-minimal-map')
 							: affectedLocations.length === 1
 								? isHidden
-									? __('Location hidden.', 'minimal-map')
-									: __('Location shown.', 'minimal-map')
+									? __('Location hidden.', 'emilian-scheel-minimal-map')
+									: __('Location shown.', 'emilian-scheel-minimal-map')
 								: sprintf(
 									isHidden
 										? _n(
 											'%d location hidden.',
 											'%d locations hidden.',
 											affectedLocations.length,
-											'minimal-map'
+											'emilian-scheel-minimal-map'
 										)
 										: _n(
 											'%d location shown.',
 											'%d locations shown.',
 											affectedLocations.length,
-											'minimal-map'
+											'emilian-scheel-minimal-map'
 										),
 									affectedLocations.length
 								),
@@ -449,7 +449,7 @@ export function useLocationsController(
 					message:
 						error instanceof Error
 							? error.message
-							: __('Location visibility could not be updated.', 'minimal-map'),
+							: __('Location visibility could not be updated.', 'emilian-scheel-minimal-map'),
 				});
 				throw error;
 			} finally {
@@ -785,14 +785,14 @@ export function useLocationsController(
 				status: 'success',
 				message:
 					selectedMarkerColorLocations.length === 1
-						? __('Marker color updated.', 'minimal-map')
-						: __('Marker colors updated.', 'minimal-map'),
+						? __('Marker color updated.', 'emilian-scheel-minimal-map')
+						: __('Marker colors updated.', 'emilian-scheel-minimal-map'),
 			});
 		} catch (error) {
 			setSubmitError(
 				error instanceof Error
 					? error.message
-					: __('Marker color could not be updated.', 'minimal-map')
+					: __('Marker color could not be updated.', 'emilian-scheel-minimal-map')
 			);
 		} finally {
 			setSubmitting(false);
@@ -901,7 +901,7 @@ export function useLocationsController(
 				message:
 					error instanceof Error
 						? error.message
-						: __('Collections could not be loaded.', 'minimal-map'),
+						: __('Collections could not be loaded.', 'emilian-scheel-minimal-map'),
 			});
 		});
 
@@ -923,7 +923,7 @@ export function useLocationsController(
 				message:
 					error instanceof Error
 						? error.message
-						: __('Logos could not be loaded.', 'minimal-map'),
+						: __('Logos could not be loaded.', 'emilian-scheel-minimal-map'),
 			});
 		});
 
@@ -945,7 +945,7 @@ export function useLocationsController(
 				message:
 					error instanceof Error
 						? error.message
-						: __('Markers could not be loaded.', 'minimal-map'),
+						: __('Markers could not be loaded.', 'emilian-scheel-minimal-map'),
 			});
 		});
 
@@ -967,7 +967,7 @@ export function useLocationsController(
 				message:
 					error instanceof Error
 						? error.message
-						: __('Tags could not be loaded.', 'minimal-map'),
+						: __('Tags could not be loaded.', 'emilian-scheel-minimal-map'),
 			});
 		});
 
@@ -1098,13 +1098,13 @@ export function useLocationsController(
 					status: 'success',
 					message:
 						targetLocations.length === 1
-							? __('Logo assigned to location.', 'minimal-map')
+							? __('Logo assigned to location.', 'emilian-scheel-minimal-map')
 							: sprintf(
 								_n(
 									'%d location updated with a logo.',
 									'%d locations updated with a logo.',
 									targetLocations.length,
-									'minimal-map'
+									'emilian-scheel-minimal-map'
 								),
 								targetLocations.length
 							),
@@ -1116,7 +1116,7 @@ export function useLocationsController(
 					message:
 						error instanceof Error
 							? error.message
-							: __('Location logos could not be updated.', 'minimal-map'),
+							: __('Location logos could not be updated.', 'emilian-scheel-minimal-map'),
 				});
 			} finally {
 				setAssignmentSaving(false);
@@ -1151,13 +1151,13 @@ export function useLocationsController(
 					status: 'success',
 					message:
 						targetLocations.length === 1
-							? __('Marker assigned to location.', 'minimal-map')
+							? __('Marker assigned to location.', 'emilian-scheel-minimal-map')
 							: sprintf(
 								_n(
 									'%d location updated with a marker.',
 									'%d locations updated with a marker.',
 									targetLocations.length,
-									'minimal-map'
+									'emilian-scheel-minimal-map'
 								),
 								targetLocations.length
 							),
@@ -1169,7 +1169,7 @@ export function useLocationsController(
 					message:
 						error instanceof Error
 							? error.message
-							: __('Location markers could not be updated.', 'minimal-map'),
+							: __('Location markers could not be updated.', 'emilian-scheel-minimal-map'),
 				});
 			} finally {
 				setAssignmentSaving(false);
@@ -1204,13 +1204,13 @@ export function useLocationsController(
 					status: 'success',
 					message:
 						targetLocations.length === 1
-							? __('Tags added to location.', 'minimal-map')
+							? __('Tags added to location.', 'emilian-scheel-minimal-map')
 							: sprintf(
 								_n(
 									'%d location updated with new tags.',
 									'%d locations updated with new tags.',
 									targetLocations.length,
-									'minimal-map'
+									'emilian-scheel-minimal-map'
 								),
 								targetLocations.length
 							),
@@ -1222,7 +1222,7 @@ export function useLocationsController(
 					message:
 						error instanceof Error
 							? error.message
-							: __('Location tags could not be updated.', 'minimal-map'),
+							: __('Location tags could not be updated.', 'emilian-scheel-minimal-map'),
 				});
 			} finally {
 				setAssignmentSaving(false);
@@ -1307,13 +1307,13 @@ export function useLocationsController(
 				status: 'success',
 				message:
 					selectedOpeningHoursLocations.length === 1
-						? __('Opening hours updated.', 'minimal-map')
+						? __('Opening hours updated.', 'emilian-scheel-minimal-map')
 						: sprintf(
 								_n(
 									'%d location updated with new opening hours.',
 									'%d locations updated with new opening hours.',
 									selectedOpeningHoursLocations.length,
-									'minimal-map'
+									'emilian-scheel-minimal-map'
 								),
 								selectedOpeningHoursLocations.length
 						  ),
@@ -1325,7 +1325,7 @@ export function useLocationsController(
 				message:
 					error instanceof Error
 						? error.message
-						: __('Opening hours could not be updated.', 'minimal-map'),
+						: __('Opening hours could not be updated.', 'emilian-scheel-minimal-map'),
 			});
 		} finally {
 			setAssignmentSaving(false);
@@ -1387,12 +1387,12 @@ export function useLocationsController(
 				message:
 					affectedLocations.length === 0
 						? selectedLogoRemovalLocations.length === 1
-							? __('The selected location already has no logo assigned.', 'minimal-map')
-							: __('None of the selected locations have logos assigned.', 'minimal-map')
+							? __('The selected location already has no logo assigned.', 'emilian-scheel-minimal-map')
+							: __('None of the selected locations have logos assigned.', 'emilian-scheel-minimal-map')
 						: affectedLocations.length === 1
-							? __('Logo removed from location.', 'minimal-map')
+							? __('Logo removed from location.', 'emilian-scheel-minimal-map')
 							: sprintf(
-								_n('%d location cleared of its logo.', '%d locations cleared of their logos.', affectedLocations.length, 'minimal-map'),
+								_n('%d location cleared of its logo.', '%d locations cleared of their logos.', affectedLocations.length, 'emilian-scheel-minimal-map'),
 								affectedLocations.length
 							),
 			});
@@ -1403,7 +1403,7 @@ export function useLocationsController(
 				message:
 					error instanceof Error
 						? error.message
-						: __('Logos could not be removed from the selected locations.', 'minimal-map'),
+						: __('Logos could not be removed from the selected locations.', 'emilian-scheel-minimal-map'),
 			});
 		} finally {
 			setAssignmentSaving(false);
@@ -1442,12 +1442,12 @@ export function useLocationsController(
 				message:
 					affectedLocations.length === 0
 						? selectedMarkerRemovalLocations.length === 1
-							? __('The selected location already has no marker assigned.', 'minimal-map')
-							: __('None of the selected locations have custom markers assigned.', 'minimal-map')
+							? __('The selected location already has no marker assigned.', 'emilian-scheel-minimal-map')
+							: __('None of the selected locations have custom markers assigned.', 'emilian-scheel-minimal-map')
 						: affectedLocations.length === 1
-							? __('Marker removed from location.', 'minimal-map')
+							? __('Marker removed from location.', 'emilian-scheel-minimal-map')
 							: sprintf(
-								_n('%d location cleared of its marker.', '%d locations cleared of their markers.', affectedLocations.length, 'minimal-map'),
+								_n('%d location cleared of its marker.', '%d locations cleared of their markers.', affectedLocations.length, 'emilian-scheel-minimal-map'),
 								affectedLocations.length
 							),
 			});
@@ -1458,7 +1458,7 @@ export function useLocationsController(
 				message:
 					error instanceof Error
 						? error.message
-						: __('Markers could not be removed from the selected locations.', 'minimal-map'),
+						: __('Markers could not be removed from the selected locations.', 'emilian-scheel-minimal-map'),
 			});
 		} finally {
 			setAssignmentSaving(false);
@@ -1497,12 +1497,12 @@ export function useLocationsController(
 				message:
 					affectedLocations.length === 0
 						? selectedTagRemovalLocations.length === 1
-							? __('The selected location already has no tags assigned.', 'minimal-map')
-							: __('None of the selected locations have tags assigned.', 'minimal-map')
+							? __('The selected location already has no tags assigned.', 'emilian-scheel-minimal-map')
+							: __('None of the selected locations have tags assigned.', 'emilian-scheel-minimal-map')
 						: affectedLocations.length === 1
-							? __('Tags removed from location.', 'minimal-map')
+							? __('Tags removed from location.', 'emilian-scheel-minimal-map')
 							: sprintf(
-								_n('%d location cleared of its tags.', '%d locations cleared of their tags.', affectedLocations.length, 'minimal-map'),
+								_n('%d location cleared of its tags.', '%d locations cleared of their tags.', affectedLocations.length, 'emilian-scheel-minimal-map'),
 								affectedLocations.length
 							),
 			});
@@ -1513,7 +1513,7 @@ export function useLocationsController(
 				message:
 					error instanceof Error
 						? error.message
-						: __('Tags could not be removed from the selected locations.', 'minimal-map'),
+						: __('Tags could not be removed from the selected locations.', 'emilian-scheel-minimal-map'),
 			});
 		} finally {
 			setAssignmentSaving(false);
@@ -1562,7 +1562,7 @@ export function useLocationsController(
 				await loadLocations();
 				setActionNotice({
 					status: 'success',
-					message: __('Location duplicated.', 'minimal-map'),
+					message: __('Location duplicated.', 'emilian-scheel-minimal-map'),
 				});
 			} catch (error) {
 				setActionNotice({
@@ -1570,7 +1570,7 @@ export function useLocationsController(
 					message:
 						error instanceof Error
 							? error.message
-							: __('Location could not be duplicated.', 'minimal-map'),
+							: __('Location could not be duplicated.', 'emilian-scheel-minimal-map'),
 				});
 				throw error;
 			} finally {
@@ -1616,7 +1616,7 @@ export function useLocationsController(
 				await loadLocations();
 				setActionNotice({
 					status: 'success',
-					message: __('Location coordinates updated.', 'minimal-map'),
+					message: __('Location coordinates updated.', 'emilian-scheel-minimal-map'),
 				});
 			} catch (error) {
 				if (!(error instanceof Error && error.message === validationMessage)) {
@@ -1625,7 +1625,7 @@ export function useLocationsController(
 						message:
 							error instanceof Error
 								? error.message
-								: __('Location could not be retrieved.', 'minimal-map'),
+								: __('Location could not be retrieved.', 'emilian-scheel-minimal-map'),
 					});
 				}
 				throw error;
@@ -1646,7 +1646,7 @@ export function useLocationsController(
 				await loadLocations();
 				setActionNotice({
 					status: 'success',
-					message: __('Location deleted.', 'minimal-map'),
+					message: __('Location deleted.', 'emilian-scheel-minimal-map'),
 				});
 			} catch (error) {
 				setActionNotice({
@@ -1654,7 +1654,7 @@ export function useLocationsController(
 					message:
 						error instanceof Error
 							? error.message
-							: __('Location could not be deleted.', 'minimal-map'),
+							: __('Location could not be deleted.', 'emilian-scheel-minimal-map'),
 				});
 				throw error;
 			} finally {
@@ -1678,9 +1678,9 @@ export function useLocationsController(
 					status: 'success',
 					message:
 						items.length === 1
-							? __('Location deleted.', 'minimal-map')
+							? __('Location deleted.', 'emilian-scheel-minimal-map')
 							: sprintf(
-								_n( '%d location deleted.', '%d locations deleted.', items.length, 'minimal-map' ),
+								_n( '%d location deleted.', '%d locations deleted.', items.length, 'emilian-scheel-minimal-map' ),
 								items.length
 							),
 				});
@@ -1690,7 +1690,7 @@ export function useLocationsController(
 					message:
 						error instanceof Error
 							? error.message
-							: __('Locations could not be deleted.', 'minimal-map'),
+							: __('Locations could not be deleted.', 'emilian-scheel-minimal-map'),
 				});
 				throw error;
 			} finally {
@@ -1726,7 +1726,7 @@ export function useLocationsController(
 						'%d location deleted.',
 						'%d locations deleted.',
 						allLocations.length,
-						'minimal-map'
+						'emilian-scheel-minimal-map'
 					),
 					allLocations.length
 				),
@@ -1737,7 +1737,7 @@ export function useLocationsController(
 				message:
 					error instanceof Error
 						? error.message
-						: __('Locations could not be deleted.', 'minimal-map'),
+						: __('Locations could not be deleted.', 'emilian-scheel-minimal-map'),
 			});
 			throw error;
 		} finally {
@@ -1758,7 +1758,7 @@ export function useLocationsController(
 		if (!selectedCollection) {
 			setActionNotice({
 				status: 'error',
-				message: __('Selected collection could not be found.', 'minimal-map'),
+				message: __('Selected collection could not be found.', 'emilian-scheel-minimal-map'),
 			});
 			return;
 		}
@@ -1766,7 +1766,7 @@ export function useLocationsController(
 		if (selectedCollection.location_ids.includes(selectedAssignmentLocation.id)) {
 			setActionNotice({
 				status: 'success',
-				message: __('Location is already assigned to that collection.', 'minimal-map'),
+				message: __('Location is already assigned to that collection.', 'emilian-scheel-minimal-map'),
 			});
 			resetAssignToCollectionState();
 			return;
@@ -1785,7 +1785,7 @@ export function useLocationsController(
 			await loadLocations();
 			setActionNotice({
 				status: 'success',
-				message: __('Location assigned to collection.', 'minimal-map'),
+				message: __('Location assigned to collection.', 'emilian-scheel-minimal-map'),
 			});
 			resetAssignToCollectionState();
 		} catch (error) {
@@ -1794,7 +1794,7 @@ export function useLocationsController(
 				message:
 					error instanceof Error
 						? error.message
-						: __('Location could not be assigned to the collection.', 'minimal-map'),
+						: __('Location could not be assigned to the collection.', 'emilian-scheel-minimal-map'),
 			});
 		} finally {
 			setAssignmentSaving(false);
@@ -1828,7 +1828,7 @@ export function useLocationsController(
 			await loadLocations();
 			setActionNotice({
 				status: 'success',
-				message: __('Collection removed from location.', 'minimal-map'),
+				message: __('Collection removed from location.', 'emilian-scheel-minimal-map'),
 			});
 			resetRemoveCollectionAssignmentState();
 		} catch (error) {
@@ -1837,7 +1837,7 @@ export function useLocationsController(
 				message:
 					error instanceof Error
 						? error.message
-						: __('Collection could not be removed from the location.', 'minimal-map'),
+						: __('Collection could not be removed from the location.', 'emilian-scheel-minimal-map'),
 			});
 		} finally {
 			setRemovingCollectionAssignment(false);
@@ -1970,7 +1970,7 @@ export function useLocationsController(
 						? error.message
 						: __(
 								'The address could not be geocoded right now. Select the location manually on the map.',
-								'minimal-map'
+								'emilian-scheel-minimal-map'
 						  )
 				);
 			} finally {
@@ -1982,7 +1982,7 @@ export function useLocationsController(
 		}
 
 		if (!selectedCoordinates) {
-			setSubmitError(__('Select a location on the map before finishing.', 'minimal-map'));
+			setSubmitError(__('Select a location on the map before finishing.', 'emilian-scheel-minimal-map'));
 			return;
 		}
 
@@ -2009,8 +2009,8 @@ export function useLocationsController(
 				error instanceof Error
 					? error.message
 					: formMode === 'edit'
-						? __('Location could not be updated.', 'minimal-map')
-						: __('Location could not be created.', 'minimal-map')
+						? __('Location could not be updated.', 'emilian-scheel-minimal-map')
+						: __('Location could not be created.', 'emilian-scheel-minimal-map')
 			);
 		} finally {
 			setSubmitting(false);
@@ -2092,7 +2092,7 @@ export function useLocationsController(
 								'%d location imported and assigned to a new collection.',
 								'%d locations imported and assigned to a new collection.',
 								result.importedCount,
-								'minimal-map'
+								'emilian-scheel-minimal-map'
 							),
 							result.importedCount
 						),
@@ -2112,7 +2112,7 @@ export function useLocationsController(
 		} catch (error) {
 			setActionNotice({
 				status: 'error',
-				message: error instanceof Error ? error.message : __('Failed to import locations.', 'minimal-map'),
+				message: error instanceof Error ? error.message : __('Failed to import locations.', 'emilian-scheel-minimal-map'),
 			});
 		}
 	}, [
@@ -2168,7 +2168,7 @@ export function useLocationsController(
 						'%d location imported and assigned to a new collection.',
 						'%d locations imported and assigned to a new collection.',
 						result.importedCount,
-						'minimal-map'
+						'emilian-scheel-minimal-map'
 					),
 					result.importedCount
 				),
@@ -2183,7 +2183,7 @@ export function useLocationsController(
 				message:
 					error instanceof Error
 						? error.message
-						: __('Failed to import locations.', 'minimal-map'),
+						: __('Failed to import locations.', 'emilian-scheel-minimal-map'),
 			});
 		} finally {
 			setIsImporting(false);
@@ -2319,7 +2319,7 @@ export function useLocationsController(
 						<Button
 							variant="tertiary"
 						icon={<BrushCleaning size={18} strokeWidth={2} />}
-						label={__('Delete all locations', 'minimal-map')}
+						label={__('Delete all locations', 'emilian-scheel-minimal-map')}
 						onClick={onOpenDeleteAllLocationsModal}
 						disabled={
 							totalItems === 0 ||
@@ -2348,7 +2348,7 @@ export function useLocationsController(
 					aria-keyshortcuts={getShortcutAriaKeys(['n'])}
 				>
 					<span className="minimal-map-admin__button-shortcut-content">
-						<span>{__('Add location', 'minimal-map')}</span>
+						<span>{__('Add location', 'emilian-scheel-minimal-map')}</span>
 						<KeyboardShortcut keys={['n']} variant="blue" />
 					</span>
 				</Button>
@@ -2384,8 +2384,8 @@ export function useLocationsController(
 		mapCenter,
 		modalTitle:
 			formMode === 'edit'
-				? __('Edit location', 'minimal-map')
-				: __('Add location', 'minimal-map'),
+				? __('Edit location', 'emilian-scheel-minimal-map')
+				: __('Add location', 'emilian-scheel-minimal-map'),
 		onBack,
 		onAssignLocationToCollection,
 		onAssignLogoToLocation,
@@ -2493,8 +2493,8 @@ export function useLocationsController(
 		selectedRemovalLocation,
 		submitLabel:
 			formMode === 'edit'
-				? __('Save changes', 'minimal-map')
-				: __('Finish', 'minimal-map'),
+				? __('Save changes', 'emilian-scheel-minimal-map')
+				: __('Finish', 'emilian-scheel-minimal-map'),
 		submitError,
 		step,
 		totalPages,
