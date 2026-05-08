@@ -37,7 +37,7 @@ export default function RemoveTagsConfirmationModal({
 
 	return (
 		<Modal
-			title={__('Remove Tags', 'emilian-scheel-minimal-map')}
+			title={__('Remove Tags', 'minimal-map')}
 			onRequestClose={controller.onCloseRemoveTagsConfirmationModal}
 			shouldCloseOnClickOutside={!controller.isAssignmentSaving}
 			shouldCloseOnEsc={!controller.isAssignmentSaving}
@@ -46,13 +46,13 @@ export default function RemoveTagsConfirmationModal({
 			<div className="minimal-map-admin__collection-delete-dialog">
 				<p className="minimal-map-admin__collection-delete-dialog-copy">
 					{affectedLocations.length === 0
-						? __('None of the selected locations have tags assigned. Confirm to close this selection.', 'emilian-scheel-minimal-map')
+						? __('None of the selected locations have tags assigned. Confirm to close this selection.', 'minimal-map')
 						: sprintf(
 							_n(
 								'Remove tags from %d selected location? %d of them currently have tags assigned.',
 								'Remove tags from %d selected locations? %d of them currently have tags assigned.',
 								controller.selectedTagRemovalLocations.length,
-								'emilian-scheel-minimal-map'
+								'minimal-map'
 							),
 							controller.selectedTagRemovalLocations.length,
 							affectedLocations.length
@@ -65,7 +65,7 @@ export default function RemoveTagsConfirmationModal({
 						disabled={controller.isAssignmentSaving}
 						data-minimal-map-dialog-ignore-enter="true"
 					>
-						{__('Cancel', 'emilian-scheel-minimal-map')}
+						{__('Cancel', 'minimal-map')}
 					</Button>
 					<Button
 						variant="primary"
@@ -75,7 +75,7 @@ export default function RemoveTagsConfirmationModal({
 						disabled={controller.isAssignmentSaving}
 					>
 						<span className="minimal-map-admin__location-dialog-button-content">
-							<span>{__('Remove Tags', 'emilian-scheel-minimal-map')}</span>
+							<span>{__('Remove Tags', 'minimal-map')}</span>
 							<Kbd variant="red">Enter</Kbd>
 						</span>
 					</Button>

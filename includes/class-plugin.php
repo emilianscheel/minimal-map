@@ -283,7 +283,7 @@ final class Plugin {
 			'dashboard' => sprintf(
 				'<a href="%1$s">%2$s</a>',
 				esc_url( Admin_Menu::get_view_url( Admin_Menu::DEFAULT_VIEW ) ),
-				esc_html__( 'Dashboard', 'emilian-scheel-minimal-map' )
+				esc_html__( 'Dashboard', 'minimal-map' )
 			),
 		);
 

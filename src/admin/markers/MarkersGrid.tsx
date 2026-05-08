@@ -12,7 +12,7 @@ export default function MarkersGrid({ controller }: { controller: MarkersControl
 		() => [
 			{
 				id: 'title',
-				label: __('Title', 'emilian-scheel-minimal-map'),
+				label: __('Title', 'minimal-map'),
 				enableHiding: false,
 				enableSorting: false,
 				filterBy: false,
@@ -20,7 +20,7 @@ export default function MarkersGrid({ controller }: { controller: MarkersControl
 			},
 			{
 				id: 'map_preview',
-				label: __('Preview', 'emilian-scheel-minimal-map'),
+				label: __('Preview', 'minimal-map'),
 				enableHiding: false,
 				enableSorting: false,
 				filterBy: false,
@@ -34,7 +34,7 @@ export default function MarkersGrid({ controller }: { controller: MarkersControl
 		() => [
 			{
 				id: 'download',
-				label: __('Download', 'emilian-scheel-minimal-map'),
+				label: __('Download', 'minimal-map'),
 				icon: <Download size={18} />,
 				context: 'single',
 				supportsBulk: false,
@@ -47,7 +47,7 @@ export default function MarkersGrid({ controller }: { controller: MarkersControl
 			},
 			{
 				id: 'edit',
-				label: __('Rename', 'emilian-scheel-minimal-map'),
+				label: __('Rename', 'minimal-map'),
 				icon: <Pencil size={18} />,
 				context: 'single',
 				supportsBulk: false,
@@ -60,7 +60,7 @@ export default function MarkersGrid({ controller }: { controller: MarkersControl
 			},
 			{
 				id: 'edit-colors',
-				label: __('Edit colors', 'emilian-scheel-minimal-map'),
+				label: __('Edit colors', 'minimal-map'),
 				icon: <Palette size={18} />,
 				context: 'single',
 				supportsBulk: false,
@@ -73,7 +73,7 @@ export default function MarkersGrid({ controller }: { controller: MarkersControl
 			},
 			{
 				id: 'delete',
-				label: __('Delete', 'emilian-scheel-minimal-map'),
+				label: __('Delete', 'minimal-map'),
 				icon: <Trash2 size={18} />,
 				context: 'single',
 				supportsBulk: false,

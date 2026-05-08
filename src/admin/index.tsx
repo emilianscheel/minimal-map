@@ -91,7 +91,7 @@ function AdminSidebar({ currentView }: { currentView: AdminSectionView }) {
     <aside className="minimal-map-admin__sidebar">
       <nav
         className="minimal-map-admin__nav"
-        aria-label={__("Minimal Map: Store Locator & Map Block Sections", "emilian-scheel-minimal-map")}
+        aria-label={__("Minimal Map: Store Locator & Map Block Sections", "minimal-map")}
       >
         {adminConfig.sections.map((section) => {
           const isActive = section.view === currentView;

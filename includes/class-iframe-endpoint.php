@@ -107,7 +107,7 @@ class Iframe_Endpoint {
 				'status' => 400,
 				'html'   => $this->render_document(
 					array(
-						'document_title'    => __( 'Invalid Minimal Map Embed', 'emilian-scheel-minimal-map' ),
+						'document_title'    => __( 'Invalid Minimal Map Embed', 'minimal-map' ),
 						'document_font_family' => $this->config->get_default_block_attributes()['fontFamily'],
 						'error_message'     => $normalized_config->get_error_message(),
 						'map_surface_markup' => '',
@@ -120,7 +120,7 @@ class Iframe_Endpoint {
 			'status' => 200,
 			'html'   => $this->render_document(
 				array(
-					'document_title'    => __( 'Minimal Map', 'emilian-scheel-minimal-map' ),
+					'document_title'    => __( 'Minimal Map', 'minimal-map' ),
 					'document_font_family' => $normalized_config['fontFamily'],
 					'error_message'     => '',
 					'map_surface_markup' => $this->map_view->render_surface( $normalized_config ),

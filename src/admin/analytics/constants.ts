@@ -17,12 +17,12 @@ export const ANALYTICS_RANGE_OPTIONS: Array<{
 	value: AnalyticsRangeKey;
 	label: string;
 }> = [
-	{ value: 'today', label: __('Today', 'emilian-scheel-minimal-map') },
-	{ value: 'yesterday', label: __('Yesterday', 'emilian-scheel-minimal-map') },
-	{ value: '7d', label: __('Last 7 Days', 'emilian-scheel-minimal-map') },
-	{ value: '30d', label: __('Last 30 Days', 'emilian-scheel-minimal-map') },
-	{ value: '90d', label: __('Last 90 Days', 'emilian-scheel-minimal-map') },
-	{ value: 'all', label: __('All', 'emilian-scheel-minimal-map') },
+	{ value: 'today', label: __('Today', 'minimal-map') },
+	{ value: 'yesterday', label: __('Yesterday', 'minimal-map') },
+	{ value: '7d', label: __('Last 7 Days', 'minimal-map') },
+	{ value: '30d', label: __('Last 30 Days', 'minimal-map') },
+	{ value: '90d', label: __('Last 90 Days', 'minimal-map') },
+	{ value: 'all', label: __('All', 'minimal-map') },
 ];
 
 export const EMPTY_SEARCH_ANALYTICS_SUMMARY: SearchAnalyticsSummary = {

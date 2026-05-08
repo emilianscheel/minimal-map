@@ -16,7 +16,7 @@ export default function MarkerColorModal({ controller }: { controller: Locations
 	return (
 		<Modal
 			className="minimal-map-admin__collection-modal"
-			title={isBulk ? __('Edit marker colors', 'emilian-scheel-minimal-map') : __('Edit marker color', 'emilian-scheel-minimal-map')}
+			title={isBulk ? __('Edit marker colors', 'minimal-map') : __('Edit marker color', 'minimal-map')}
 			onRequestClose={controller.onCloseMarkerColorModal}
 			shouldCloseOnClickOutside={!controller.isSubmitting}
 			shouldCloseOnEsc={!controller.isSubmitting}
@@ -46,14 +46,14 @@ export default function MarkerColorModal({ controller }: { controller: Locations
 									'Set a new marker color for %d selected location.',
 									'Set a new marker color for %d selected locations.',
 									controller.selectedMarkerColorLocations.length,
-									'emilian-scheel-minimal-map'
+									'minimal-map'
 								),
 								controller.selectedMarkerColorLocations.length
 							)}
 						</p>
 					)}
 					<ColorControl
-						label={__('Marker Color', 'emilian-scheel-minimal-map')}
+						label={__('Marker Color', 'minimal-map')}
 						color={controller.form.marker_color}
 						onChange={(value) => controller.onChangeFormValue('marker_color', value)}
 					/>
@@ -66,7 +66,7 @@ export default function MarkerColorModal({ controller }: { controller: Locations
 						onClick={controller.onCloseMarkerColorModal}
 						disabled={controller.isSubmitting}
 					>
-						{__('Cancel', 'emilian-scheel-minimal-map')}
+						{__('Cancel', 'minimal-map')}
 					</Button>
 					<Button
 						__next40pxDefaultSize
@@ -76,7 +76,7 @@ export default function MarkerColorModal({ controller }: { controller: Locations
 						disabled={controller.isSubmitting}
 					>
 						<span className="minimal-map-admin__location-dialog-button-content">
-							<span>{__('Save changes', 'emilian-scheel-minimal-map')}</span>
+							<span>{__('Save changes', 'minimal-map')}</span>
 							<Kbd variant="blue">Enter</Kbd>
 						</span>
 					</Button>

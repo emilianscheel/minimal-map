@@ -46,8 +46,8 @@ export default function DeleteLocationActionModal({
         actionError instanceof Error
           ? actionError.message
           : items.length > 1
-          ? __("Locations could not be deleted.", "emilian-scheel-minimal-map")
-          : __("Location could not be deleted.", "emilian-scheel-minimal-map"),
+          ? __("Locations could not be deleted.", "minimal-map")
+          : __("Location could not be deleted.", "minimal-map"),
       );
     } finally {
       setDeleting(false);
@@ -86,11 +86,11 @@ export default function DeleteLocationActionModal({
                 "Are you sure you want to delete %d location? This action cannot be undone.",
                 "Are you sure you want to delete %d locations? This action cannot be undone.",
                 items.length,
-                "emilian-scheel-minimal-map",
+                "minimal-map",
               ),
               items.length,
             )
-          : __("Delete this location and remove its saved collection assignments?", "emilian-scheel-minimal-map")}
+          : __("Delete this location and remove its saved collection assignments?", "minimal-map")}
       </p>
       {!isBulk && items[0] && (
         <p className="minimal-map-admin__collection-delete-dialog-title">
@@ -109,7 +109,7 @@ export default function DeleteLocationActionModal({
           disabled={isDeleting}
           data-minimal-map-dialog-ignore-enter="true"
         >
-          {__("Cancel", "emilian-scheel-minimal-map")}
+          {__("Cancel", "minimal-map")}
         </Button>
         <Button
           variant="primary"
@@ -119,7 +119,7 @@ export default function DeleteLocationActionModal({
           disabled={isDeleting}
         >
           <span className="minimal-map-admin__location-dialog-button-content">
-            <span>{__("Delete", "emilian-scheel-minimal-map")}</span>
+            <span>{__("Delete", "minimal-map")}</span>
             <Kbd variant="red">Enter</Kbd>
           </span>
         </Button>

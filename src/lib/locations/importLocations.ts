@@ -285,23 +285,23 @@ export function exportLocationsJson(
 }
 
 export const CUSTOM_CSV_MAPPING_FIELDS = [
-	{ key: 'title', label: __('Title', 'emilian-scheel-minimal-map') },
-	{ key: 'email', label: __('Email', 'emilian-scheel-minimal-map') },
-	{ key: 'telephone', label: __('Phone', 'emilian-scheel-minimal-map') },
-	{ key: 'website', label: __('Website', 'emilian-scheel-minimal-map') },
-	{ key: 'instagram', label: __('Instagram', 'emilian-scheel-minimal-map') },
-	{ key: 'x', label: __('X', 'emilian-scheel-minimal-map') },
-	{ key: 'facebook', label: __('Facebook', 'emilian-scheel-minimal-map') },
-	{ key: 'threads', label: __('Threads', 'emilian-scheel-minimal-map') },
-	{ key: 'youtube', label: __('YouTube', 'emilian-scheel-minimal-map') },
-	{ key: 'telegram', label: __('Telegram', 'emilian-scheel-minimal-map') },
-	{ key: 'street', label: __('Street', 'emilian-scheel-minimal-map') },
-	{ key: 'house_number', label: __('House number', 'emilian-scheel-minimal-map') },
-	{ key: 'city', label: __('City', 'emilian-scheel-minimal-map') },
-	{ key: 'postal_code', label: __('Zip code', 'emilian-scheel-minimal-map') },
-	{ key: 'country', label: __('Country', 'emilian-scheel-minimal-map') },
-	{ key: 'marker_color', label: __('Marker color', 'emilian-scheel-minimal-map') },
-	{ key: 'is_hidden', label: __('Hidden', 'emilian-scheel-minimal-map') },
+	{ key: 'title', label: __('Title', 'minimal-map') },
+	{ key: 'email', label: __('Email', 'minimal-map') },
+	{ key: 'telephone', label: __('Phone', 'minimal-map') },
+	{ key: 'website', label: __('Website', 'minimal-map') },
+	{ key: 'instagram', label: __('Instagram', 'minimal-map') },
+	{ key: 'x', label: __('X', 'minimal-map') },
+	{ key: 'facebook', label: __('Facebook', 'minimal-map') },
+	{ key: 'threads', label: __('Threads', 'minimal-map') },
+	{ key: 'youtube', label: __('YouTube', 'minimal-map') },
+	{ key: 'telegram', label: __('Telegram', 'minimal-map') },
+	{ key: 'street', label: __('Street', 'minimal-map') },
+	{ key: 'house_number', label: __('House number', 'minimal-map') },
+	{ key: 'city', label: __('City', 'minimal-map') },
+	{ key: 'postal_code', label: __('Zip code', 'minimal-map') },
+	{ key: 'country', label: __('Country', 'minimal-map') },
+	{ key: 'marker_color', label: __('Marker color', 'minimal-map') },
+	{ key: 'is_hidden', label: __('Hidden', 'minimal-map') },
 ] as const;
 
 export type CsvDelimiter = ',' | ';';
@@ -463,7 +463,7 @@ export function parseCsvText(text: string): ParsedCsvData {
 	const parsedRows = parseCsvRows(text, delimiter);
 
 	if (parsedRows.length < 2) {
-		throw new Error(__('CSV file is empty or missing headers.', 'emilian-scheel-minimal-map'));
+		throw new Error(__('CSV file is empty or missing headers.', 'minimal-map'));
 	}
 
 	const headers = parsedRows[0].map((header) => header.replace(/^\uFEFF/, '').trim());
@@ -497,18 +497,18 @@ export function parseJsonText(text: string): ParsedLocationImportData {
 	try {
 		parsedJson = JSON.parse(text);
 	} catch {
-		throw new Error(__('JSON file is invalid.', 'emilian-scheel-minimal-map'));
+		throw new Error(__('JSON file is invalid.', 'minimal-map'));
 	}
 
 	if (!Array.isArray(parsedJson) || parsedJson.length === 0) {
-		throw new Error(__('JSON file must contain a non-empty array of objects.', 'emilian-scheel-minimal-map'));
+		throw new Error(__('JSON file must contain a non-empty array of objects.', 'minimal-map'));
 	}
 
 	const headers: string[] = [];
 
 	for (const entry of parsedJson) {
 		if (!entry || typeof entry !== 'object' || Array.isArray(entry)) {
-			throw new Error(__('JSON file must contain only objects.', 'emilian-scheel-minimal-map'));
+			throw new Error(__('JSON file must contain only objects.', 'minimal-map'));
 		}
 
 		Object.keys(entry).forEach((key) => {
@@ -519,7 +519,7 @@ export function parseJsonText(text: string): ParsedLocationImportData {
 	}
 
 	if (headers.length === 0) {
-		throw new Error(__('JSON file is empty or missing fields.', 'emilian-scheel-minimal-map'));
+		throw new Error(__('JSON file is empty or missing fields.', 'minimal-map'));
 	}
 
 	const rows = parsedJson.map((entry) => {
@@ -612,11 +612,11 @@ function createImportCollectionTitle(now: () => Date): string {
 		' ' +
 		date.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
 
-	return `${__('Import on', 'emilian-scheel-minimal-map')} ${timestamp}`;
+	return `${__('Import on', 'minimal-map')} ${timestamp}`;
 }
 
 function getImportedLocationFallbackTitle(): string {
-	return __('Imported Location', 'emilian-scheel-minimal-map');
+	return __('Imported Location', 'minimal-map');
 }
 
 function createBaseImportForm(): LocationFormState {
@@ -902,7 +902,7 @@ export async function runCommonCsvImport(
 	const totalRows = parsedCsv.rows.length;
 
 	if (!isCommonCsvFormat(parsedCsv)) {
-		throw new Error(__('CSV file does not match the supported import format.', 'emilian-scheel-minimal-map'));
+		throw new Error(__('CSV file does not match the supported import format.', 'minimal-map'));
 	}
 
 	dependencies.onProgress?.(0, totalRows);

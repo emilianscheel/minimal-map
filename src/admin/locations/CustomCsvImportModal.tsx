@@ -16,19 +16,19 @@ export default function CustomCsvImportModal({ controller }: { controller: Locat
 		return null;
 	}
 
-	const modalTitle = __('Import custom data', 'emilian-scheel-minimal-map');
+	const modalTitle = __('Import custom data', 'minimal-map');
 	const allColumnOptions = controller.csvImportColumnOptions;
 	const logoOptions = [
-		{ label: __('None', 'emilian-scheel-minimal-map'), value: '' },
+		{ label: __('None', 'minimal-map'), value: '' },
 		...controller.logos.map((logo) => ({
-			label: logo.title || __('Untitled logo', 'emilian-scheel-minimal-map'),
+			label: logo.title || __('Untitled logo', 'minimal-map'),
 			value: `${logo.id}`,
 		})),
 	];
 	const markerOptions = [
-		{ label: __('None', 'emilian-scheel-minimal-map'), value: '' },
+		{ label: __('None', 'minimal-map'), value: '' },
 		...controller.markers.map((marker) => ({
-			label: marker.title || __('Untitled marker', 'emilian-scheel-minimal-map'),
+			label: marker.title || __('Untitled marker', 'minimal-map'),
 			value: `${marker.id}`,
 		})),
 	];
@@ -114,16 +114,16 @@ export default function CustomCsvImportModal({ controller }: { controller: Locat
 									__next40pxDefaultSize
 									__nextHasNoMarginBottom
 									hideLabelFromVision
-									label={__('Logo', 'emilian-scheel-minimal-map')}
+									label={__('Logo', 'minimal-map')}
 									value="logo"
-									options={[{ label: __('Logo', 'emilian-scheel-minimal-map'), value: 'logo' }]}
+									options={[{ label: __('Logo', 'minimal-map'), value: 'logo' }]}
 									disabled
 								/>
 								<SelectControl
 									__next40pxDefaultSize
 									__nextHasNoMarginBottom
 									hideLabelFromVision
-									label={__('Logo', 'emilian-scheel-minimal-map')}
+									label={__('Logo', 'minimal-map')}
 									value={controller.csvImportLogoId}
 									options={logoOptions}
 									onChange={controller.onSelectCsvImportLogo}
@@ -135,16 +135,16 @@ export default function CustomCsvImportModal({ controller }: { controller: Locat
 									__next40pxDefaultSize
 									__nextHasNoMarginBottom
 									hideLabelFromVision
-									label={__('Marker', 'emilian-scheel-minimal-map')}
+									label={__('Marker', 'minimal-map')}
 									value="marker"
-									options={[{ label: __('Marker', 'emilian-scheel-minimal-map'), value: 'marker' }]}
+									options={[{ label: __('Marker', 'minimal-map'), value: 'marker' }]}
 									disabled
 								/>
 								<SelectControl
 									__next40pxDefaultSize
 									__nextHasNoMarginBottom
 									hideLabelFromVision
-									label={__('Marker', 'emilian-scheel-minimal-map')}
+									label={__('Marker', 'minimal-map')}
 									value={controller.csvImportMarkerId}
 									options={markerOptions}
 									onChange={controller.onSelectCsvImportMarker}
@@ -153,7 +153,7 @@ export default function CustomCsvImportModal({ controller }: { controller: Locat
 							</div>
 						</div>
 						<FormTokenField
-							label={__('Tags', 'emilian-scheel-minimal-map')}
+							label={__('Tags', 'minimal-map')}
 							value={selectedTagNames}
 							suggestions={tagSuggestions}
 							onChange={(tokenNames) => {
@@ -176,7 +176,7 @@ export default function CustomCsvImportModal({ controller }: { controller: Locat
 									disabled={controller.isImporting}
 									data-minimal-map-dialog-ignore-enter="true"
 								>
-									{__('Cancel', 'emilian-scheel-minimal-map')}
+									{__('Cancel', 'minimal-map')}
 								</Button>
 								<Button
 									__next40pxDefaultSize
@@ -186,7 +186,7 @@ export default function CustomCsvImportModal({ controller }: { controller: Locat
 									disabled={controller.isImporting}
 								>
 									<span className="minimal-map-admin__location-dialog-button-content">
-										<span>{__('Next', 'emilian-scheel-minimal-map')}</span>
+										<span>{__('Next', 'minimal-map')}</span>
 										<Kbd variant="blue">Enter</Kbd>
 									</span>
 								</Button>
@@ -215,7 +215,7 @@ export default function CustomCsvImportModal({ controller }: { controller: Locat
 									disabled={controller.isImporting}
 									data-minimal-map-dialog-ignore-enter="true"
 								>
-									{__('Back', 'emilian-scheel-minimal-map')}
+									{__('Back', 'minimal-map')}
 								</Button>
 							</div>
 							<div className="minimal-map-admin__location-dialog-actions">
@@ -226,7 +226,7 @@ export default function CustomCsvImportModal({ controller }: { controller: Locat
 									disabled={controller.isImporting}
 									data-minimal-map-dialog-ignore-enter="true"
 								>
-									{__('Cancel', 'emilian-scheel-minimal-map')}
+									{__('Cancel', 'minimal-map')}
 								</Button>
 								<Button
 									__next40pxDefaultSize
@@ -238,7 +238,7 @@ export default function CustomCsvImportModal({ controller }: { controller: Locat
 									disabled={controller.isImporting}
 								>
 									<span className="minimal-map-admin__location-dialog-button-content">
-										<span>{__('Next', 'emilian-scheel-minimal-map')}</span>
+										<span>{__('Next', 'minimal-map')}</span>
 										<Kbd variant="blue">Enter</Kbd>
 									</span>
 								</Button>

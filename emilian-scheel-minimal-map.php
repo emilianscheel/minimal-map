@@ -8,7 +8,7 @@
  * Author:            Emilian Scheel
  * License:           MIT
  * License URI:       https://opensource.org/license/mit/
- * Text Domain:       emilian-scheel-minimal-map
+ * Text Domain:       minimal-map
  * Domain Path:       /languages
  *
  * @package Minimal_Map

@@ -157,7 +157,7 @@ export function useAnalyticsController(
 				setLoadError(
 					error instanceof Error
 						? error.message
-						: __('Analytics data could not be loaded.', 'emilian-scheel-minimal-map')
+						: __('Analytics data could not be loaded.', 'minimal-map')
 				);
 			})
 			.finally(() => {
@@ -187,7 +187,7 @@ export function useAnalyticsController(
 				setLoadError(
 					error instanceof Error
 						? error.message
-						: __('Analytics data could not be loaded.', 'emilian-scheel-minimal-map')
+						: __('Analytics data could not be loaded.', 'minimal-map')
 				);
 			})
 			.finally(() => {
@@ -217,7 +217,7 @@ export function useAnalyticsController(
 				setLoadError(
 					error instanceof Error
 						? error.message
-						: __('Analytics data could not be loaded.', 'emilian-scheel-minimal-map')
+						: __('Analytics data could not be loaded.', 'minimal-map')
 				);
 			})
 			.finally(() => {
@@ -247,7 +247,7 @@ export function useAnalyticsController(
 				setLoadError(
 					error instanceof Error
 						? error.message
-						: __('Analytics data could not be loaded.', 'emilian-scheel-minimal-map')
+						: __('Analytics data could not be loaded.', 'minimal-map')
 				);
 			})
 			.finally(() => {
@@ -322,7 +322,7 @@ export function useAnalyticsController(
 				message:
 					error instanceof Error
 						? error.message
-						: __('Analytics settings could not be updated.', 'emilian-scheel-minimal-map'),
+						: __('Analytics settings could not be updated.', 'minimal-map'),
 			});
 		} finally {
 			setSavingSettings(false);
@@ -387,7 +387,7 @@ export function useAnalyticsController(
 			setDeleteAllAnalyticsModalOpen(false);
 			setNotice({
 				status: 'success',
-				message: __('All tracking data deleted.', 'emilian-scheel-minimal-map'),
+				message: __('All tracking data deleted.', 'minimal-map'),
 			});
 		} catch (error) {
 			setNotice({
@@ -395,7 +395,7 @@ export function useAnalyticsController(
 				message:
 					error instanceof Error
 						? error.message
-						: __('Analytics tracking data could not be deleted.', 'emilian-scheel-minimal-map'),
+						: __('Analytics tracking data could not be deleted.', 'minimal-map'),
 			});
 		} finally {
 			setDeletingAllAnalytics(false);

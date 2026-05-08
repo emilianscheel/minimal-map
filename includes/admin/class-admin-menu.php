@@ -36,36 +36,36 @@ class Admin_Menu {
 	public static function get_sections() {
 		return array(
 			'dashboard'  => array(
-				'title'       => __( 'Dashboard', 'emilian-scheel-minimal-map' ),
-				'description' => __( 'An overview of Minimal Map: Store Locator & Map Block sections and upcoming data tools.', 'emilian-scheel-minimal-map' ),
+				'title'       => __( 'Dashboard', 'minimal-map' ),
+				'description' => __( 'An overview of Minimal Map: Store Locator & Map Block sections and upcoming data tools.', 'minimal-map' ),
 			),
 			'analytics'  => array(
-				'title'       => __( 'Analytics', 'emilian-scheel-minimal-map' ),
-				'description' => __( 'Review map search demand and identify where people are looking for locations.', 'emilian-scheel-minimal-map' ),
+				'title'       => __( 'Analytics', 'minimal-map' ),
+				'description' => __( 'Review map search demand and identify where people are looking for locations.', 'minimal-map' ),
 			),
 			'locations'  => array(
-				'title'       => __( 'Locations', 'emilian-scheel-minimal-map' ),
-				'description' => __( 'Create and organize the places you want to render on your maps.', 'emilian-scheel-minimal-map' ),
+				'title'       => __( 'Locations', 'minimal-map' ),
+				'description' => __( 'Create and organize the places you want to render on your maps.', 'minimal-map' ),
 			),
 			'collections' => array(
-				'title'       => __( 'Collections', 'emilian-scheel-minimal-map' ),
-				'description' => __( 'Assemble reusable groups of locations and manage their map-ready assignments.', 'emilian-scheel-minimal-map' ),
+				'title'       => __( 'Collections', 'minimal-map' ),
+				'description' => __( 'Assemble reusable groups of locations and manage their map-ready assignments.', 'minimal-map' ),
 			),
 			'tags'       => array(
-				'title'       => __( 'Tags', 'emilian-scheel-minimal-map' ),
-				'description' => __( 'Apply lightweight labels to keep map content easy to organize.', 'emilian-scheel-minimal-map' ),
+				'title'       => __( 'Tags', 'minimal-map' ),
+				'description' => __( 'Apply lightweight labels to keep map content easy to organize.', 'minimal-map' ),
 			),
 			'logos'      => array(
-				'title'       => __( 'Logos', 'emilian-scheel-minimal-map' ),
-				'description' => __( 'Upload SVG logos and assign them across multiple locations.', 'emilian-scheel-minimal-map' ),
+				'title'       => __( 'Logos', 'minimal-map' ),
+				'description' => __( 'Upload SVG logos and assign them across multiple locations.', 'minimal-map' ),
 			),
 			'markers'    => array(
-				'title'       => __( 'Markers', 'emilian-scheel-minimal-map' ),
-				'description' => __( 'Define the marker styles and visual pin variants used across maps.', 'emilian-scheel-minimal-map' ),
+				'title'       => __( 'Markers', 'minimal-map' ),
+				'description' => __( 'Define the marker styles and visual pin variants used across maps.', 'minimal-map' ),
 			),
 			'styles'     => array(
-				'title'       => __( 'Styles', 'emilian-scheel-minimal-map' ),
-				'description' => __( 'Manage the map styles and presets available inside the block editor.', 'emilian-scheel-minimal-map' ),
+				'title'       => __( 'Styles', 'minimal-map' ),
+				'description' => __( 'Manage the map styles and presets available inside the block editor.', 'minimal-map' ),
 			),
 		);
 	}
@@ -110,8 +110,8 @@ class Admin_Menu {
 	 */
 	public function register() {
 		add_menu_page(
-			__( 'Minimal Map: Store Locator & Map Block', 'emilian-scheel-minimal-map' ),
-			__( 'Minimal Map: Store Locator & Map Block', 'emilian-scheel-minimal-map' ),
+			__( 'Minimal Map: Store Locator & Map Block', 'minimal-map' ),
+			__( 'Minimal Map: Store Locator & Map Block', 'minimal-map' ),
 			self::CAPABILITY,
 			self::TOP_LEVEL_SLUG,
 			array( $this, 'render_page' ),

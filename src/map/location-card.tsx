@@ -150,12 +150,12 @@ function LocationContactMeta({
     { label: string; icon: any }
   > = useMemo(
     () => ({
-      instagram: { label: __("Instagram", "emilian-scheel-minimal-map"), icon: Instagram },
-      x: { label: __("X", "emilian-scheel-minimal-map"), icon: Twitter },
-      facebook: { label: __("Facebook", "emilian-scheel-minimal-map"), icon: Facebook },
-      threads: { label: __("Threads", "emilian-scheel-minimal-map"), icon: AtSign },
-      youtube: { label: __("YouTube", "emilian-scheel-minimal-map"), icon: Youtube },
-      telegram: { label: __("Telegram", "emilian-scheel-minimal-map"), icon: Send },
+      instagram: { label: __("Instagram", "minimal-map"), icon: Instagram },
+      x: { label: __("X", "minimal-map"), icon: Twitter },
+      facebook: { label: __("Facebook", "minimal-map"), icon: Facebook },
+      threads: { label: __("Threads", "minimal-map"), icon: AtSign },
+      youtube: { label: __("YouTube", "minimal-map"), icon: Youtube },
+      telegram: { label: __("Telegram", "minimal-map"), icon: Send },
     }),
     [],
   );
@@ -330,7 +330,7 @@ export const LocationResultCard = memo(
               className={`minimal-map-search__result-opening-hours-trigger minimal-map-search__result-opening-hours-trigger--static ${openingHoursStateClass}`}
             >
               <Clock3 size={10} />
-              <span>{openedStatus?.label || __("Closed", "emilian-scheel-minimal-map")}</span>
+              <span>{openedStatus?.label || __("Closed", "minimal-map")}</span>
             </div>
           ) : (
             <>
@@ -348,7 +348,7 @@ export const LocationResultCard = memo(
               >
                 <Clock3 size={10} />
                 <span>
-                  {openedStatus?.label || __("Closed", "emilian-scheel-minimal-map")}
+                  {openedStatus?.label || __("Closed", "minimal-map")}
                 </span>
                 <ChevronDown
                   size={12}
@@ -461,13 +461,13 @@ export const LocationResultCard = memo(
                   rel="noreferrer noopener"
                 >
                   {googleMapsButtonShowIcon ? <Navigation size={10} /> : null}
-                  <span>{__("Open in Google Maps", "emilian-scheel-minimal-map")}</span>
+                  <span>{__("Open in Google Maps", "minimal-map")}</span>
                 </a>
               ) : null}
             </div>
             {distanceLabel ? (
               <div className="minimal-map-search__result-distance">
-                {sprintf(__("%s away", "emilian-scheel-minimal-map"), distanceLabel)}
+                {sprintf(__("%s away", "minimal-map"), distanceLabel)}
               </div>
             ) : null}
           </div>

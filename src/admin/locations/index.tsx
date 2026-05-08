@@ -47,7 +47,7 @@ export default function LocationsView({ controller }: { controller: LocationsCon
 							void controller.onImportLocations(file);
 						}
 					}}
-					label={__('Drop a CSV, Excel, or JSON file here to import locations', 'emilian-scheel-minimal-map')}
+					label={__('Drop a CSV, Excel, or JSON file here to import locations', 'minimal-map')}
 				/>
 				{controller.isLoading ? (
 					<div className="minimal-map-admin__locations-state minimal-map-admin__locations-state--loading">

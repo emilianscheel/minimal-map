@@ -13,7 +13,7 @@ export default function LocationTitleCell({
 		return <span className="minimal-map-admin__location-title">{location.title}</span>;
 	}
 
-	const hiddenLabel = __('Hidden location. Click to show it again.', 'emilian-scheel-minimal-map');
+	const hiddenLabel = __('Hidden location. Click to show it again.', 'minimal-map');
 
 	return (
 		<span className="minimal-map-admin__location-title minimal-map-admin__location-title--hidden">

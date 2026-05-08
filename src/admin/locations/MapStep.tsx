@@ -77,7 +77,7 @@ export default function MapStep({
       ) : null}
       {!controller.selectedCoordinates && (
         <p className="minimal-map-admin__location-map-hint">
-          {__("Click on the map to place the location marker.", "emilian-scheel-minimal-map")}
+          {__("Click on the map to place the location marker.", "minimal-map")}
         </p>
       )}
       <div ref={hostRef} className="minimal-map-admin__location-map-surface" />

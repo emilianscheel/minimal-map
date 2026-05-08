@@ -25,7 +25,7 @@ export default function DeleteLogoModal({ controller }: { controller: LogosContr
 
 	return (
 		<Modal
-			title={__('Delete Logo', 'emilian-scheel-minimal-map')}
+			title={__('Delete Logo', 'minimal-map')}
 			onRequestClose={controller.onCloseDeleteModal}
 			shouldCloseOnClickOutside={!controller.isRowActionPending}
 			shouldCloseOnEsc={!controller.isRowActionPending}
@@ -35,7 +35,7 @@ export default function DeleteLogoModal({ controller }: { controller: LogosContr
 				<p className="minimal-map-admin__collection-delete-dialog-copy">
 					{__(
 						'Delete this logo and clear it from every assigned location? This action cannot be undone.',
-						'emilian-scheel-minimal-map'
+						'minimal-map'
 					)}
 				</p>
 				<p className="minimal-map-admin__collection-delete-dialog-title">
@@ -48,7 +48,7 @@ export default function DeleteLogoModal({ controller }: { controller: LogosContr
 						disabled={controller.isRowActionPending}
 						data-minimal-map-dialog-ignore-enter="true"
 					>
-						{__('Cancel', 'emilian-scheel-minimal-map')}
+						{__('Cancel', 'minimal-map')}
 					</Button>
 					<Button
 						variant="primary"
@@ -58,7 +58,7 @@ export default function DeleteLogoModal({ controller }: { controller: LogosContr
 						disabled={controller.isRowActionPending}
 					>
 						<span className="minimal-map-admin__location-dialog-button-content">
-							<span>{__('Delete Logo', 'emilian-scheel-minimal-map')}</span>
+							<span>{__('Delete Logo', 'minimal-map')}</span>
 							<Kbd variant="red">Enter</Kbd>
 						</span>
 					</Button>

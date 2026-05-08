@@ -37,7 +37,7 @@ export default function RemoveMarkerConfirmationModal({
 
 	return (
 		<Modal
-			title={__('Remove Markers', 'emilian-scheel-minimal-map')}
+			title={__('Remove Markers', 'minimal-map')}
 			onRequestClose={controller.onCloseRemoveMarkerConfirmationModal}
 			shouldCloseOnClickOutside={!controller.isAssignmentSaving}
 			shouldCloseOnEsc={!controller.isAssignmentSaving}
@@ -46,13 +46,13 @@ export default function RemoveMarkerConfirmationModal({
 			<div className="minimal-map-admin__collection-delete-dialog">
 				<p className="minimal-map-admin__collection-delete-dialog-copy">
 					{affectedLocations.length === 0
-						? __('None of the selected locations have a custom marker assigned. Confirm to close this selection.', 'emilian-scheel-minimal-map')
+						? __('None of the selected locations have a custom marker assigned. Confirm to close this selection.', 'minimal-map')
 						: sprintf(
 							_n(
 								'Remove markers from %d selected location? %d of them currently have a custom marker assigned.',
 								'Remove markers from %d selected locations? %d of them currently have a custom marker assigned.',
 								controller.selectedMarkerRemovalLocations.length,
-								'emilian-scheel-minimal-map'
+								'minimal-map'
 							),
 							controller.selectedMarkerRemovalLocations.length,
 							affectedLocations.length
@@ -65,7 +65,7 @@ export default function RemoveMarkerConfirmationModal({
 						disabled={controller.isAssignmentSaving}
 						data-minimal-map-dialog-ignore-enter="true"
 					>
-						{__('Cancel', 'emilian-scheel-minimal-map')}
+						{__('Cancel', 'minimal-map')}
 					</Button>
 					<Button
 						variant="primary"
@@ -75,7 +75,7 @@ export default function RemoveMarkerConfirmationModal({
 						disabled={controller.isAssignmentSaving}
 					>
 						<span className="minimal-map-admin__location-dialog-button-content">
-							<span>{__('Remove Markers', 'emilian-scheel-minimal-map')}</span>
+							<span>{__('Remove Markers', 'minimal-map')}</span>
 							<Kbd variant="red">Enter</Kbd>
 						</span>
 					</Button>

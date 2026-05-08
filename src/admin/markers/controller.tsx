@@ -81,7 +81,7 @@ export function useMarkersController(
 			setLoadError(
 				error instanceof Error
 					? error.message
-					: __('Markers could not be loaded.', 'emilian-scheel-minimal-map')
+					: __('Markers could not be loaded.', 'minimal-map')
 			);
 		} finally {
 			setLoading(false);
@@ -185,11 +185,11 @@ export function useMarkersController(
 			resetColorEditModalState();
 			setActionNotice({
 				status: 'success',
-				message: __('Marker updated.', 'emilian-scheel-minimal-map'),
+				message: __('Marker updated.', 'minimal-map'),
 			});
 		} catch (error) {
 			setColorEditSubmitError(
-				error instanceof Error ? error.message : __('Marker could not be updated.', 'emilian-scheel-minimal-map')
+				error instanceof Error ? error.message : __('Marker could not be updated.', 'minimal-map')
 			);
 		} finally {
 			setSubmitting(false);
@@ -229,7 +229,7 @@ export function useMarkersController(
 				await loadMarkers();
 				setActionNotice({
 					status: 'success',
-					message: __('Marker deleted.', 'emilian-scheel-minimal-map'),
+					message: __('Marker deleted.', 'minimal-map'),
 				});
 			} catch (error) {
 				setActionNotice({
@@ -237,7 +237,7 @@ export function useMarkersController(
 					message:
 						error instanceof Error
 							? error.message
-							: __('Marker could not be deleted.', 'emilian-scheel-minimal-map'),
+							: __('Marker could not be deleted.', 'minimal-map'),
 				});
 				throw error;
 			} finally {
@@ -272,7 +272,7 @@ export function useMarkersController(
 			setActionNotice({
 				status: 'success',
 				message: sprintf(
-					_n('%d marker deleted.', '%d markers deleted.', allMarkers.length, 'emilian-scheel-minimal-map'),
+					_n('%d marker deleted.', '%d markers deleted.', allMarkers.length, 'minimal-map'),
 					allMarkers.length
 				),
 			});
@@ -282,7 +282,7 @@ export function useMarkersController(
 				message:
 					error instanceof Error
 						? error.message
-						: __('Markers could not be deleted.', 'emilian-scheel-minimal-map'),
+						: __('Markers could not be deleted.', 'minimal-map'),
 			});
 			throw error;
 		} finally {
@@ -304,7 +304,7 @@ export function useMarkersController(
 		}
 
 		if (!hasFilenameBasename(editFilenameBasename)) {
-			setSubmitError(__('Filename is required.', 'emilian-scheel-minimal-map'));
+			setSubmitError(__('Filename is required.', 'minimal-map'));
 			return;
 		}
 
@@ -323,11 +323,11 @@ export function useMarkersController(
 			resetEditModalState();
 			setActionNotice({
 				status: 'success',
-				message: __('Marker updated.', 'emilian-scheel-minimal-map'),
+				message: __('Marker updated.', 'minimal-map'),
 			});
 		} catch (error) {
 			setSubmitError(
-				error instanceof Error ? error.message : __('Marker could not be updated.', 'emilian-scheel-minimal-map')
+				error instanceof Error ? error.message : __('Marker could not be updated.', 'minimal-map')
 			);
 		} finally {
 			setSubmitting(false);
@@ -358,7 +358,7 @@ export function useMarkersController(
 						const content = await file.text();
 						// Basic SVG validation (very simple)
 						if (!content.includes('<svg')) {
-							throw new Error(__('Invalid SVG file.', 'emilian-scheel-minimal-map'));
+							throw new Error(__('Invalid SVG file.', 'minimal-map'));
 						}
 
 						return apiFetch({
@@ -377,9 +377,9 @@ export function useMarkersController(
 					status: 'success',
 					message:
 						fileList.length === 1
-							? __('Marker uploaded.', 'emilian-scheel-minimal-map')
+							? __('Marker uploaded.', 'minimal-map')
 							: sprintf(
-								_n( '%d marker uploaded.', '%d markers uploaded.', fileList.length, 'emilian-scheel-minimal-map' ),
+								_n( '%d marker uploaded.', '%d markers uploaded.', fileList.length, 'minimal-map' ),
 								fileList.length
 							),
 				});
@@ -389,7 +389,7 @@ export function useMarkersController(
 					message:
 						error instanceof Error
 							? error.message
-							: __('Markers could not be uploaded.', 'emilian-scheel-minimal-map'),
+							: __('Markers could not be uploaded.', 'minimal-map'),
 				});
 			} finally {
 				setUploading(false);
@@ -414,7 +414,7 @@ export function useMarkersController(
 				<Button
 					variant="tertiary"
 					icon={<BrushCleaning size={18} strokeWidth={2} />}
-					label={__('Delete all markers', 'emilian-scheel-minimal-map')}
+					label={__('Delete all markers', 'minimal-map')}
 					onClick={onOpenDeleteAllMarkersModal}
 					disabled={totalItems === 0 || isDeletingAllMarkers || isRowActionPending || isUploading}
 					__next40pxDefaultSize
@@ -422,7 +422,7 @@ export function useMarkersController(
 				<Button
 					variant="tertiary"
 					icon={<Library size={18} strokeWidth={2} />}
-					label={__('Marker library', 'emilian-scheel-minimal-map')}
+					label={__('Marker library', 'minimal-map')}
 					onClick={onOpenLibraryModal}
 					disabled={isUploading || isDeletingAllMarkers || isRowActionPending}
 					__next40pxDefaultSize

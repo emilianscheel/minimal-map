@@ -127,8 +127,8 @@ class Location_Post_Type {
 			self::POST_TYPE,
 			array(
 				'labels'              => array(
-					'name'          => __( 'Locations', 'emilian-scheel-minimal-map' ),
-					'singular_name' => __( 'Location', 'emilian-scheel-minimal-map' ),
+					'name'          => __( 'Locations', 'minimal-map' ),
+					'singular_name' => __( 'Location', 'minimal-map' ),
 				),
 				'public'              => false,
 				'show_ui'             => false,

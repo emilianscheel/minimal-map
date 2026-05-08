@@ -7,10 +7,10 @@ export default function CollectionsEmptyState({ controller }: { controller: Coll
 	return (
 		<EmptyState
 			icon={<Layers3 />}
-			title={__('No collections found', 'emilian-scheel-minimal-map')}
-			description={__('Create collections to organize your locations into groups. This makes it easier to manage and display sets of locations on your maps.', 'emilian-scheel-minimal-map')}
+			title={__('No collections found', 'minimal-map')}
+			description={__('Create collections to organize your locations into groups. This makes it easier to manage and display sets of locations on your maps.', 'minimal-map')}
 			action={{
-				label: __('Add collection', 'emilian-scheel-minimal-map'),
+				label: __('Add collection', 'minimal-map'),
 				onClick: controller.onAddCollection,
 				icon: <Plus />,
 			}}

@@ -11,7 +11,7 @@ export default function LocationImportProgressModal({
 		return null;
 	}
 
-	const modalTitle = __('Import locations', 'emilian-scheel-minimal-map');
+	const modalTitle = __('Import locations', 'minimal-map');
 
 	return (
 		<Modal

@@ -11,7 +11,7 @@ export function DeleteThemeButton({ slug, onClick }: DeleteThemeButtonProps) {
 	return (
 		<Button
 			icon={<Trash2 size={18} />}
-			label={__('Delete Current Theme', 'emilian-scheel-minimal-map')}
+			label={__('Delete Current Theme', 'minimal-map')}
 			onClick={onClick}
 			disabled={slug === 'default'}
 			variant="tertiary"

@@ -36,7 +36,7 @@ export default function CollectionsView({ controller }: { controller: Collection
 							void controller.onImportLocations(file);
 						}
 					}}
-					label={__('Drop CSV file here to import locations', 'emilian-scheel-minimal-map')}
+					label={__('Drop CSV file here to import locations', 'minimal-map')}
 				/>
 				{controller.isLoading ? (
 					<div className="minimal-map-admin__collections-state minimal-map-admin__collections-state--loading">

@@ -18,7 +18,7 @@ function useCollectionFields(
     () => [
       {
         id: "map_preview",
-        label: __("Map preview", "emilian-scheel-minimal-map"),
+        label: __("Map preview", "minimal-map"),
         type: "media",
         enableHiding: false,
         enableSorting: false,
@@ -33,7 +33,7 @@ function useCollectionFields(
       },
       {
         id: "title",
-        label: __("Title", "emilian-scheel-minimal-map"),
+        label: __("Title", "minimal-map"),
         enableHiding: false,
         enableSorting: false,
         filterBy: false,
@@ -41,7 +41,7 @@ function useCollectionFields(
       },
       {
         id: "add_locations",
-        label: __("Locations", "emilian-scheel-minimal-map"),
+        label: __("Locations", "minimal-map"),
         enableHiding: false,
         enableSorting: false,
         filterBy: false,
@@ -55,7 +55,7 @@ function useCollectionFields(
               onOpenAssignmentModal(item);
             }}
           >
-            {__("Add locations", "emilian-scheel-minimal-map")}
+            {__("Add locations", "minimal-map")}
           </Button>
         ),
       },
@@ -73,7 +73,7 @@ function useCollectionActions(
     () => [
       {
         id: "edit-collection",
-        label: __("Edit", "emilian-scheel-minimal-map"),
+        label: __("Edit", "minimal-map"),
         icon: <Pencil size={16} strokeWidth={2} />,
         context: "single",
         disabled: isRowActionPending,
@@ -88,13 +88,13 @@ function useCollectionActions(
       },
       {
         id: "delete-collection",
-        label: __("Delete", "emilian-scheel-minimal-map"),
+        label: __("Delete", "minimal-map"),
         icon: <Trash2 size={16} strokeWidth={2} />,
         context: "single",
         disabled: isRowActionPending,
         supportsBulk: false,
         callback: () => {},
-        modalHeader: __("Delete collection", "emilian-scheel-minimal-map"),
+        modalHeader: __("Delete collection", "minimal-map"),
         RenderModal: ({ items, closeModal, onActionPerformed }) => {
           if (!items[0]) {
             return <></>;

@@ -49,8 +49,8 @@ class Tag_Taxonomy {
 			array( 'minimal_map_location' ),
 			array(
 				'labels'            => array(
-					'name'          => __( 'Tags', 'emilian-scheel-minimal-map' ),
-					'singular_name' => __( 'Tag', 'emilian-scheel-minimal-map' ),
+					'name'          => __( 'Tags', 'minimal-map' ),
+					'singular_name' => __( 'Tag', 'minimal-map' ),
 				),
 				'public'            => false,
 				'show_ui'           => false,

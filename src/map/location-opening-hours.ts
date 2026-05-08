@@ -21,23 +21,23 @@ const DAY_KEY_BY_ENGLISH_WEEKDAY: Record<string, OpeningHoursDayKey> = {
 };
 
 const DAY_LABELS: Record<OpeningHoursDayKey, string> = {
-	monday: __('Monday', 'emilian-scheel-minimal-map'),
-	tuesday: __('Tuesday', 'emilian-scheel-minimal-map'),
-	wednesday: __('Wednesday', 'emilian-scheel-minimal-map'),
-	thursday: __('Thursday', 'emilian-scheel-minimal-map'),
-	friday: __('Friday', 'emilian-scheel-minimal-map'),
-	saturday: __('Saturday', 'emilian-scheel-minimal-map'),
-	sunday: __('Sunday', 'emilian-scheel-minimal-map'),
+	monday: __('Monday', 'minimal-map'),
+	tuesday: __('Tuesday', 'minimal-map'),
+	wednesday: __('Wednesday', 'minimal-map'),
+	thursday: __('Thursday', 'minimal-map'),
+	friday: __('Friday', 'minimal-map'),
+	saturday: __('Saturday', 'minimal-map'),
+	sunday: __('Sunday', 'minimal-map'),
 };
 
 const SHORT_DAY_LABELS: Record<OpeningHoursDayKey, string> = {
-	monday: __('Mon', 'emilian-scheel-minimal-map'),
-	tuesday: __('Tue', 'emilian-scheel-minimal-map'),
-	wednesday: __('Wed', 'emilian-scheel-minimal-map'),
-	thursday: __('Thu', 'emilian-scheel-minimal-map'),
-	friday: __('Fri', 'emilian-scheel-minimal-map'),
-	saturday: __('Sat', 'emilian-scheel-minimal-map'),
-	sunday: __('Sun', 'emilian-scheel-minimal-map'),
+	monday: __('Mon', 'minimal-map'),
+	tuesday: __('Tue', 'minimal-map'),
+	wednesday: __('Wed', 'minimal-map'),
+	thursday: __('Thu', 'minimal-map'),
+	friday: __('Fri', 'minimal-map'),
+	saturday: __('Sat', 'minimal-map'),
+	sunday: __('Sun', 'minimal-map'),
 };
 
 export interface OpeningHoursStatus {
@@ -373,11 +373,11 @@ export function getOpeningHoursStatus(
 			return {
 				label: isSoon
 					? sprintf(
-						__('Open - closes soon %s', 'emilian-scheel-minimal-map'),
+						__('Open - closes soon %s', 'minimal-map'),
 						formattedTime
 					)
 					: sprintf(
-						__('Open - closes %s', 'emilian-scheel-minimal-map'),
+						__('Open - closes %s', 'minimal-map'),
 						formattedTime
 					),
 				state: isSoon ? 'soon' : 'open',
@@ -387,11 +387,11 @@ export function getOpeningHoursStatus(
 		return {
 			label: isSoon
 				? sprintf(
-					__('Opens soon - %s', 'emilian-scheel-minimal-map'),
+					__('Opens soon - %s', 'minimal-map'),
 					formattedTime
 				)
 				: sprintf(
-					__('Closed - opens %s', 'emilian-scheel-minimal-map'),
+					__('Closed - opens %s', 'minimal-map'),
 					formattedTime
 				),
 			state: isSoon ? 'soon' : 'closed',
@@ -417,7 +417,7 @@ export function getOpeningHoursStatus(
 
 		return {
 			label: sprintf(
-				__('Closed - opens %1$s %2$s', 'emilian-scheel-minimal-map'),
+				__('Closed - opens %1$s %2$s', 'minimal-map'),
 				SHORT_DAY_LABELS[dayKey],
 				formattedTime
 			),
@@ -426,7 +426,7 @@ export function getOpeningHoursStatus(
 	}
 
 	return {
-		label: __('Closed', 'emilian-scheel-minimal-map'),
+		label: __('Closed', 'minimal-map'),
 		state: 'closed',
 	};
 }
@@ -456,11 +456,11 @@ export function formatOpeningHoursDisplayLine(
 	siteLocale: string
 ): string {
 	if (!hasOpeningHoursForDay(day)) {
-		return __('Closed', 'emilian-scheel-minimal-map');
+		return __('Closed', 'minimal-map');
 	}
 
 	const timeRange = sprintf(
-		__('%1$s-%2$s', 'emilian-scheel-minimal-map'),
+		__('%1$s-%2$s', 'minimal-map'),
 		formatDisplayTime(day.open, siteLocale),
 		formatDisplayTime(day.close, siteLocale)
 	);
@@ -476,7 +476,7 @@ export function formatOpeningHoursDisplayLine(
 	}
 
 	return sprintf(
-		__('%1$s, Lunch %2$s-%3$s', 'emilian-scheel-minimal-map'),
+		__('%1$s, Lunch %2$s-%3$s', 'minimal-map'),
 		timeRange,
 		formatDisplayTime(day.lunch_start, siteLocale),
 		formatDisplayTime(formatMinutesToTimeString(lunchEnd), siteLocale)

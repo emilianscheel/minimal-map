@@ -152,7 +152,7 @@ class Styles_Route {
 		$themes = $this->get_themes();
 
 		if ( ! isset( $themes[ $slug ] ) ) {
-			return new WP_Error( 'minimal_map_style_not_found', __( 'Style theme not found.', 'emilian-scheel-minimal-map' ), array( 'status' => 404 ) );
+			return new WP_Error( 'minimal_map_style_not_found', __( 'Style theme not found.', 'minimal-map' ), array( 'status' => 404 ) );
 		}
 
 		$colors = $request->get_param( 'colors' );
@@ -181,11 +181,11 @@ class Styles_Route {
 		$themes = $this->get_themes();
 
 		if ( ! isset( $themes[ $slug ] ) ) {
-			return new WP_Error( 'minimal_map_style_not_found', __( 'Style theme not found.', 'emilian-scheel-minimal-map' ), array( 'status' => 404 ) );
+			return new WP_Error( 'minimal_map_style_not_found', __( 'Style theme not found.', 'minimal-map' ), array( 'status' => 404 ) );
 		}
 
 		if ( 'default' === $slug ) {
-			return new WP_Error( 'minimal_map_cannot_delete_default', __( 'The default theme cannot be deleted.', 'emilian-scheel-minimal-map' ), array( 'status' => 400 ) );
+			return new WP_Error( 'minimal_map_cannot_delete_default', __( 'The default theme cannot be deleted.', 'minimal-map' ), array( 'status' => 400 ) );
 		}
 
 		unset( $themes[ $slug ] );
@@ -206,7 +206,7 @@ class Styles_Route {
 			$themes = array(
 				'default' => array(
 					'slug'       => 'default',
-					'label'      => __( 'Default Theme', 'emilian-scheel-minimal-map' ),
+					'label'      => __( 'Default Theme', 'minimal-map' ),
 					'basePreset' => 'positron',
 					'colors'     => $this->get_default_positron_colors(),
 				),
@@ -225,7 +225,7 @@ class Styles_Route {
 
 			$normalized_theme = $theme;
 			$normalized_theme['slug']       = isset( $theme['slug'] ) ? sanitize_title( (string) $theme['slug'] ) : sanitize_title( (string) $slug );
-			$normalized_theme['label']      = isset( $theme['label'] ) ? sanitize_text_field( (string) $theme['label'] ) : __( 'Untitled Theme', 'emilian-scheel-minimal-map' );
+			$normalized_theme['label']      = isset( $theme['label'] ) ? sanitize_text_field( (string) $theme['label'] ) : __( 'Untitled Theme', 'minimal-map' );
 			$normalized_theme['basePreset'] = isset( $theme['basePreset'] ) ? sanitize_key( (string) $theme['basePreset'] ) : 'positron';
 			$normalized_theme['colors']     = $this->sanitize_theme_colors(
 				isset( $theme['colors'] ) && is_array( $theme['colors'] ) ? $theme['colors'] : array()
@@ -242,7 +242,7 @@ class Styles_Route {
 			$normalized_themes = array(
 				'default' => array(
 					'slug'       => 'default',
-					'label'      => __( 'Default Theme', 'emilian-scheel-minimal-map' ),
+					'label'      => __( 'Default Theme', 'minimal-map' ),
 					'basePreset' => 'positron',
 					'colors'     => $this->get_default_positron_colors(),
 				),

@@ -15,8 +15,8 @@ export default function AnalyticsRangeSelector({
 	return (
 		<OptionDropdown
 			activeValue={activeRange}
-			emptyLabel={__('Select period', 'emilian-scheel-minimal-map')}
-			groupLabel={__('Select time period', 'emilian-scheel-minimal-map')}
+			emptyLabel={__('Select period', 'minimal-map')}
+			groupLabel={__('Select time period', 'minimal-map')}
 			labelClassName="minimal-map-admin__option-dropdown-label"
 			onSelect={(value) => onSelect(value as AnalyticsRangeKey)}
 			options={ANALYTICS_RANGE_OPTIONS}

@@ -171,5 +171,5 @@ export async function exportAnalyticsFile(
 export function getAnalyticsExportErrorMessage(error: unknown): string {
 	return error instanceof Error
 		? error.message
-		: __('Analytics data could not be exported.', 'emilian-scheel-minimal-map');
+		: __('Analytics data could not be exported.', 'minimal-map');
 }

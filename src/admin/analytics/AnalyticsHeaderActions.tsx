@@ -40,7 +40,7 @@ export default function AnalyticsHeaderActions({
         <Button
           variant="tertiary"
           icon={<BrushCleaning size={18} strokeWidth={2} />}
-          label={__("Clean tracking data", "emilian-scheel-minimal-map")}
+          label={__("Clean tracking data", "minimal-map")}
           onClick={onOpenDeleteAllAnalyticsModal}
           disabled={isDeletingAllAnalytics || isExporting || isSavingSettings}
           __next40pxDefaultSize
@@ -60,7 +60,7 @@ export default function AnalyticsHeaderActions({
             htmlFor="minimal-map-analytics-complianz-toggle"
           >
             <span className="minimal-map-admin__analytics-toggle-label">
-              {__("Only track if Complianz confirmed", "emilian-scheel-minimal-map")}
+              {__("Only track if Complianz confirmed", "minimal-map")}
             </span>
             <FormToggle
               id="minimal-map-analytics-complianz-toggle"
@@ -75,7 +75,7 @@ export default function AnalyticsHeaderActions({
           htmlFor="minimal-map-analytics-toggle"
         >
           <span className="minimal-map-admin__analytics-toggle-label">
-            {__("Analytics tracking", "emilian-scheel-minimal-map")}
+            {__("Analytics tracking", "minimal-map")}
           </span>
           <FormToggle
             id="minimal-map-analytics-toggle"

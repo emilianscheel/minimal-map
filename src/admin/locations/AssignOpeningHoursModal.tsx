@@ -33,7 +33,7 @@ export default function AssignOpeningHoursModal({ controller }: { controller: Lo
 	return (
 		<Modal
 			className="minimal-map-admin__location-modal"
-			title={__('Assign Opening Hours', 'emilian-scheel-minimal-map')}
+			title={__('Assign Opening Hours', 'minimal-map')}
 			onRequestClose={controller.onCloseAssignOpeningHoursModal}
 			shouldCloseOnClickOutside={!controller.isAssignmentSaving}
 			shouldCloseOnEsc={!controller.isAssignmentSaving}
@@ -48,7 +48,7 @@ export default function AssignOpeningHoursModal({ controller }: { controller: Lo
 									'Set opening hours for %d selected location.',
 									'Set opening hours for %d selected locations.',
 									controller.selectedOpeningHoursLocations.length,
-									'emilian-scheel-minimal-map'
+									'minimal-map'
 								),
 								controller.selectedOpeningHoursLocations.length
 							)}
@@ -56,7 +56,7 @@ export default function AssignOpeningHoursModal({ controller }: { controller: Lo
 					) : (
 						<p className="minimal-map-admin__assign-to-collection-empty">
 							{sprintf(
-								__('Set opening hours for "%s".', 'emilian-scheel-minimal-map'),
+								__('Set opening hours for "%s".', 'minimal-map'),
 								controller.selectedOpeningHoursLocations[0].title
 							)}
 						</p>
@@ -78,7 +78,7 @@ export default function AssignOpeningHoursModal({ controller }: { controller: Lo
 						disabled={controller.isAssignmentSaving}
 						data-minimal-map-dialog-ignore-enter="true"
 					>
-						{__('Cancel', 'emilian-scheel-minimal-map')}
+						{__('Cancel', 'minimal-map')}
 					</Button>
 					<Button
 						__next40pxDefaultSize
@@ -88,7 +88,7 @@ export default function AssignOpeningHoursModal({ controller }: { controller: Lo
 						disabled={controller.isAssignmentSaving}
 					>
 						<span className="minimal-map-admin__location-dialog-button-content">
-							<span>{__('Save Opening Hours', 'emilian-scheel-minimal-map')}</span>
+							<span>{__('Save Opening Hours', 'minimal-map')}</span>
 							<Kbd variant="blue">Enter</Kbd>
 						</span>
 					</Button>

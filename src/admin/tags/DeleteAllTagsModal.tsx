@@ -44,7 +44,7 @@ export default function DeleteAllTagsModal({
 
 	return (
 		<Modal
-			title={__('Delete all tags', 'emilian-scheel-minimal-map')}
+			title={__('Delete all tags', 'minimal-map')}
 			onRequestClose={controller.onCloseDeleteAllTagsModal}
 			shouldCloseOnClickOutside={!controller.isDeletingAllTags}
 			shouldCloseOnEsc={!controller.isDeletingAllTags}
@@ -62,7 +62,7 @@ export default function DeleteAllTagsModal({
 							'Are you sure you want to delete %d tag? This action cannot be undone.',
 							'Are you sure you want to delete %d tags? This action cannot be undone.',
 							controller.totalItems,
-							'emilian-scheel-minimal-map'
+							'minimal-map'
 						),
 						controller.totalItems
 					)}
@@ -74,7 +74,7 @@ export default function DeleteAllTagsModal({
 						disabled={controller.isDeletingAllTags}
 						data-minimal-map-dialog-ignore-enter="true"
 					>
-						{__('Cancel', 'emilian-scheel-minimal-map')}
+						{__('Cancel', 'minimal-map')}
 					</Button>
 					<Button
 						variant="primary"
@@ -86,7 +86,7 @@ export default function DeleteAllTagsModal({
 						disabled={controller.isDeletingAllTags}
 					>
 						<span className="minimal-map-admin__location-dialog-button-content">
-							<span>{__('Delete all tags', 'emilian-scheel-minimal-map')}</span>
+							<span>{__('Delete all tags', 'minimal-map')}</span>
 							<Kbd variant="red">Enter</Kbd>
 						</span>
 					</Button>

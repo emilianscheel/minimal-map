@@ -38,8 +38,8 @@ class Marker_Post_Type {
 			self::POST_TYPE,
 			array(
 				'labels'              => array(
-					'name'          => __( 'Markers', 'emilian-scheel-minimal-map' ),
-					'singular_name' => __( 'Marker', 'emilian-scheel-minimal-map' ),
+					'name'          => __( 'Markers', 'minimal-map' ),
+					'singular_name' => __( 'Marker', 'minimal-map' ),
 				),
 				'public'              => false,
 				'show_ui'             => false,

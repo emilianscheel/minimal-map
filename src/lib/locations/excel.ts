@@ -39,7 +39,7 @@ export async function parseExcelFile(file: File): Promise<ParsedLocationImportDa
 	const rows = XLSX.utils.sheet_to_json<any[]>(worksheet, { header: 1, defval: '' });
 
 	if (rows.length < 1) {
-		throw new Error(__('Excel file is empty.', 'emilian-scheel-minimal-map'));
+		throw new Error(__('Excel file is empty.', 'minimal-map'));
 	}
 
 	const headers = rows[0].map((h: any) => String(h || '').trim());

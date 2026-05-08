@@ -187,7 +187,7 @@ export const MapSearchControl = ({
 		() => normalizeSearchValue(trimmedSearchTerm),
 		[trimmedSearchTerm]
 	);
-	const liveLocationLabel = __('My location', 'emilian-scheel-minimal-map');
+	const liveLocationLabel = __('My location', 'minimal-map');
 	const hasOpenedQuickFilter = useMemo(
 		() =>
 			enableOpenedFilter &&
@@ -513,26 +513,26 @@ export const MapSearchControl = ({
 
 	const formatLiveLocationError = useCallback((error?: GeolocationPositionError) => {
 		if (!error) {
-			return __('Live location could not be loaded.', 'emilian-scheel-minimal-map');
+			return __('Live location could not be loaded.', 'minimal-map');
 		}
 
 		if (error.code === error.PERMISSION_DENIED) {
-			return __('Location access was denied.', 'emilian-scheel-minimal-map');
+			return __('Location access was denied.', 'minimal-map');
 		}
 
 		if (error.code === error.POSITION_UNAVAILABLE) {
 			if (isTransientLiveLocationError(error)) {
-				return __('Current location is still being determined. Please try again in a moment.', 'emilian-scheel-minimal-map');
+				return __('Current location is still being determined. Please try again in a moment.', 'minimal-map');
 			}
 
-			return __('Current location is unavailable.', 'emilian-scheel-minimal-map');
+			return __('Current location is unavailable.', 'minimal-map');
 		}
 
 		if (error.code === error.TIMEOUT) {
-			return __('Location request timed out.', 'emilian-scheel-minimal-map');
+			return __('Location request timed out.', 'minimal-map');
 		}
 
-		return __('Live location could not be loaded.', 'emilian-scheel-minimal-map');
+		return __('Live location could not be loaded.', 'minimal-map');
 	}, []);
 
 	const handleAddressSearch = useCallback(async (
@@ -635,7 +635,7 @@ export const MapSearchControl = ({
 
 		if (!geolocation) {
 			setLiveLocationError(
-				__('Live location is not supported in this browser.', 'emilian-scheel-minimal-map')
+				__('Live location is not supported in this browser.', 'minimal-map')
 			);
 			return;
 		}
@@ -722,7 +722,7 @@ export const MapSearchControl = ({
 						aria-pressed={isOpenedFilterActive}
 						onClick={() => onOpenedFilterChange(!isOpenedFilterActive)}
 					>
-						{__('Opened', 'emilian-scheel-minimal-map')}
+						{__('Opened', 'minimal-map')}
 					</button>
 				) : null}
 				{enableCategoryFilter ? availableTags.map((tag) => (
@@ -872,15 +872,15 @@ export const MapSearchControl = ({
 						onFocus={handleSearchFocus}
 						onKeyDown={handleSearchKeyDown}
 						enterKeyHint="search"
-						placeholder={__('Search locations...', 'emilian-scheel-minimal-map')}
-						aria-label={__('Search locations', 'emilian-scheel-minimal-map')}
+						placeholder={__('Search locations...', 'minimal-map')}
+						aria-label={__('Search locations', 'minimal-map')}
 					/>
 					{searchTerm ? (
 						<button
 							type="button"
 							className="minimal-map-search__clear"
 							onClick={() => resetAddressSearch('')}
-							aria-label={__('Clear search', 'emilian-scheel-minimal-map')}
+							aria-label={__('Clear search', 'minimal-map')}
 						>
 							<X size={16} />
 						</button>
@@ -900,8 +900,8 @@ export const MapSearchControl = ({
 									className="minimal-map-search__state-spinner"
 								/>
 								<div className="minimal-map-search__state-message">
-									{__('Press', 'emilian-scheel-minimal-map')} <Kbd variant="search">Enter</Kbd>{' '}
-									{__('to load results', 'emilian-scheel-minimal-map')}
+									{__('Press', 'minimal-map')} <Kbd variant="search">Enter</Kbd>{' '}
+									{__('to load results', 'minimal-map')}
 								</div>
 							</div>
 						) : searchMode === 'address-loading' ? (
@@ -911,7 +911,7 @@ export const MapSearchControl = ({
 									className="minimal-map-search__state-spinner"
 								/>
 								<div className="minimal-map-search__state-message">
-									{__('Loading results...', 'emilian-scheel-minimal-map')}
+									{__('Loading results...', 'minimal-map')}
 								</div>
 							</div>
 						) : searchMode === 'address-empty' ? (
@@ -921,7 +921,7 @@ export const MapSearchControl = ({
 									className="minimal-map-search__state-icon"
 								/>
 								<div className="minimal-map-search__state-message">
-									{__('No locations found', 'emilian-scheel-minimal-map')}
+									{__('No locations found', 'minimal-map')}
 								</div>
 							</div>
 						) : null}
@@ -982,7 +982,7 @@ export function createWordPressSearchControl(
 			if (!frontendGeocodePath) {
 				return Promise.resolve({
 					success: false,
-					message: __('No locations found', 'emilian-scheel-minimal-map'),
+					message: __('No locations found', 'minimal-map'),
 				} satisfies GeocodeResponse);
 			}
 

@@ -10,7 +10,7 @@ export function ExportThemeButton({ onExport }: ExportThemeButtonProps) {
 	return (
 		<Button
 			icon={<Download size={18} />}
-			label={__('Download Theme Config', 'emilian-scheel-minimal-map')}
+			label={__('Download Theme Config', 'minimal-map')}
 			onClick={onExport}
 			variant="tertiary"
 			__next40pxDefaultSize

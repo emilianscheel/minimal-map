@@ -29,7 +29,7 @@ export default function EditMarkerModal({ controller }: { controller: MarkersCon
 	return (
 		<Modal
 			className="minimal-map-admin__collection-modal minimal-map-admin__edit-colors-modal"
-			title={__('Edit marker colors', 'emilian-scheel-minimal-map')}
+			title={__('Edit marker colors', 'minimal-map')}
 			onRequestClose={controller.onCancelEditMarkerColors}
 			shouldCloseOnClickOutside={!controller.isSubmitting}
 			shouldCloseOnEsc={!controller.isSubmitting}
@@ -54,7 +54,7 @@ export default function EditMarkerModal({ controller }: { controller: MarkersCon
 					<div className="minimal-map-admin__edit-colors-controls">
 						{controller.draftSvgColors.length === 0 ? (
 							<p className="minimal-map-admin__edit-colors-empty">
-								{__('No editable colors found in this SVG.', 'emilian-scheel-minimal-map')}
+								{__('No editable colors found in this SVG.', 'minimal-map')}
 							</p>
 						) : (
 							controller.draftSvgColors.map((entry) => (
@@ -65,7 +65,7 @@ export default function EditMarkerModal({ controller }: { controller: MarkersCon
 												{entry.label}
 											</span>
 											<span className="minimal-map-admin__edit-colors-none-badge">
-												{_x('None', 'color value', 'emilian-scheel-minimal-map')}
+												{_x('None', 'color value', 'minimal-map')}
 											</span>
 										</div>
 									) : (
@@ -83,8 +83,8 @@ export default function EditMarkerModal({ controller }: { controller: MarkersCon
 										onClick={() => controller.onToggleMarkerColorNone(entry.id)}
 										title={
 											entry.isNone
-												? __('Set a color', 'emilian-scheel-minimal-map')
-												: __('Set to none', 'emilian-scheel-minimal-map')
+												? __('Set a color', 'minimal-map')
+												: __('Set to none', 'minimal-map')
 										}
 									>
 										{entry.isNone ? <Plus size={14} /> : <Ban size={14} />}
@@ -99,7 +99,7 @@ export default function EditMarkerModal({ controller }: { controller: MarkersCon
 							<img
 								className="minimal-map-admin__edit-colors-preview-img"
 								src={previewDataUrl}
-								alt={__('Marker preview', 'emilian-scheel-minimal-map')}
+								alt={__('Marker preview', 'minimal-map')}
 							/>
 						</div>
 					</div>
@@ -112,7 +112,7 @@ export default function EditMarkerModal({ controller }: { controller: MarkersCon
 						onClick={controller.onCancelEditMarkerColors}
 						disabled={controller.isSubmitting}
 					>
-						{__('Cancel', 'emilian-scheel-minimal-map')}
+						{__('Cancel', 'minimal-map')}
 					</Button>
 					<Button
 						__next40pxDefaultSize
@@ -122,7 +122,7 @@ export default function EditMarkerModal({ controller }: { controller: MarkersCon
 						disabled={controller.isSubmitting}
 					>
 						<span className="minimal-map-admin__location-dialog-button-content">
-							<span>{__('Save changes', 'emilian-scheel-minimal-map')}</span>
+							<span>{__('Save changes', 'minimal-map')}</span>
 							<Kbd variant="blue">Enter</Kbd>
 						</span>
 					</Button>

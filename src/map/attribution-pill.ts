@@ -40,7 +40,7 @@ export function createAttributionPill(
 
   root.className = "minimal-map-attribution";
   root.setAttribute("role", "note");
-  root.setAttribute("aria-label", __("Map credits", "emilian-scheel-minimal-map"));
+  root.setAttribute("aria-label", __("Map credits", "minimal-map"));
   root.style.setProperty(
     "--minimal-map-attribution-padding-top",
     config.creditsPadding.top,

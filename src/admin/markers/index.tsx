@@ -34,7 +34,7 @@ export default function MarkersView({ controller }: { controller: MarkersControl
 					onFilesDrop={(files) => {
 						void controller.onUploadMarkers(files as unknown as FileList);
 					}}
-					label={__('Drop SVG files here to upload', 'emilian-scheel-minimal-map')}
+					label={__('Drop SVG files here to upload', 'minimal-map')}
 				/>
 				{controller.isLoading ? (
 					<div className="minimal-map-admin__locations-state minimal-map-admin__locations-state--loading">

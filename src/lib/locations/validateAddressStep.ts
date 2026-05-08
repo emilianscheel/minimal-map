@@ -6,23 +6,23 @@ export function validateAddressStep(form: LocationFormState): FieldErrors {
 	const errors = createEmptyFieldErrors();
 
 	if (!form.street.trim()) {
-		errors.street = __('Street is required to geocode the address.', 'emilian-scheel-minimal-map');
+		errors.street = __('Street is required to geocode the address.', 'minimal-map');
 	}
 
 	if (!form.house_number.trim()) {
-		errors.house_number = __('House number is required to geocode the address.', 'emilian-scheel-minimal-map');
+		errors.house_number = __('House number is required to geocode the address.', 'minimal-map');
 	}
 
 	if (!form.postal_code.trim()) {
-		errors.postal_code = __('Postal code is required to geocode the address.', 'emilian-scheel-minimal-map');
+		errors.postal_code = __('Postal code is required to geocode the address.', 'minimal-map');
 	}
 
 	if (!form.city.trim()) {
-		errors.city = __('City is required to geocode the address.', 'emilian-scheel-minimal-map');
+		errors.city = __('City is required to geocode the address.', 'minimal-map');
 	}
 
 	if (!form.country.trim()) {
-		errors.country = __('Country is required to geocode the address.', 'emilian-scheel-minimal-map');
+		errors.country = __('Country is required to geocode the address.', 'minimal-map');
 	}
 
 	return errors;

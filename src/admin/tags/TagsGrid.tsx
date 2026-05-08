@@ -12,7 +12,7 @@ export default function TagsGrid({ controller }: { controller: TagsController })
 		() => [
 			{
 				id: 'name',
-				label: __('Name', 'emilian-scheel-minimal-map'),
+				label: __('Name', 'minimal-map'),
 				enableHiding: false,
 				enableSorting: false,
 				filterBy: false,
@@ -20,7 +20,7 @@ export default function TagsGrid({ controller }: { controller: TagsController })
 			},
 			{
 				id: 'map_preview',
-				label: __('Preview', 'emilian-scheel-minimal-map'),
+				label: __('Preview', 'minimal-map'),
 				type: 'media',
 				enableHiding: false,
 				enableSorting: false,
@@ -41,7 +41,7 @@ export default function TagsGrid({ controller }: { controller: TagsController })
 		() => [
 			{
 				id: 'edit',
-				label: __('Edit', 'emilian-scheel-minimal-map'),
+				label: __('Edit', 'minimal-map'),
 				isPrimary: true,
 				icon: <Pencil size={18} />,
 				callback: (items) => {
@@ -52,7 +52,7 @@ export default function TagsGrid({ controller }: { controller: TagsController })
 			},
 			{
 				id: 'delete',
-				label: __('Delete', 'emilian-scheel-minimal-map'),
+				label: __('Delete', 'minimal-map'),
 				isPrimary: false,
 				icon: <Trash2 size={18} />,
 				isDestructive: true,
